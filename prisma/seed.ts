@@ -1,11 +1,9 @@
 import { PrismaClient } from "./client/client";
-import { PrismaBetterSqlite3 } from "@prisma/adapter-better-sqlite3";
 import * as bcrypt from "bcryptjs";
 import * as fs from "fs";
 import * as path from "path";
 
-const adapter = new PrismaBetterSqlite3({ url: "file:./prisma/dev.db" });
-const prisma = new PrismaClient({ adapter });
+const prisma = new PrismaClient();
 
 const DISTRICTS_MAP: Record<string, string[]> = {
   "AN": ["Nicobars", "North and Middle Andaman", "South Andaman"],
