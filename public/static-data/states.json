@@ -1,0 +1,5414 @@
+[
+  {
+    "id": "fd434397-4650-4015-b244-396a60b16351",
+    "name": "Andaman and Nicobar Islands",
+    "code": "AN",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "2c521759-d136-4a60-aaaf-b5bad4d79ba2",
+        "stateId": "fd434397-4650-4015-b244-396a60b16351",
+        "name": "Nicobars",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "cbb347d6-2d76-4a24-ad74-9d33b9812f8d",
+        "stateId": "fd434397-4650-4015-b244-396a60b16351",
+        "name": "North and Middle Andaman",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "f9d987be-33e8-4236-8128-410248b091b2",
+        "stateId": "fd434397-4650-4015-b244-396a60b16351",
+        "name": "South Andaman",
+        "odopProduct": "Coconut Handicrafts",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "27ecc2d3-2df5-404a-adf5-eb6254634069",
+    "name": "Andhra Pradesh",
+    "code": "AP",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "8ecfa265-2270-4e52-ae20-7162ed6d2bda",
+        "stateId": "27ecc2d3-2df5-404a-adf5-eb6254634069",
+        "name": "Anantapur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "5b3beac9-6524-400b-91e8-1086ffdda7c2",
+        "stateId": "27ecc2d3-2df5-404a-adf5-eb6254634069",
+        "name": "Araku Valley",
+        "odopProduct": "Araku Coffee",
+        "isActive": true
+      },
+      {
+        "id": "3b97b93f-5a80-4c78-8e09-c8cba0f52ea9",
+        "stateId": "27ecc2d3-2df5-404a-adf5-eb6254634069",
+        "name": "Chittoor",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "0f54c95e-36a2-4d7a-afac-b9f49d6e910f",
+        "stateId": "27ecc2d3-2df5-404a-adf5-eb6254634069",
+        "name": "East Godavari",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "46d6532f-c7a1-40eb-a2ea-7927bf27cb83",
+        "stateId": "27ecc2d3-2df5-404a-adf5-eb6254634069",
+        "name": "Guntur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "d89cacda-bc30-4e7f-ac2a-7f1f5adfb5d0",
+        "stateId": "27ecc2d3-2df5-404a-adf5-eb6254634069",
+        "name": "Krishna",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "80d5077c-ce82-446c-8759-fe5bc627a240",
+        "stateId": "27ecc2d3-2df5-404a-adf5-eb6254634069",
+        "name": "Kurnool",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "50d7c3df-c578-4301-bde0-bb7d6f43ad00",
+        "stateId": "27ecc2d3-2df5-404a-adf5-eb6254634069",
+        "name": "Prakasam",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "39c0c716-f9da-4b5e-9408-cb8167c2a1fd",
+        "stateId": "27ecc2d3-2df5-404a-adf5-eb6254634069",
+        "name": "Sri Potti Sriramulu Nellore",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "410dd9dc-aa33-48d6-91f6-4b5464b47338",
+        "stateId": "27ecc2d3-2df5-404a-adf5-eb6254634069",
+        "name": "Srikakulam",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "fa85d1f8-d760-44c8-8579-0a6c89010952",
+        "stateId": "27ecc2d3-2df5-404a-adf5-eb6254634069",
+        "name": "Visakhapatnam",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "81c4554c-6382-4eef-93df-2411f0c43ea3",
+        "stateId": "27ecc2d3-2df5-404a-adf5-eb6254634069",
+        "name": "Vizianagaram",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "243388c8-6868-4c37-886e-d51562b67095",
+        "stateId": "27ecc2d3-2df5-404a-adf5-eb6254634069",
+        "name": "West Godavari",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "1609407e-a0ed-48d3-bf3c-aba0f9e76d91",
+        "stateId": "27ecc2d3-2df5-404a-adf5-eb6254634069",
+        "name": "Y.S.R.",
+        "odopProduct": null,
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "28ac869c-5575-41b8-a0be-30477b4a8219",
+    "name": "Arunachal Pradesh",
+    "code": "AR",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "e77caf10-c397-43b2-87af-1f352c719919",
+        "stateId": "28ac869c-5575-41b8-a0be-30477b4a8219",
+        "name": "Anjaw",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "e08859a1-5725-4611-a692-c4d3882a3f18",
+        "stateId": "28ac869c-5575-41b8-a0be-30477b4a8219",
+        "name": "Changlang",
+        "odopProduct": "Handloom Textiles",
+        "isActive": true
+      },
+      {
+        "id": "2ca571c7-a835-429a-af20-199b54aa87a8",
+        "stateId": "28ac869c-5575-41b8-a0be-30477b4a8219",
+        "name": "Dibang Valley",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "07257485-7576-409d-9edd-37b24be7786b",
+        "stateId": "28ac869c-5575-41b8-a0be-30477b4a8219",
+        "name": "East Kameng",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b9692dd7-bce0-46ee-a502-5bf8ad36a41d",
+        "stateId": "28ac869c-5575-41b8-a0be-30477b4a8219",
+        "name": "East Siang",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "8301153e-a97a-4f26-9920-48d9164211e7",
+        "stateId": "28ac869c-5575-41b8-a0be-30477b4a8219",
+        "name": "Kra Daadi",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "d3c366d8-f4b5-4774-b5d5-0163eb5fcd1f",
+        "stateId": "28ac869c-5575-41b8-a0be-30477b4a8219",
+        "name": "Kurung Kumey",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "26119656-a497-48a9-b2a0-e95ab96e9f64",
+        "stateId": "28ac869c-5575-41b8-a0be-30477b4a8219",
+        "name": "Lohit",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "3d1b4e0a-08d1-4432-a236-c2b39c99de9f",
+        "stateId": "28ac869c-5575-41b8-a0be-30477b4a8219",
+        "name": "Lower Dibang Valley",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "251afe99-8541-44be-90a3-b78dd61badac",
+        "stateId": "28ac869c-5575-41b8-a0be-30477b4a8219",
+        "name": "Lower Siang",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "71274823-3346-4da9-b96c-f516e286fea7",
+        "stateId": "28ac869c-5575-41b8-a0be-30477b4a8219",
+        "name": "Lower Subansiri",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "063b6e24-ff3a-4e3c-9278-a5f9e2769ffb",
+        "stateId": "28ac869c-5575-41b8-a0be-30477b4a8219",
+        "name": "Namsai",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "072725f2-dc4e-4976-8a31-69b3911c46ac",
+        "stateId": "28ac869c-5575-41b8-a0be-30477b4a8219",
+        "name": "Papum Pare",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "21544bda-59a8-4f45-8025-7fffd3f97981",
+        "stateId": "28ac869c-5575-41b8-a0be-30477b4a8219",
+        "name": "Siang",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "e3c679b4-447c-418e-8047-57e12aa633ac",
+        "stateId": "28ac869c-5575-41b8-a0be-30477b4a8219",
+        "name": "Tawang",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "eb7f729e-1d3f-4559-ba68-993371017cca",
+        "stateId": "28ac869c-5575-41b8-a0be-30477b4a8219",
+        "name": "Tirap",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "dbcf8953-ac49-48a9-b116-b8437b2415e9",
+        "stateId": "28ac869c-5575-41b8-a0be-30477b4a8219",
+        "name": "Upper Siang",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "a0f4ae35-8a9d-4b31-afc4-25ca9441c32b",
+        "stateId": "28ac869c-5575-41b8-a0be-30477b4a8219",
+        "name": "Upper Subansiri",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "4fdb9b29-9737-4fb9-bb0e-5eefa2659bf7",
+        "stateId": "28ac869c-5575-41b8-a0be-30477b4a8219",
+        "name": "West Kameng",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "29b31743-2408-40d9-bccf-13ea071b9902",
+        "stateId": "28ac869c-5575-41b8-a0be-30477b4a8219",
+        "name": "West Siang",
+        "odopProduct": null,
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+    "name": "Assam",
+    "code": "AS",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "eb5e3c0b-6495-4f70-a251-5d0271643f71",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Baksa",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "601269b7-6146-4ee8-88ff-47fe18956372",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Barpeta",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "9cff7653-4c10-4641-8f0a-b65fd195e0b7",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Biswanath",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "6a74c8da-c17b-4874-b586-ee1ae57bb59b",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Bongaigaon",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "598c17e7-406b-4925-b524-afb10b7375ab",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Cachar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "939b6704-02a8-4676-9fc8-213be60a2814",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Charaideo",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "54536f6c-53cb-4ff6-87f4-abf3bd12e0b4",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Chirang",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "4d3466ff-7efd-4b41-9c04-10720e5eff8d",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Darrang",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "8907239c-5600-4041-a2a7-92b7e1ac9f35",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Dhemaji",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "369d310c-f005-4702-b1d5-e6611de83e0b",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Dhubri",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "42705f5f-bba1-40e6-858b-cb0d2a182efb",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Dibrugarh",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "fa8b8ec9-e9fd-421c-936d-f9b0d1348825",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Dima Hasao",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "89ff3208-6668-4ca4-9401-8bbf93b36d16",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Goalpara",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "ca766264-5feb-4742-9f5b-22b5b313f862",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Golaghat",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "307814b9-822a-4e23-8535-9667323f496f",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Hailakandi",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "77abaec8-d404-47a1-946e-cf0bbd5e1c69",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Hojai",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "cd497f27-f960-4d48-bbb8-0594848b0dce",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Jorhat",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "488a2322-91e8-4b45-a5eb-300c3d70c8a3",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Kamrup",
+        "odopProduct": "Muga Silk",
+        "isActive": true
+      },
+      {
+        "id": "25f76056-0b35-4c1c-be03-a1699f3b43d6",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Kamrup Metropolitan",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "0c8facf3-c572-49b0-b8be-d1474480aeed",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Karbi Anglong",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "772bb027-9ce4-4a75-8e0d-9265bce49eef",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Karimganj",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "5e255b24-ba9e-4a86-aa4d-33e44ba3a093",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Kokrajhar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "f5d640f6-a46a-413c-8f74-75ae7eb5f694",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Lakhimpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "fd8e2552-3a0e-4e4c-8224-9006e0a6dcef",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Majuli",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "7641f85b-0d70-4951-bef3-76de8f5cb708",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Morigaon",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "ab3c8ea1-79dc-4b2d-ab46-e9a310bc2381",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Nagaon",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "29afc88a-6f94-4413-888a-7bdafd3af7b0",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Nalbari",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "808339da-32f1-41eb-ac0a-a2a60ca908d6",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Sivasagar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "a07fa5cf-4b06-4d0b-8341-938742d5ca54",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Sonitpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "a666f981-71e5-42b1-81f6-f4024fc6da17",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "South Salamara-Mankachar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "749f3bdc-587c-4c19-a17a-7084c567250e",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Tinsukia",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "9136b1d5-acaa-446a-a640-ad51daeca380",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "Udalguri",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "84474a13-1980-42cd-b86f-146bfa4ec38d",
+        "stateId": "c8edc0e4-f554-404a-acf8-cd046ffc2d67",
+        "name": "West Karbi Anglong",
+        "odopProduct": null,
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+    "name": "Bihar",
+    "code": "BR",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "bf6c330a-fac4-4301-958d-e6f394fcc0a3",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Araria",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "11626369-9ca8-4f98-8264-2c582bfd83aa",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Arwal",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b907dcdc-301d-4194-93c2-7cd8d4845696",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Aurangabad",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "41874d63-7ff3-42c5-9a85-efa741f26fa6",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Banka",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "06fd046b-282d-49b9-96d1-5a3cab6ffcce",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Begusarai",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "80ed97a8-9548-4b5a-8e61-f330f2c7d782",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Bhagalpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "9209a4ba-e82c-458d-9d31-1ed0261546a5",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Bhojpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "2fa5704d-6c03-4d1a-9d48-2865926a5653",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Buxar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b8d29c89-8fbd-4ffb-abc0-4bf798526eb5",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Darbhanga",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b7db6a08-76ce-43bd-9951-b265d322864a",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Gaya",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b7c9eac6-f9ee-46d0-bdb5-5ded95bae661",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Gopalganj",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "34815b16-bb10-4a8d-bc8c-37b912277dd5",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Jamui",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "2c10b625-c34b-4430-8f72-e4b027484a8f",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Jehanabad",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "fc8824ff-8e1e-425c-a9a1-f41ad2f6b725",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Kaimur (Bhabua)",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "ffca1cd0-bb2c-4998-8673-3be0faec35fa",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Katihar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "462daa92-e3ca-42ae-b0c8-edc3f02b4ed4",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Khagaria",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "1ed31419-2627-4900-8b2a-b655aa7d26c0",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Kishanganj",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "c12dfc08-6283-41ac-b6a5-20aef17dcd21",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Lakhisarai",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "6966aa26-def3-4d52-a52e-8cf31fbb4b26",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Madhepura",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "aab4b3d7-a781-4852-b033-803cf2556957",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Madhubani",
+        "odopProduct": "Madhubani Paintings",
+        "isActive": true
+      },
+      {
+        "id": "a2bbd130-411b-408b-9ab1-038a787f5473",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Munger",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "6dddfb85-d516-4947-a6b9-bfea5af4b102",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Muzaffarpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "4461946c-149c-4fc5-bcf8-a5c0dd1a6daf",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Nalanda",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "78946ef6-19c7-4b06-8e30-c2d29610dbf4",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Nawada",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "91de19a6-3aa5-4072-b89c-a34a1dfc88f4",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Pashchim Champaran",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "a2908873-5d63-4931-9ed8-e5c3cf215610",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Patna",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "6054fc39-0cc7-4e96-97d4-3ad69bd271fb",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Purbi Champaran",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "429a3d1f-44a0-49be-acef-b10b0d42f63f",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Purnia",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "172e1f51-21a3-4ba6-a4f7-0d5652a8d1c4",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Rohtas",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "27444fd7-577f-4590-a351-3b258a860126",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Saharsa",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b9a8ff38-adf1-4f4c-8b01-713cbc7b49ba",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Samastipur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "9291c1c2-90ee-484f-89fc-d41553ccd6c9",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Saran",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "9832eff6-7e9e-4add-8326-40d83959705b",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Sheikhpura",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "83a7ebbc-8cb4-4764-8fd3-0783ed5cc35f",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Sheohar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "ac35652e-f0f9-4ee9-90d0-ce1cc7a4e77c",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Sitamarhi",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b1e8618f-e612-4933-bc02-a576b7691c99",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Siwan",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "6cce3147-5349-4883-aecc-664254aca594",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Supaul",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "fc76221b-202a-489e-b763-ab8473f106bb",
+        "stateId": "7217f7b3-1985-42d0-96ac-8acd943fd6ab",
+        "name": "Vaishali",
+        "odopProduct": null,
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "f50a3850-c000-4cc9-9cd7-30ae74c1cbe0",
+    "name": "Chandigarh",
+    "code": "CH",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "b5350712-7baf-4a9c-92a1-1a55c2e07e54",
+        "stateId": "f50a3850-c000-4cc9-9cd7-30ae74c1cbe0",
+        "name": "Chandigarh",
+        "odopProduct": "Phulkari & Panjiri",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "791ac1fe-1802-47d0-9dc9-98bfb34edc9c",
+    "name": "Chhattisgarh",
+    "code": "CG",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "b46a78cf-0576-4584-9062-ff130ea1bcb4",
+        "stateId": "791ac1fe-1802-47d0-9dc9-98bfb34edc9c",
+        "name": "Balod",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "7861c08d-73b1-41e9-86d7-0af6d9c0948f",
+        "stateId": "791ac1fe-1802-47d0-9dc9-98bfb34edc9c",
+        "name": "Baloda Bazar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "488fcd60-ddb3-4e84-a2ac-f7d961a1cbc0",
+        "stateId": "791ac1fe-1802-47d0-9dc9-98bfb34edc9c",
+        "name": "Balrampur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "7e0d03f8-a75c-4716-afe2-94dd08826d15",
+        "stateId": "791ac1fe-1802-47d0-9dc9-98bfb34edc9c",
+        "name": "Bastar",
+        "odopProduct": "Bastar Iron Craft",
+        "isActive": true
+      },
+      {
+        "id": "704abc59-1496-4df3-a702-d7fa3e978a39",
+        "stateId": "791ac1fe-1802-47d0-9dc9-98bfb34edc9c",
+        "name": "Bemetara",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "ac5b136b-d4bb-4713-85a4-db16057a35f5",
+        "stateId": "791ac1fe-1802-47d0-9dc9-98bfb34edc9c",
+        "name": "Bijapur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "eef7ec5c-e671-4b4b-9cf8-f4aaddeb77df",
+        "stateId": "791ac1fe-1802-47d0-9dc9-98bfb34edc9c",
+        "name": "Bilaspur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "44a7a35f-acc9-43c7-a46a-9bec090539ca",
+        "stateId": "791ac1fe-1802-47d0-9dc9-98bfb34edc9c",
+        "name": "Dakshin Bastar Dantewada",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "2b83dcde-c37a-45a7-8540-99a9daad39c4",
+        "stateId": "791ac1fe-1802-47d0-9dc9-98bfb34edc9c",
+        "name": "Dhamtari",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "729e1d10-8db9-471d-aad5-6b7d8e5b5411",
+        "stateId": "791ac1fe-1802-47d0-9dc9-98bfb34edc9c",
+        "name": "Durg",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "5d603137-3583-4cc9-82a7-0481570b6588",
+        "stateId": "791ac1fe-1802-47d0-9dc9-98bfb34edc9c",
+        "name": "Gariyaband",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "eb4b87e2-fe0c-4de9-a987-f3e1c9e2ef19",
+        "stateId": "791ac1fe-1802-47d0-9dc9-98bfb34edc9c",
+        "name": "Janjgir - Champa",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "87cca504-8ec9-40d5-8452-ca435a2d26fc",
+        "stateId": "791ac1fe-1802-47d0-9dc9-98bfb34edc9c",
+        "name": "Jashpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "db1bf700-ed59-4fd3-9394-b1de831fce64",
+        "stateId": "791ac1fe-1802-47d0-9dc9-98bfb34edc9c",
+        "name": "Kabeerdham",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "8f0b2a90-a010-40f1-b053-808769058a79",
+        "stateId": "791ac1fe-1802-47d0-9dc9-98bfb34edc9c",
+        "name": "Kondagaon",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "deba9e60-21ba-40ea-bf5b-6857c1396a59",
+        "stateId": "791ac1fe-1802-47d0-9dc9-98bfb34edc9c",
+        "name": "Korba",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "75da5c1c-3729-42c2-a3c1-2dc43bc2815c",
+        "stateId": "791ac1fe-1802-47d0-9dc9-98bfb34edc9c",
+        "name": "Koriya",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b6e7b8bf-7b67-4163-beb4-00e2f4939396",
+        "stateId": "791ac1fe-1802-47d0-9dc9-98bfb34edc9c",
+        "name": "Mahasamund",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "28dda3d7-19c1-49a2-8828-653de33ffa78",
+        "stateId": "791ac1fe-1802-47d0-9dc9-98bfb34edc9c",
+        "name": "Mungeli",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "9b58b96f-1eee-4b5e-88d2-f8359df8ab59",
+        "stateId": "791ac1fe-1802-47d0-9dc9-98bfb34edc9c",
+        "name": "Narayanpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "7a4d9433-f9c6-4533-8687-8a40108938b9",
+        "stateId": "791ac1fe-1802-47d0-9dc9-98bfb34edc9c",
+        "name": "Raigarh",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "4c4fa03a-adb3-49f5-94dd-f69d8fbe8c2a",
+        "stateId": "791ac1fe-1802-47d0-9dc9-98bfb34edc9c",
+        "name": "Raipur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b8a4c89b-bed6-44e1-bc90-d416b9bfe7bb",
+        "stateId": "791ac1fe-1802-47d0-9dc9-98bfb34edc9c",
+        "name": "Rajnandgaon",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "5a665256-442c-4c07-ac6d-92bda9cb366c",
+        "stateId": "791ac1fe-1802-47d0-9dc9-98bfb34edc9c",
+        "name": "Sukma",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "89497461-50ba-426b-81a9-561ebb5ca437",
+        "stateId": "791ac1fe-1802-47d0-9dc9-98bfb34edc9c",
+        "name": "Surajpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "9bfb5a5f-e0d7-45f8-b95c-f854c22d253f",
+        "stateId": "791ac1fe-1802-47d0-9dc9-98bfb34edc9c",
+        "name": "Surguja",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "18578adc-ae57-45be-bc24-95125a33a8b0",
+        "stateId": "791ac1fe-1802-47d0-9dc9-98bfb34edc9c",
+        "name": "Uttar Kanker",
+        "odopProduct": null,
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "66de2814-b63a-4de6-b286-18ef2c14b3f8",
+    "name": "Dadra and Nagar Haveli and Daman and Diu",
+    "code": "DN",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "21582261-784b-4f15-9876-3f4f078c04ba",
+        "stateId": "66de2814-b63a-4de6-b286-18ef2c14b3f8",
+        "name": "Dadra and Nagar Haveli",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "04a380c0-c7f5-46d5-8413-b0e0a93bac5c",
+        "stateId": "66de2814-b63a-4de6-b286-18ef2c14b3f8",
+        "name": "Daman",
+        "odopProduct": "Tortoiseshell & Ivory Carving",
+        "isActive": true
+      },
+      {
+        "id": "ce1b90bf-fb55-4581-800e-096d63e06a06",
+        "stateId": "66de2814-b63a-4de6-b286-18ef2c14b3f8",
+        "name": "Diu",
+        "odopProduct": null,
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "a3069e71-b41c-47f4-aad2-43fc3570203d",
+    "name": "Delhi",
+    "code": "DL",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "99c71275-478a-4d39-91db-fee29ff9ebe1",
+        "stateId": "a3069e71-b41c-47f4-aad2-43fc3570203d",
+        "name": "Central",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "c0a70cf8-86d9-4c46-b2b6-3586d60fa16e",
+        "stateId": "a3069e71-b41c-47f4-aad2-43fc3570203d",
+        "name": "Central Delhi",
+        "odopProduct": "Zardozi Embroidery",
+        "isActive": true
+      },
+      {
+        "id": "91616ab3-40d1-4274-ba03-8b7315d5a14f",
+        "stateId": "a3069e71-b41c-47f4-aad2-43fc3570203d",
+        "name": "East",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "0c57113f-6de4-4985-8f2d-4063b04b8586",
+        "stateId": "a3069e71-b41c-47f4-aad2-43fc3570203d",
+        "name": "New Delhi",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "80ab9dbf-00fe-4201-b933-20f7e1c8cd16",
+        "stateId": "a3069e71-b41c-47f4-aad2-43fc3570203d",
+        "name": "North",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "bede3b0b-cc7f-4104-9805-7bd3dbb20317",
+        "stateId": "a3069e71-b41c-47f4-aad2-43fc3570203d",
+        "name": "North East",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "aca5edfa-8ee6-4436-9663-116934a48add",
+        "stateId": "a3069e71-b41c-47f4-aad2-43fc3570203d",
+        "name": "North West",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "0aeef474-d471-4440-ba65-4148ee13c5db",
+        "stateId": "a3069e71-b41c-47f4-aad2-43fc3570203d",
+        "name": "Shahdara",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b654c7d3-4ea4-44f8-9475-d19231df309f",
+        "stateId": "a3069e71-b41c-47f4-aad2-43fc3570203d",
+        "name": "South",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "9fa6ca45-cafd-4d80-b2d5-13a640cf73e2",
+        "stateId": "a3069e71-b41c-47f4-aad2-43fc3570203d",
+        "name": "South East Delhi",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "3f14b4ea-ee82-44ed-b555-0498a2328dad",
+        "stateId": "a3069e71-b41c-47f4-aad2-43fc3570203d",
+        "name": "South West",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "4e96ab34-414e-4d32-80fa-e266960ffde4",
+        "stateId": "a3069e71-b41c-47f4-aad2-43fc3570203d",
+        "name": "West",
+        "odopProduct": null,
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "4776fd87-465d-480b-bb21-3fc9d5cfff2d",
+    "name": "Goa",
+    "code": "GA",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "f40a2048-a47d-4dec-8bbd-2e4febc0758d",
+        "stateId": "4776fd87-465d-480b-bb21-3fc9d5cfff2d",
+        "name": "North Goa",
+        "odopProduct": "Cashew Nuts",
+        "isActive": true
+      },
+      {
+        "id": "b7ec9e73-03d4-47bc-b3d7-529d8b457fb5",
+        "stateId": "4776fd87-465d-480b-bb21-3fc9d5cfff2d",
+        "name": "South Goa",
+        "odopProduct": null,
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "c22040a6-29a4-4653-8201-91e5403c2d83",
+    "name": "Gujarat",
+    "code": "GJ",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "bbd8322d-f99d-453e-aab5-1b3db4c33d82",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Ahmadabad",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "7c1f6eaf-3230-46b4-a444-3837bdf5ced7",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Amreli",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "ab014ab1-059f-485b-a3ca-00b4d80e878d",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Anand",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "0005f541-ef89-4c1c-a265-8e8414bf556d",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Arvalli",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "c7ad38f9-d47a-4b85-b94a-a4bdefa5c840",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Banas Kantha",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "937a9437-984f-425a-91b9-8816aac076e5",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Bharuch",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "7a13e193-51db-4cbc-ad64-9380452ec693",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Bhavnagar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "ac6b0a23-e669-4572-8a11-cb822f0fc9be",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Botad",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "765d1b3d-9d41-48f6-87ef-c79742acec39",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Chhota Udepur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "ab3eb97c-17e4-4538-ac92-41faa6d8841d",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Devbhoomi Dwarka",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "dbf1cc04-37c7-42aa-bb62-0eef800212da",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Dohad",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "ca61b578-63a4-4676-b10e-e3239a7e0b5a",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Gandhinagar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "d360e240-5c30-4cd1-815c-9f970d1716fd",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Gir Somnath",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "540f2436-2d16-4a0d-8971-fb46e15ef6ac",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Jamnagar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b25f6125-73c6-4014-a544-29e20dacb0b2",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Junagadh",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "a05258ce-2da6-495b-afd1-e16cd455899a",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Kachchh",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "3b9c941f-24e5-42e1-96fa-371f5af63aed",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Kheda",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "ffa469ad-4589-45a7-b1e3-b4c1e454afa2",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Kutch",
+        "odopProduct": "Kutchi Embroidery",
+        "isActive": true
+      },
+      {
+        "id": "9586d04e-9b97-4498-81cd-74c48e89b21e",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Mahesana",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "21730396-6345-4b37-82ed-c4d671b957d2",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Mahisagar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "7d96b841-abf1-41c3-bae1-2d5e42218449",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Morbi",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "9823a931-b083-4bc0-905b-dae984c91d71",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Narmada",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "ff107ac6-b146-4a4d-abce-859d9bd77089",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Navsari",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "f20e9e29-e018-466e-91fd-473e960e0fdc",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Panch Mahals",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "ec441645-d241-47cc-b02f-743245154e88",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Patan",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "87fb1d0b-6ec7-48a5-840a-15c400ea991c",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Porbandar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "941b4f22-600d-4f71-a34d-09bb66b29ead",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Rajkot",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "d371fda0-293a-4378-bf66-c7bcba4e8899",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Sabar Kantha",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "d7508b70-3542-43dc-92bc-6cd3623a27ca",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Surat",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "0c5ff1b0-7eea-48ed-8323-9803c47182f5",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Surendranagar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "d53ec2a8-3b34-4344-b263-b2e2d47f8d38",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Tapi",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "2cbbdbf0-f697-46ff-9095-f63116d27ff9",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "The Dangs",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "38d80f43-9ea5-4b56-b7e2-46aca9dbfeb1",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Vadodara",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "a91e7307-c586-4dce-80a3-bfb90437074a",
+        "stateId": "c22040a6-29a4-4653-8201-91e5403c2d83",
+        "name": "Valsad",
+        "odopProduct": null,
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "100a8175-ad04-4633-9d37-53c659a958c4",
+    "name": "Haryana",
+    "code": "HR",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "8912a152-39a9-4581-ae34-aa87d25fe733",
+        "stateId": "100a8175-ad04-4633-9d37-53c659a958c4",
+        "name": "Ambala",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "c09d93b6-b35a-40cd-93aa-9cadfa63dbac",
+        "stateId": "100a8175-ad04-4633-9d37-53c659a958c4",
+        "name": "Bhiwani",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b28e6a83-0b63-49c2-ada0-7ad4f1d0ed3c",
+        "stateId": "100a8175-ad04-4633-9d37-53c659a958c4",
+        "name": "Charkhi Dadri",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "8225c355-cd51-4a83-aa1b-9d27d620aa01",
+        "stateId": "100a8175-ad04-4633-9d37-53c659a958c4",
+        "name": "Faridabad",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "3eb8184e-c1d4-4836-ac0d-efcfcc9b94e9",
+        "stateId": "100a8175-ad04-4633-9d37-53c659a958c4",
+        "name": "Fatehabad",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "7a520190-bc7b-43c2-8beb-f051c7e7a8b3",
+        "stateId": "100a8175-ad04-4633-9d37-53c659a958c4",
+        "name": "Gurgaon",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "baca1f79-925e-4bd6-9354-eb7196026164",
+        "stateId": "100a8175-ad04-4633-9d37-53c659a958c4",
+        "name": "Hisar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "f4c5bf5a-3d62-4b8a-8e8a-8adb9793dd42",
+        "stateId": "100a8175-ad04-4633-9d37-53c659a958c4",
+        "name": "Jhajjar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "360549bb-22b5-4221-b683-a5315b6350f9",
+        "stateId": "100a8175-ad04-4633-9d37-53c659a958c4",
+        "name": "Jind",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "34bad502-e331-47a0-bd80-8ca3cd665277",
+        "stateId": "100a8175-ad04-4633-9d37-53c659a958c4",
+        "name": "Kaithal",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "0b52c27a-08e0-4237-8d9e-639b752f18ed",
+        "stateId": "100a8175-ad04-4633-9d37-53c659a958c4",
+        "name": "Karnal",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "44c1d845-f8cd-492f-b34f-c487ab3f19f1",
+        "stateId": "100a8175-ad04-4633-9d37-53c659a958c4",
+        "name": "Kurukshetra",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "02b9e70c-7e1b-4683-a3be-6d0f77a342e0",
+        "stateId": "100a8175-ad04-4633-9d37-53c659a958c4",
+        "name": "Mahendragarh",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b67f1cee-529d-4435-9931-6ef2cfbe164f",
+        "stateId": "100a8175-ad04-4633-9d37-53c659a958c4",
+        "name": "Mewat",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "9483fd9a-0fc8-4b81-abeb-3a591201acc6",
+        "stateId": "100a8175-ad04-4633-9d37-53c659a958c4",
+        "name": "Palwal",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "03a39746-15a6-4ac6-bf88-29cd74290777",
+        "stateId": "100a8175-ad04-4633-9d37-53c659a958c4",
+        "name": "Panchkula",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "bd0b9b1f-d146-48a3-8be2-b40d1e3466ce",
+        "stateId": "100a8175-ad04-4633-9d37-53c659a958c4",
+        "name": "Panipat",
+        "odopProduct": "Handloom Carpets",
+        "isActive": true
+      },
+      {
+        "id": "131c9709-569c-4747-9715-b41954e01c17",
+        "stateId": "100a8175-ad04-4633-9d37-53c659a958c4",
+        "name": "Rewari",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "f83980bd-03b4-4377-96ce-8aa0c2ac1ea7",
+        "stateId": "100a8175-ad04-4633-9d37-53c659a958c4",
+        "name": "Rohtak",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b57935e7-0803-4ff1-a201-7f8fa852a4ff",
+        "stateId": "100a8175-ad04-4633-9d37-53c659a958c4",
+        "name": "Sirsa",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "3e90d87d-67f9-4c06-a441-263450f541b5",
+        "stateId": "100a8175-ad04-4633-9d37-53c659a958c4",
+        "name": "Sonipat",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "fd88d411-ec4c-43d1-b6e6-6dd63db46ddd",
+        "stateId": "100a8175-ad04-4633-9d37-53c659a958c4",
+        "name": "Yamunanagar",
+        "odopProduct": null,
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "cd57b847-a69e-435f-a369-96372f4b7aea",
+    "name": "Himachal Pradesh",
+    "code": "HP",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "312619ee-6d9c-4dba-aa52-5b0a18f19095",
+        "stateId": "cd57b847-a69e-435f-a369-96372f4b7aea",
+        "name": "Bilaspur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "725f538f-332b-4c0c-85e7-718f6297d72a",
+        "stateId": "cd57b847-a69e-435f-a369-96372f4b7aea",
+        "name": "Chamba",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "12f14579-0516-4c24-90c5-7388e131ac2a",
+        "stateId": "cd57b847-a69e-435f-a369-96372f4b7aea",
+        "name": "Hamirpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "acca400f-f9f6-4563-b274-e3b896b56c37",
+        "stateId": "cd57b847-a69e-435f-a369-96372f4b7aea",
+        "name": "Kangra",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "331e30e5-846c-42c1-9d52-5c117d730b91",
+        "stateId": "cd57b847-a69e-435f-a369-96372f4b7aea",
+        "name": "Kinnaur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "2956ec06-650c-4045-90af-ab5f67dcdcd7",
+        "stateId": "cd57b847-a69e-435f-a369-96372f4b7aea",
+        "name": "Kullu",
+        "odopProduct": "Kullu Shawl",
+        "isActive": true
+      },
+      {
+        "id": "a6f13c02-fae1-4eff-9b34-aee295f79cb3",
+        "stateId": "cd57b847-a69e-435f-a369-96372f4b7aea",
+        "name": "Lahul Spiti",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "e1472910-1ce3-4cb0-a5a9-9862720a7a47",
+        "stateId": "cd57b847-a69e-435f-a369-96372f4b7aea",
+        "name": "Mandi",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "98f0b630-2691-4840-b7c0-3a2a8d70b512",
+        "stateId": "cd57b847-a69e-435f-a369-96372f4b7aea",
+        "name": "Shimla",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "3dc834a7-30fe-407a-a64c-7725934cd4b1",
+        "stateId": "cd57b847-a69e-435f-a369-96372f4b7aea",
+        "name": "Sirmaur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "ac254c9e-7f32-4561-a817-0c0df9472c02",
+        "stateId": "cd57b847-a69e-435f-a369-96372f4b7aea",
+        "name": "Solan",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "038f77a9-7d8a-47c0-b00f-aa24fcbfcc7c",
+        "stateId": "cd57b847-a69e-435f-a369-96372f4b7aea",
+        "name": "Una",
+        "odopProduct": null,
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "a1310244-d58c-4112-88e5-3e531de329f3",
+    "name": "Jammu and Kashmir",
+    "code": "JK",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "aefb833c-e847-4000-a2ef-839406b5f373",
+        "stateId": "a1310244-d58c-4112-88e5-3e531de329f3",
+        "name": "Anantnag",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "1c30581d-7ca1-41a2-a45c-267fe6b9a446",
+        "stateId": "a1310244-d58c-4112-88e5-3e531de329f3",
+        "name": "Badgam",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "52f1ef30-796e-434b-9b02-afd8b7b0136d",
+        "stateId": "a1310244-d58c-4112-88e5-3e531de329f3",
+        "name": "Bandipore",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "82696cab-1dab-4604-9cc6-55cd6f25add6",
+        "stateId": "a1310244-d58c-4112-88e5-3e531de329f3",
+        "name": "Baramula",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "0d7ac0e0-1774-42e4-9fc4-16e17587f5b7",
+        "stateId": "a1310244-d58c-4112-88e5-3e531de329f3",
+        "name": "Doda",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b4843048-2667-4e85-bcc5-846213a66d12",
+        "stateId": "a1310244-d58c-4112-88e5-3e531de329f3",
+        "name": "Ganderbal",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "5f6e926f-bcd4-44d4-bfa4-eb2b64b09501",
+        "stateId": "a1310244-d58c-4112-88e5-3e531de329f3",
+        "name": "Jammu",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "9df10f17-b554-4d2b-ba92-1c678f7326af",
+        "stateId": "a1310244-d58c-4112-88e5-3e531de329f3",
+        "name": "Kargil",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "a7f80d8b-dc73-4d14-99e9-87da1e020792",
+        "stateId": "a1310244-d58c-4112-88e5-3e531de329f3",
+        "name": "Kathua",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "48e069d3-7c1f-4c32-a391-80227d30fff4",
+        "stateId": "a1310244-d58c-4112-88e5-3e531de329f3",
+        "name": "Kishtwar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "ddd44901-279a-48dd-ba42-87c051462292",
+        "stateId": "a1310244-d58c-4112-88e5-3e531de329f3",
+        "name": "Kulgam",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "a1087062-f5c6-4bb7-9595-6c5c6d0a5798",
+        "stateId": "a1310244-d58c-4112-88e5-3e531de329f3",
+        "name": "Kupwara",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "58a93cfc-0e82-40bd-ae90-fd8fe1d6b9ae",
+        "stateId": "a1310244-d58c-4112-88e5-3e531de329f3",
+        "name": "Leh(Ladakh)",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "0f2b3384-f8e6-4994-98dd-c9fef9e290f6",
+        "stateId": "a1310244-d58c-4112-88e5-3e531de329f3",
+        "name": "Pulwama",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "a8d9032a-108e-43a4-960c-436d8bcdcc92",
+        "stateId": "a1310244-d58c-4112-88e5-3e531de329f3",
+        "name": "Punch",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "3b18b0d5-b561-4e51-98a2-9b38d3b50714",
+        "stateId": "a1310244-d58c-4112-88e5-3e531de329f3",
+        "name": "Rajouri",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b1f312f8-0537-42d2-8b8a-4e2f1d9102d5",
+        "stateId": "a1310244-d58c-4112-88e5-3e531de329f3",
+        "name": "Ramban",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "2bb4f96e-fb7f-47a2-b474-0f03d6603b17",
+        "stateId": "a1310244-d58c-4112-88e5-3e531de329f3",
+        "name": "Reasi",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "22bcb866-0d0f-47fa-b4f6-81eedffa673d",
+        "stateId": "a1310244-d58c-4112-88e5-3e531de329f3",
+        "name": "Samba",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "46419fb8-1fa3-42eb-897c-aba457a7d013",
+        "stateId": "a1310244-d58c-4112-88e5-3e531de329f3",
+        "name": "Shupiyan",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "38dc9fb0-53cd-445f-8a59-d301952adc53",
+        "stateId": "a1310244-d58c-4112-88e5-3e531de329f3",
+        "name": "Srinagar",
+        "odopProduct": "Kashmiri Pashmina Shawl",
+        "isActive": true
+      },
+      {
+        "id": "3d07aa9c-c4d8-4059-b744-eb1e87abb5df",
+        "stateId": "a1310244-d58c-4112-88e5-3e531de329f3",
+        "name": "Udhampur",
+        "odopProduct": null,
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "e2d429b8-0256-4231-ba15-e79d9e400877",
+    "name": "Jharkhand",
+    "code": "JH",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "7dd8d85f-52fc-4469-9fc1-320461da74c4",
+        "stateId": "e2d429b8-0256-4231-ba15-e79d9e400877",
+        "name": "Bokaro",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "237aa8a2-077d-42c9-ae6d-93e079497463",
+        "stateId": "e2d429b8-0256-4231-ba15-e79d9e400877",
+        "name": "Chatra",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "dff7a01a-7ad3-4081-b36c-7ffac2b6f7c2",
+        "stateId": "e2d429b8-0256-4231-ba15-e79d9e400877",
+        "name": "Deoghar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "06fceb6d-0441-4c90-8db7-1b225003c118",
+        "stateId": "e2d429b8-0256-4231-ba15-e79d9e400877",
+        "name": "Dhanbad",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "00200e18-283f-41cf-a257-3d4cb9eee1bb",
+        "stateId": "e2d429b8-0256-4231-ba15-e79d9e400877",
+        "name": "Dumka",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "3dc641f2-78fa-45ef-9e54-5f4f05c0c210",
+        "stateId": "e2d429b8-0256-4231-ba15-e79d9e400877",
+        "name": "Garhwa",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "bac134d9-de49-43c9-a9c5-3e80058e849d",
+        "stateId": "e2d429b8-0256-4231-ba15-e79d9e400877",
+        "name": "Giridih",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "3dac2c75-c696-4a41-a91e-ae86f43ebcde",
+        "stateId": "e2d429b8-0256-4231-ba15-e79d9e400877",
+        "name": "Godda",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "79a8204b-474f-4a13-b8c0-7d9b8ea4c747",
+        "stateId": "e2d429b8-0256-4231-ba15-e79d9e400877",
+        "name": "Gumla",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "fa523411-7ccb-4942-a7c3-54c08808e86e",
+        "stateId": "e2d429b8-0256-4231-ba15-e79d9e400877",
+        "name": "Hazaribagh",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "5dccc90a-d32f-4c10-bd28-20fca50784cc",
+        "stateId": "e2d429b8-0256-4231-ba15-e79d9e400877",
+        "name": "Jamtara",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "a4dfe766-ea9f-43d3-b199-c67406568ac3",
+        "stateId": "e2d429b8-0256-4231-ba15-e79d9e400877",
+        "name": "Khunti",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "c2603a86-19da-4a28-901a-9b9d6b8cab1e",
+        "stateId": "e2d429b8-0256-4231-ba15-e79d9e400877",
+        "name": "Kodarma",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "39e79e69-bf5c-426a-8b1b-af5b7451f66d",
+        "stateId": "e2d429b8-0256-4231-ba15-e79d9e400877",
+        "name": "Latehar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "0a4c4c7e-4b26-4d4a-ba09-239be8a36b31",
+        "stateId": "e2d429b8-0256-4231-ba15-e79d9e400877",
+        "name": "Lohardaga",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "cef3fee4-192c-4886-8c1b-2609022468cf",
+        "stateId": "e2d429b8-0256-4231-ba15-e79d9e400877",
+        "name": "Pakur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "61dfba85-b24f-4dea-9621-d230c52d3c7b",
+        "stateId": "e2d429b8-0256-4231-ba15-e79d9e400877",
+        "name": "Palamu",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "96b31182-1992-48e4-91a6-8093697f67dc",
+        "stateId": "e2d429b8-0256-4231-ba15-e79d9e400877",
+        "name": "Pashchimi Singhbhum",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "50fe566f-c90c-4335-9769-5c878b017233",
+        "stateId": "e2d429b8-0256-4231-ba15-e79d9e400877",
+        "name": "Purbi Singhbhum",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "354a40ef-d429-4565-ac36-4398e006bc48",
+        "stateId": "e2d429b8-0256-4231-ba15-e79d9e400877",
+        "name": "Ramgarh",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b21b92de-cde9-42c3-9fd6-a2965917deb5",
+        "stateId": "e2d429b8-0256-4231-ba15-e79d9e400877",
+        "name": "Ranchi",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "61c5462f-e603-467f-9479-e325434fcca0",
+        "stateId": "e2d429b8-0256-4231-ba15-e79d9e400877",
+        "name": "Sahibganj",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "a490e142-2734-4d6e-bf5e-7cfac7123f6d",
+        "stateId": "e2d429b8-0256-4231-ba15-e79d9e400877",
+        "name": "Saraikela",
+        "odopProduct": "Seraikella Chhau Masks",
+        "isActive": true
+      },
+      {
+        "id": "6882812c-0cae-494d-a220-10641a26a691",
+        "stateId": "e2d429b8-0256-4231-ba15-e79d9e400877",
+        "name": "Saraikela-Kharsawan",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "039725d7-8d5f-4070-8413-fd72771d8784",
+        "stateId": "e2d429b8-0256-4231-ba15-e79d9e400877",
+        "name": "Simdega",
+        "odopProduct": null,
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+    "name": "Karnataka",
+    "code": "KA",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "6b69198f-df2e-4dc7-8f3b-b69c939e0dbb",
+        "stateId": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+        "name": "Bagalkot",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "db98cd45-93a8-46d7-b531-1d7b312d541e",
+        "stateId": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+        "name": "Bangalore",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "81179d05-17c8-4e8a-9ee5-99a5f9160ba4",
+        "stateId": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+        "name": "Bangalore Rural",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "ffbc2fb9-9847-434e-9b47-6eb62b89ed1c",
+        "stateId": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+        "name": "Belgaum",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "259005e1-18ab-4d4d-b5f6-9849ab286401",
+        "stateId": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+        "name": "Bellary",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "284432f0-d2e4-4c42-9896-804ae9c9cfe5",
+        "stateId": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+        "name": "Bidar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "565f5d12-e8f8-4b96-875e-e463acc75400",
+        "stateId": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+        "name": "Bijapur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "54e4890a-1b0f-4fba-b359-c0f9e0f2f78f",
+        "stateId": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+        "name": "Chamarajanagar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "663c680d-bbfe-45bf-8ff4-e057bb8fd919",
+        "stateId": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+        "name": "Chikkaballapura",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "86b5cd9b-9c24-4a35-92f2-0a6d1a1ead16",
+        "stateId": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+        "name": "Chikmagalur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "6e2fd182-f851-428e-ae87-b9ea4eb8edd4",
+        "stateId": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+        "name": "Chitradurga",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "5f4469b2-385b-400f-ac24-eb79b9934c2d",
+        "stateId": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+        "name": "Dakshina Kannada",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "66a07754-6e73-410d-a27a-b2f20b74ba7e",
+        "stateId": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+        "name": "Davanagere",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "2252eaf2-30fa-406c-bb60-2e7e4e1245a7",
+        "stateId": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+        "name": "Dharwad",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "a047ae10-6f99-49b7-81ba-a7485be76ea8",
+        "stateId": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+        "name": "Gadag",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "12aed01d-e4c1-4034-8e3d-cad62df99cb9",
+        "stateId": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+        "name": "Gulbarga",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "1ba157ef-24f0-45cf-9a4b-fac29daf174c",
+        "stateId": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+        "name": "Hassan",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "1513cd79-82a5-48e5-b594-b47a7b5159ab",
+        "stateId": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+        "name": "Haveri",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "2187dd72-e351-426e-a46e-518455f97b48",
+        "stateId": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+        "name": "Kodagu",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "37fbe74f-3d6c-4d2b-9301-c792d1d2f937",
+        "stateId": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+        "name": "Kolar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "77300dd9-fba4-4cbe-a97a-ed4e82f21766",
+        "stateId": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+        "name": "Koppal",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "237c2f92-b90f-4683-a95b-10ad9ec4cde6",
+        "stateId": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+        "name": "Mandya",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "aa91b397-c499-4e81-8c14-a5aa9c7557e3",
+        "stateId": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+        "name": "Mysore",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "503700dd-03ac-42b9-b93e-8f572c94599e",
+        "stateId": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+        "name": "Raichur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "e6add739-d026-48b6-b5bb-e8b5e23f1a25",
+        "stateId": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+        "name": "Ramanagara",
+        "odopProduct": "Channapatna Toys",
+        "isActive": true
+      },
+      {
+        "id": "08793245-a948-486c-87ce-ad1c2e56b509",
+        "stateId": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+        "name": "Shimoga",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "a97e5542-26fb-4054-92eb-3cd8b0b33b09",
+        "stateId": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+        "name": "Tumkur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "665f4228-5cff-4250-8951-03926a09d3c1",
+        "stateId": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+        "name": "Udupi",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "2b1ef0e6-2d02-41e2-babb-97ba029152ad",
+        "stateId": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+        "name": "Uttara Kannada",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "cb481d6c-9167-4acc-87ba-eaa7b475d333",
+        "stateId": "cbfb6d33-86c3-4fd8-9237-f4bba26c89b2",
+        "name": "Yadgir",
+        "odopProduct": null,
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "3687d83b-43b5-460e-bd67-4c8e55b7ec20",
+    "name": "Kerala",
+    "code": "KL",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "6b385d98-47ca-41ce-a9a5-e08f91300ba1",
+        "stateId": "3687d83b-43b5-460e-bd67-4c8e55b7ec20",
+        "name": "Alappuzha",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "4e523544-4626-47cf-8a4d-9c6345c1f7e9",
+        "stateId": "3687d83b-43b5-460e-bd67-4c8e55b7ec20",
+        "name": "Ernakulam",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "788d3527-ee05-4c1f-a511-6e9284b54045",
+        "stateId": "3687d83b-43b5-460e-bd67-4c8e55b7ec20",
+        "name": "Idukki",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "2cfd53d2-2e7d-439f-aca7-b33278f20006",
+        "stateId": "3687d83b-43b5-460e-bd67-4c8e55b7ec20",
+        "name": "Kannur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "43928f0d-0a27-48af-b49c-c19fae84d9c1",
+        "stateId": "3687d83b-43b5-460e-bd67-4c8e55b7ec20",
+        "name": "Kasaragod",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "3cf374fa-59da-4ee0-b633-7b0776f766c8",
+        "stateId": "3687d83b-43b5-460e-bd67-4c8e55b7ec20",
+        "name": "Kollam",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "202a9b0d-7cee-4155-8d37-a17ea7198f02",
+        "stateId": "3687d83b-43b5-460e-bd67-4c8e55b7ec20",
+        "name": "Kottayam",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "feec7709-d525-4853-8b4a-d7b1eceeb2f7",
+        "stateId": "3687d83b-43b5-460e-bd67-4c8e55b7ec20",
+        "name": "Kozhikode",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "e9d1141e-df63-4f96-aac3-415bbaaea033",
+        "stateId": "3687d83b-43b5-460e-bd67-4c8e55b7ec20",
+        "name": "Malappuram",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "000094c5-1961-481d-8435-04a5eb71b3ec",
+        "stateId": "3687d83b-43b5-460e-bd67-4c8e55b7ec20",
+        "name": "Palakkad",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "ea84370a-0428-4ada-be7b-2da139605cd9",
+        "stateId": "3687d83b-43b5-460e-bd67-4c8e55b7ec20",
+        "name": "Pathanamthitta",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "50783c88-47a9-414c-bd1a-147b61656901",
+        "stateId": "3687d83b-43b5-460e-bd67-4c8e55b7ec20",
+        "name": "Thiruvananthapuram",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "f9884a7b-fd76-42ea-a283-3864f72c4d30",
+        "stateId": "3687d83b-43b5-460e-bd67-4c8e55b7ec20",
+        "name": "Thrissur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "67a34cc5-907e-420d-9e8b-c098c8bcd716",
+        "stateId": "3687d83b-43b5-460e-bd67-4c8e55b7ec20",
+        "name": "Wayanad",
+        "odopProduct": "Wayanad Cardamom",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "59654196-66c5-4f84-bd0a-cda960a2316d",
+    "name": "Ladakh",
+    "code": "LA",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "63fe01e8-c6a3-49d4-a203-a1cd393bf81c",
+        "stateId": "59654196-66c5-4f84-bd0a-cda960a2316d",
+        "name": "Kargil",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "dcb92eef-cf58-4d9f-915a-76fbaabf5401",
+        "stateId": "59654196-66c5-4f84-bd0a-cda960a2316d",
+        "name": "Leh",
+        "odopProduct": "Sea Buckthorn Berries",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "74a9c833-e834-4f23-9518-34555a275ec7",
+    "name": "Lakshadweep",
+    "code": "LD",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "4f8fce78-6309-4bbe-9f34-3dca3d0e5690",
+        "stateId": "74a9c833-e834-4f23-9518-34555a275ec7",
+        "name": "Kavaratti",
+        "odopProduct": "Coir and Coconut Products",
+        "isActive": true
+      },
+      {
+        "id": "9c173eba-5d34-4d1e-8892-1b0afc17ccce",
+        "stateId": "74a9c833-e834-4f23-9518-34555a275ec7",
+        "name": "Lakshadweep",
+        "odopProduct": null,
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "2577feb1-c767-4436-89d5-81d2179c995d",
+    "name": "Madhya Pradesh",
+    "code": "MP",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "c41a4103-0cef-4817-8ec2-30a0da6ac6ec",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Agar Malwa",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "3f55d73d-7e7a-4268-8864-85689b9761cd",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Alirajpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "94e459a1-6f3d-465f-8d55-8b3b72a65082",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Anuppur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "6da9240b-750f-4cb4-a26f-de13e3a53308",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Ashoknagar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "0b8bc180-4229-481f-81d0-81d99dbc34ad",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Balaghat",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "297b7d2a-c0ae-49d2-b035-4088934b100a",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Barwani",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "20285e92-9b76-421d-8d7b-4d12f2ed8ae6",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Betul",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "6d3f5957-0872-4402-b66f-006ed324078b",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Bhind",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "fbdc58c2-8fcf-479f-a313-c0fa0880cf55",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Bhopal",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "629210a2-84b9-4ef8-8b92-f11d29b03c1a",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Burhanpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "c5197727-0b4e-4f24-a25a-645ea4599541",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Chanderi",
+        "odopProduct": "Chanderi Saree",
+        "isActive": true
+      },
+      {
+        "id": "f4ae1310-e4a8-4f9f-9061-500bcce1933d",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Chhatarpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "022560d9-54e6-4e2e-9ebf-93b31858c3d4",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Chhindwara",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "ab923074-ef60-471e-8e5a-ae47639daefe",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Damoh",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "0fe5823f-44b1-488b-8c8a-b5bbc26aa26d",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Datia",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "e3d94b8b-1d06-4a59-a65c-63034f432534",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Dewas",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "9bd5550a-21a2-424e-b1ac-6109ea96ed36",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Dhar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "9666bd6c-f84b-4e99-9e9b-c467d0a3679b",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Dindori",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "228cab32-16b3-48fe-9fb5-7adb2738b1e3",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Guna",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "38abf52e-c007-43af-a8fc-9da3a013260f",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Gwalior",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "9f9df967-fca4-471f-8cf2-70d78565400f",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Harda",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b8189258-101b-4f6f-819f-3b900c781ad0",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Hoshangabad",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "27920dc6-1852-4205-8760-dd0ebaddf8e9",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Indore",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "d1b26609-ffee-4735-a9fe-a55467923496",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Jabalpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b12d86de-d20e-4ffd-b29a-d982b59e9e15",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Jhabua",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "599c75b3-b74c-4783-bae5-5004f991b7c2",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Katni",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "c37ccbb3-c539-44f5-aac9-da5155ebc298",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Khandwa (East Nimar)",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "6d8983b2-b565-4dc2-bc7d-b5b2d6c29d63",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Khargone (West Nimar)",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "5fa32602-c76a-4f48-8054-5f4b5abb331d",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Mandla",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "fa6fb35e-ce53-495b-bc97-639dfdce3f90",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Mandsaur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "3163b510-5c51-40b2-8969-a6afa35f59f5",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Morena",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "8c01e016-ed9d-48ff-add4-b858d7a2004e",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Narsimhapur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "42a0a2f9-68f5-48cd-b367-6e36323d6a27",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Neemuch",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "91407dce-3792-4f42-8c55-65ddce813058",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Panna",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "118c9de8-a333-46f2-94c6-ae27a203cd89",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Raisen",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "99dc271d-6463-4973-887d-a77f98f4cd7b",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Rajgarh",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "19065c26-07aa-4f66-a234-31667185524b",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Ratlam",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "4b21163d-e1e0-4fee-9e56-578b24ad21f4",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Rewa",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "3acf1af1-35b3-47a4-95f2-a5140acb39f8",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Sagar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "2c72d631-cbef-4c6b-b2fe-9b5debdeeca9",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Satna",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "72b184aa-ac99-42a6-8d7a-e18a9c8dcc22",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Sehore",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "d71b387b-e9d5-44af-a38c-d1ed5b535002",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Seoni",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "c4acfd65-6c55-45f0-a2ac-646cd1b7eac2",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Shahdol",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b10f447f-a794-4e39-a94a-81baefca1a58",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Shajapur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "6e535c77-134f-42fa-9672-62eff1622d86",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Sheopur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "29c863a7-0d5a-41c6-99b3-6f49a6e0270a",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Shivpuri",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b8bfba8c-c972-4004-b7ed-7c24e13e8d9a",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Sidhi",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "34b965f6-7108-4cfe-9d55-5f9410857d28",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Singrauli",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "1c5dfec0-6adc-4c74-ba4a-9a4fc5139fce",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Tikamgarh",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "090900cb-5919-4e8e-a3de-d842f16fd982",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Ujjain",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "a9a4d9cf-b112-4679-959c-8937dd64a036",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Umaria",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "2f99c662-8b84-4faf-88b0-0df47428cfc3",
+        "stateId": "2577feb1-c767-4436-89d5-81d2179c995d",
+        "name": "Vidisha",
+        "odopProduct": null,
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+    "name": "Maharashtra",
+    "code": "MH",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "e4f2b2d0-b475-4a05-b10d-4fc3a1fb23e6",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Ahmadnagar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "53e83c15-bab5-4031-aee6-82a21a289f49",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Akola",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "3c47bc47-3022-482c-97ec-fa5435c0d13c",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Amravati",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "cfb5683a-f4f2-49f3-b457-6ce54630a19f",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Aurangabad",
+        "odopProduct": "Himroo Shawls",
+        "isActive": true
+      },
+      {
+        "id": "d3173537-f91f-41ab-b76e-17db270c7cf2",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Bhandara",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "35cae379-da9e-4fd9-b0b8-b729f984916a",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Bid",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "00bad17d-4886-4e86-8738-b5e6e60614ab",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Buldana",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "2b25353f-01b4-4cdb-94f2-b6f179ee7129",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Chandrapur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "ccabfd62-8b1d-4153-9785-1e31b6c9104c",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Dhule",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "5813273b-7b88-4f34-b099-82112ab8c6f9",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Gadchiroli",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "c8cf31a5-a297-42b4-a721-9ff8571bdc31",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Gondiya",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "221bd6a4-f882-46dc-bfc8-b4480cf1aea4",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Hingoli",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "0f4fd3db-b37b-435d-a62b-676ba02a34b2",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Jalgaon",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b5303ec3-0227-4d5b-a27a-1876b5036336",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Jalna",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "9d339389-252a-495c-a0b7-6e1185ad9407",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Kolhapur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "2f5f194f-7efe-4866-8469-99d15b3aa830",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Latur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "726a523b-51fd-403b-8fdb-cf27b6bc902c",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Mumbai",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "0405b32b-47b7-4eee-8e44-a6307aa5d764",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Mumbai Suburban",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b8360ecb-d448-4a91-b6d6-df8ee0f83c4d",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Nagpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "9fe67d6f-ee57-495d-a30c-7bf8e8f8aee4",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Nanded",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "49168fa4-84f7-49ba-8e93-114d19ed2e05",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Nandurbar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "872498fe-3ce5-4766-b8d1-51369360c139",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Nashik",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "0f0612d0-8ff6-4e15-a06e-3fcb0104a6e3",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Osmanabad",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "9bb7573d-9cc3-4282-9dbc-f547a7d429fa",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Palghar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "f02e3a82-53bc-4122-9c44-71a08b63a241",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Parbhani",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "fa6202c9-6050-42a9-958d-af9ba07b828b",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Pune",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "4a4322c8-aceb-4ed4-8dfe-74fc76e33c61",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Raigarh",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "76005936-020b-4d47-bb28-77f27c52ed74",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Ratnagiri",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "758dd3ef-37f3-491e-9e0f-7172cb284be8",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Sangli",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "71bffe20-bd82-4577-be1b-e0f2ad91daf2",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Satara",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "7e1a3303-2069-4b8b-b9d5-012941b1a2b9",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Sindhudurg",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "4da7dc5b-960e-4bcd-8967-b25eccbf531e",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Solapur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "d8f2feb0-525b-4857-9a37-dc7dfc33997f",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Thane",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "557df783-0cc4-4940-adda-a0caddee3c8f",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Wardha",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "9032e516-7d7a-43ea-90ef-6bce312a7b3a",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Washim",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "6cec19fd-a408-41d7-ada0-6f4fb26768b4",
+        "stateId": "3fb33052-061f-4b9a-a272-ea30f275bb6f",
+        "name": "Yavatmal",
+        "odopProduct": null,
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "9b1b246f-4492-40e2-86c0-37840a33901a",
+    "name": "Manipur",
+    "code": "MN",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "b6c2aa3a-ece7-43ec-8167-277c9cc923c2",
+        "stateId": "9b1b246f-4492-40e2-86c0-37840a33901a",
+        "name": "Bishnupur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "3e36864d-4b39-4beb-a370-1bbaecda1256",
+        "stateId": "9b1b246f-4492-40e2-86c0-37840a33901a",
+        "name": "Chandel",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "671b1438-1299-49c3-92a1-743e566112a9",
+        "stateId": "9b1b246f-4492-40e2-86c0-37840a33901a",
+        "name": "Churachandpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "9df9c0d2-bea3-4ef3-9ac9-809b2917f254",
+        "stateId": "9b1b246f-4492-40e2-86c0-37840a33901a",
+        "name": "Imphal East",
+        "odopProduct": "Kauna Reed Craft",
+        "isActive": true
+      },
+      {
+        "id": "126dc48c-63e7-4a8e-aa76-49de1483f4ec",
+        "stateId": "9b1b246f-4492-40e2-86c0-37840a33901a",
+        "name": "Imphal West",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "2ff1f4c4-3c45-4eb4-8272-15a979568584",
+        "stateId": "9b1b246f-4492-40e2-86c0-37840a33901a",
+        "name": "Jiribam",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "4c969ff9-75dc-42ae-aa4a-2f677e30cd1c",
+        "stateId": "9b1b246f-4492-40e2-86c0-37840a33901a",
+        "name": "Kakching",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "d62586a9-8ea6-4f35-9f85-59ae02f33336",
+        "stateId": "9b1b246f-4492-40e2-86c0-37840a33901a",
+        "name": "Kamjong",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "4b89894e-07fe-4ef9-8847-92a8d381cdfc",
+        "stateId": "9b1b246f-4492-40e2-86c0-37840a33901a",
+        "name": "Kangpokpi",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "5a189933-e362-4d17-a46c-c54c9a953c58",
+        "stateId": "9b1b246f-4492-40e2-86c0-37840a33901a",
+        "name": "Noney",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "4ac51558-f854-45e3-ae7a-5c98be9be142",
+        "stateId": "9b1b246f-4492-40e2-86c0-37840a33901a",
+        "name": "Pherzawl",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "c0b34cfa-5a1e-4aee-8d2f-f16263351b4d",
+        "stateId": "9b1b246f-4492-40e2-86c0-37840a33901a",
+        "name": "Senapati",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "70e1860c-e88e-4019-ad98-056432e18092",
+        "stateId": "9b1b246f-4492-40e2-86c0-37840a33901a",
+        "name": "Tamenglong",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "69b1a91e-c939-4f1f-8439-78c7407f934e",
+        "stateId": "9b1b246f-4492-40e2-86c0-37840a33901a",
+        "name": "Tengnoupal",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "aa5631de-f8bf-435d-b13c-94a33acb1f67",
+        "stateId": "9b1b246f-4492-40e2-86c0-37840a33901a",
+        "name": "Thoubal",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "669c2f15-e207-473d-81ae-8a5d07b6d5c2",
+        "stateId": "9b1b246f-4492-40e2-86c0-37840a33901a",
+        "name": "Ukhrul",
+        "odopProduct": null,
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "66761df4-15f0-4169-b427-d1abac023de3",
+    "name": "Meghalaya",
+    "code": "ML",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "4fa3354a-b4d9-485d-93f7-37b90ea7330e",
+        "stateId": "66761df4-15f0-4169-b427-d1abac023de3",
+        "name": "East Garo Hills",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "ec0a2486-c299-4e7a-8497-c0130d77033c",
+        "stateId": "66761df4-15f0-4169-b427-d1abac023de3",
+        "name": "East Jaintia Hills",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "e88ce8b4-597f-4b59-9db2-ad67df938b57",
+        "stateId": "66761df4-15f0-4169-b427-d1abac023de3",
+        "name": "East Khasi Hills",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "6b92e82e-1bd6-4e10-9078-fcd132aa7132",
+        "stateId": "66761df4-15f0-4169-b427-d1abac023de3",
+        "name": "Jaintia Hills",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "96dd69cd-230b-4057-b513-154d88a1c98f",
+        "stateId": "66761df4-15f0-4169-b427-d1abac023de3",
+        "name": "North Garo Hills",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "0a1ed84f-1372-4329-af0b-7f8629194813",
+        "stateId": "66761df4-15f0-4169-b427-d1abac023de3",
+        "name": "Ribhoi",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "d18a5d85-960a-45bf-b09b-65dcad9ebd86",
+        "stateId": "66761df4-15f0-4169-b427-d1abac023de3",
+        "name": "South Garo Hills",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "e4c11e86-d3cd-4d97-97c3-e3b133a46b69",
+        "stateId": "66761df4-15f0-4169-b427-d1abac023de3",
+        "name": "South West Garo Hills",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "5ad147bd-e594-453a-8fad-756c002f0fcf",
+        "stateId": "66761df4-15f0-4169-b427-d1abac023de3",
+        "name": "South West Khasi Hills",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "2ee64a0e-0f34-4232-abf2-4a8a5217ac98",
+        "stateId": "66761df4-15f0-4169-b427-d1abac023de3",
+        "name": "West Garo Hills",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "9b501908-f8e8-46b2-a399-c3229598afe3",
+        "stateId": "66761df4-15f0-4169-b427-d1abac023de3",
+        "name": "West Jaintia Hills",
+        "odopProduct": "Lakadong Turmeric",
+        "isActive": true
+      },
+      {
+        "id": "ac896b89-2045-42e6-b94f-026b73180aa4",
+        "stateId": "66761df4-15f0-4169-b427-d1abac023de3",
+        "name": "West Khasi Hills",
+        "odopProduct": null,
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "b2668f71-d15e-463c-9162-df9e153de5e6",
+    "name": "Mizoram",
+    "code": "MZ",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "fbfccdf7-4c76-489e-865b-d74b4a47e484",
+        "stateId": "b2668f71-d15e-463c-9162-df9e153de5e6",
+        "name": "Aizawl",
+        "odopProduct": "Mizo Puan Fabric",
+        "isActive": true
+      },
+      {
+        "id": "a3bfade6-e3e3-431d-85a9-b74ad9d63e79",
+        "stateId": "b2668f71-d15e-463c-9162-df9e153de5e6",
+        "name": "Champhai",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "1b81991d-19da-4969-b2be-a3bab5a4d062",
+        "stateId": "b2668f71-d15e-463c-9162-df9e153de5e6",
+        "name": "Kolasib",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "3d9c69d0-7316-4692-b0bf-ef5b07e0fa0c",
+        "stateId": "b2668f71-d15e-463c-9162-df9e153de5e6",
+        "name": "Lawngtlai",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "e507945c-16e1-4a97-afa8-baad47aca9ef",
+        "stateId": "b2668f71-d15e-463c-9162-df9e153de5e6",
+        "name": "Lunglei",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "fa24d20f-1be0-4cf0-93c9-8e03b8ec1204",
+        "stateId": "b2668f71-d15e-463c-9162-df9e153de5e6",
+        "name": "Mamit",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "af8389e6-d9f3-42f7-833a-2152c6694f6c",
+        "stateId": "b2668f71-d15e-463c-9162-df9e153de5e6",
+        "name": "Saiha",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "396126e6-e53f-4ecc-b586-e67dc2380214",
+        "stateId": "b2668f71-d15e-463c-9162-df9e153de5e6",
+        "name": "Serchhip",
+        "odopProduct": null,
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "b2f69e18-b1ca-46cf-8386-bcc337b17e35",
+    "name": "Nagaland",
+    "code": "NL",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "00e54514-41d7-4c73-9535-c48344330742",
+        "stateId": "b2f69e18-b1ca-46cf-8386-bcc337b17e35",
+        "name": "Chumoukedima",
+        "odopProduct": "Naga Handloom & Crafts",
+        "isActive": true
+      },
+      {
+        "id": "f5c4e3e9-6bc3-4209-abc1-b82e9f2f3de4",
+        "stateId": "b2f69e18-b1ca-46cf-8386-bcc337b17e35",
+        "name": "Dimapur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "dafb8566-3585-4d74-888d-c84cbc750e82",
+        "stateId": "b2f69e18-b1ca-46cf-8386-bcc337b17e35",
+        "name": "Kiphire",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "4ab4bf09-da5c-4ba8-aac6-0c36e0acb0d9",
+        "stateId": "b2f69e18-b1ca-46cf-8386-bcc337b17e35",
+        "name": "Kohima",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "67d3b536-b878-4c08-bb3d-8cf7de52efc3",
+        "stateId": "b2f69e18-b1ca-46cf-8386-bcc337b17e35",
+        "name": "Longleng",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "00e68b2b-5391-4983-9d3d-1ac28db4d351",
+        "stateId": "b2f69e18-b1ca-46cf-8386-bcc337b17e35",
+        "name": "Mokokchung",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "29db2b9c-5a00-448c-ae7f-9e74243a880e",
+        "stateId": "b2f69e18-b1ca-46cf-8386-bcc337b17e35",
+        "name": "Mon",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "bbbf473c-4fd0-4e3d-961b-1dffbbbb58dc",
+        "stateId": "b2f69e18-b1ca-46cf-8386-bcc337b17e35",
+        "name": "Peren",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "219377f1-a356-4d3c-8f52-c728eab952d4",
+        "stateId": "b2f69e18-b1ca-46cf-8386-bcc337b17e35",
+        "name": "Phek",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "ef736024-bfc8-4b42-a807-b705c830913d",
+        "stateId": "b2f69e18-b1ca-46cf-8386-bcc337b17e35",
+        "name": "Tuensang",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "bae693c3-af4e-44db-8e69-8a61ca02ee74",
+        "stateId": "b2f69e18-b1ca-46cf-8386-bcc337b17e35",
+        "name": "Wokha",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "982aa610-dfe0-4045-a866-aa0ab2178ef1",
+        "stateId": "b2f69e18-b1ca-46cf-8386-bcc337b17e35",
+        "name": "Zunheboto",
+        "odopProduct": null,
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+    "name": "Odisha",
+    "code": "OR",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "671e9723-a2f2-4288-9a85-657567897fa3",
+        "stateId": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+        "name": "Anugul",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "2228d321-bd6d-4cec-bcde-6b0799e848e5",
+        "stateId": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+        "name": "Balangir",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "199d5dc7-ca2e-4bbe-9225-232cdbd56494",
+        "stateId": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+        "name": "Baleshwar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "f0f7413a-c391-407a-a86d-303b30aa7d3d",
+        "stateId": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+        "name": "Bargarh",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "9a2c0bfc-a5c3-466c-9180-99dc4269282c",
+        "stateId": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+        "name": "Baudh",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "014825e9-3be6-4fad-a06a-034c90194722",
+        "stateId": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+        "name": "Bhadrak",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "81957e0f-0683-4296-8469-2f4efe8008b8",
+        "stateId": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+        "name": "Cuttack",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b4c3a5af-c1da-4088-a76b-7eb8115ebab5",
+        "stateId": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+        "name": "Debagarh",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "1bcfc5c0-3293-4df8-8d21-ac15c726be00",
+        "stateId": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+        "name": "Dhenkanal",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "189c0536-9865-4da9-b4fc-2f2815f82a3d",
+        "stateId": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+        "name": "Gajapati",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "f40afac7-7494-4e04-87b1-2269d1df5e61",
+        "stateId": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+        "name": "Ganjam",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "79c3b00e-8f83-49c7-8a4f-d19329f0d8b7",
+        "stateId": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+        "name": "Jagatsinghapur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "fc299ff2-e0ea-4bf8-8044-8d8dd445eafe",
+        "stateId": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+        "name": "Jajapur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "1302e5dc-17b2-4dc0-b045-b89b8dad40eb",
+        "stateId": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+        "name": "Jharsuguda",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "71efbc5c-67bd-4b03-aea1-82ebf4cf0d12",
+        "stateId": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+        "name": "Kalahandi",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "819066c9-4a0b-4541-9f3d-7c09347a705f",
+        "stateId": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+        "name": "Kandhamal",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "45103f2c-bd6b-4bc7-aace-7e5b55ac728d",
+        "stateId": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+        "name": "Kendrapara",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "f2c26213-ba79-491b-b3fd-cbb385ca6e2f",
+        "stateId": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+        "name": "Kendujhar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "d01fc073-85ac-409c-a99a-11fc6e9ab9be",
+        "stateId": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+        "name": "Khordha",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "2a284736-6f14-4ab2-be04-4df1dc3d0f27",
+        "stateId": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+        "name": "Koraput",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "966a4419-2a40-45c6-a474-16abc42acf1f",
+        "stateId": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+        "name": "Malkangiri",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "611bd1e0-9e2e-4cb1-bdb3-79a23fbbf179",
+        "stateId": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+        "name": "Mayurbhanj",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "64e2ae80-d0c9-4a3a-8942-1fe6fa8b7e57",
+        "stateId": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+        "name": "Nabarangapur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "9029f038-5a14-4e60-ab14-db38a6c7f36e",
+        "stateId": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+        "name": "Nayagarh",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "a9db5053-3ab6-4123-b2a9-3e935bca2583",
+        "stateId": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+        "name": "Nuapada",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "3a885e93-af96-48c2-81b7-0ef3bd172a99",
+        "stateId": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+        "name": "Puri",
+        "odopProduct": "Applique Work of Pippli",
+        "isActive": true
+      },
+      {
+        "id": "267ccce5-78d3-491f-b027-bf2489a7d3c7",
+        "stateId": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+        "name": "Rayagada",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "cb3a1720-e0a2-4734-afcc-b1bf27f07b29",
+        "stateId": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+        "name": "Sambalpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "3e2d372d-a3f1-4510-a42e-22b5e3232cad",
+        "stateId": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+        "name": "Subarnapur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "9c81da88-87b7-4016-b753-691367e4f2d6",
+        "stateId": "b004f221-9934-4ace-8ede-b6043d75a3b0",
+        "name": "Sundargarh",
+        "odopProduct": null,
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "c9460491-3b51-4a4c-b02b-4525d7f565aa",
+    "name": "Puducherry",
+    "code": "PY",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "55d93ba9-ab89-48b0-bf8f-884cf503c1f9",
+        "stateId": "c9460491-3b51-4a4c-b02b-4525d7f565aa",
+        "name": "Karaikal",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "7a44d8da-e0fc-4af8-8741-2f2c7d802a55",
+        "stateId": "c9460491-3b51-4a4c-b02b-4525d7f565aa",
+        "name": "Mahe",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "8ad54bdd-c4ef-48ea-9786-af8c351ef287",
+        "stateId": "c9460491-3b51-4a4c-b02b-4525d7f565aa",
+        "name": "Puducherry",
+        "odopProduct": "Terracotta Toys & Dolls",
+        "isActive": true
+      },
+      {
+        "id": "f1ea6f06-fc58-44c2-ac79-e9a1a341b4d1",
+        "stateId": "c9460491-3b51-4a4c-b02b-4525d7f565aa",
+        "name": "Yanam",
+        "odopProduct": null,
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "c6e3e015-8024-431e-bbef-bf0002d8a63f",
+    "name": "Punjab",
+    "code": "PB",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "1c08e11e-200d-4314-923d-06d78dc22898",
+        "stateId": "c6e3e015-8024-431e-bbef-bf0002d8a63f",
+        "name": "Amritsar",
+        "odopProduct": "Phulkari Embroidery",
+        "isActive": true
+      },
+      {
+        "id": "4396e959-52a2-45da-b968-47ed704759de",
+        "stateId": "c6e3e015-8024-431e-bbef-bf0002d8a63f",
+        "name": "Barnala",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "3e12517a-61f5-4193-a0c2-6c7ab8fc7839",
+        "stateId": "c6e3e015-8024-431e-bbef-bf0002d8a63f",
+        "name": "Bathinda",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "50e4552e-56cb-4ed4-8134-8cfe8f08ba95",
+        "stateId": "c6e3e015-8024-431e-bbef-bf0002d8a63f",
+        "name": "Faridkot",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "933a5594-eabe-4ba9-a9a2-864b5135b5ba",
+        "stateId": "c6e3e015-8024-431e-bbef-bf0002d8a63f",
+        "name": "Fatehgarh Sahib",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "d9a7336c-ce49-4164-b385-dfd7bf7f8f52",
+        "stateId": "c6e3e015-8024-431e-bbef-bf0002d8a63f",
+        "name": "Fazilka",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "a1a28094-0ff1-4297-98d8-6dcd9e8e48a9",
+        "stateId": "c6e3e015-8024-431e-bbef-bf0002d8a63f",
+        "name": "Firozpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "c19617bd-7d97-436c-8284-5d1ccd94b0b5",
+        "stateId": "c6e3e015-8024-431e-bbef-bf0002d8a63f",
+        "name": "Gurdaspur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "98394847-3ab7-44b6-b780-f97605d3512d",
+        "stateId": "c6e3e015-8024-431e-bbef-bf0002d8a63f",
+        "name": "Hoshiarpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "97061bd9-c3ea-42f7-9038-71f09018f959",
+        "stateId": "c6e3e015-8024-431e-bbef-bf0002d8a63f",
+        "name": "Jalandhar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "cb6ae71a-6220-4224-91bb-111ab0f43071",
+        "stateId": "c6e3e015-8024-431e-bbef-bf0002d8a63f",
+        "name": "Kapurthala",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "86311380-1741-4190-8a42-1ee0adea7944",
+        "stateId": "c6e3e015-8024-431e-bbef-bf0002d8a63f",
+        "name": "Ludhiana",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "ffef0498-21f3-42d3-9114-fb1935df57b0",
+        "stateId": "c6e3e015-8024-431e-bbef-bf0002d8a63f",
+        "name": "Mansa",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "72dbeaaa-be11-4791-b9fa-f6ec3f3c1608",
+        "stateId": "c6e3e015-8024-431e-bbef-bf0002d8a63f",
+        "name": "Moga",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "dcf24a7b-ee2c-4f56-9ab1-feb20661de6b",
+        "stateId": "c6e3e015-8024-431e-bbef-bf0002d8a63f",
+        "name": "Muktsar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "2e37b327-f067-4f9f-874c-fe4dc791ff17",
+        "stateId": "c6e3e015-8024-431e-bbef-bf0002d8a63f",
+        "name": "Pathankot",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "3d98e052-db0c-4010-a375-8c5fac0f0e68",
+        "stateId": "c6e3e015-8024-431e-bbef-bf0002d8a63f",
+        "name": "Patiala",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "a9f1982b-b8e3-454e-a1ee-15cd6683957c",
+        "stateId": "c6e3e015-8024-431e-bbef-bf0002d8a63f",
+        "name": "Rupnagar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "0736e854-b7b2-4d1f-88a7-e4f65b1251d2",
+        "stateId": "c6e3e015-8024-431e-bbef-bf0002d8a63f",
+        "name": "Sahibzada Ajit Singh Nagar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "9f6b1118-42ce-412d-8ce4-1eda0f3bcc89",
+        "stateId": "c6e3e015-8024-431e-bbef-bf0002d8a63f",
+        "name": "Sangrur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "9e71b9d0-c878-4bb4-a442-4eb8373a54c0",
+        "stateId": "c6e3e015-8024-431e-bbef-bf0002d8a63f",
+        "name": "Shahid Bhagat Singh Nagar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "a7fe3ac3-cd37-4958-99e7-5a64334c2101",
+        "stateId": "c6e3e015-8024-431e-bbef-bf0002d8a63f",
+        "name": "Tarn Taran",
+        "odopProduct": null,
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+    "name": "Rajasthan",
+    "code": "RJ",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "e965ff14-5a85-452b-8476-5df213517f8d",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Ajmer",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "29cd44f6-39f4-4f97-9322-e13307554bbc",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Alwar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "10ca5e65-06b5-475e-94f9-2416a4e25c3a",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Banswara",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "695cd6f2-edf7-48fb-84cb-d7aa9a6f5e46",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Baran",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "0858f089-5218-4f0b-8bce-d60dc46f97a0",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Barmer",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "832fdf79-f2c4-41bc-b142-45ecfa2d7da8",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Bharatpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "5e21852d-b659-4c25-877e-070fd0eb60b3",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Bhilwara",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "9917b8c0-d1d9-415f-b150-65bb88583842",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Bikaner",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "9de57354-1f01-49df-814f-e5dfa9beddf5",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Bundi",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "1533eacf-5c2a-49ac-b4eb-4c99fe11a1b7",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Chittaurgarh",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "da9829f9-0b0e-4bb1-bc6c-302d2de2d577",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Churu",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "444f8577-ee83-4439-969b-2176936a261e",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Dausa",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "bdd59b42-4605-4812-8230-0a0484b01fdc",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Dhaulpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "4650ce2d-c132-4831-8294-80a9371b2171",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Dungarpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "678d692c-b371-4948-8f70-d5cbaf8ab6ac",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Hanumangarh",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "0c027940-466a-43c0-a933-2955f4cd9872",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Jaipur",
+        "odopProduct": "Blue Pottery",
+        "isActive": true
+      },
+      {
+        "id": "89636b47-ba27-462d-ae60-54d4c950404e",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Jaisalmer",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "65220713-e705-4745-bcf9-6dda39d36012",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Jalor",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "30d78f19-86ad-4b8f-923e-6d77f5f11424",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Jhalawar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "f3d74fdc-6321-4ada-a9b3-c4a5366787f8",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Jhunjhunun",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "a1560874-6803-4276-8dd1-f45f90dd0169",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Jodhpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "94732901-93c6-44cb-952c-317259de40bc",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Karauli",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "8a1ad052-8f31-4902-86d4-9bbc07449607",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Kota",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "6183045b-ca8b-48c4-acac-95e4fb2ec2f3",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Nagaur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "a5eb8b7c-2310-49ac-89e8-587fe1d2195a",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Pali",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b0e9c194-862b-42a2-96a4-02c3d03c43b6",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Pratapgarh",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b390a619-8392-4daf-9999-d4a92bd11e1d",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Rajsamand",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "3ea80766-c3a7-4b82-8afe-45063a963f31",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Sawai Madhopur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "d9258c80-40fe-4764-8bfc-79411fa9a72e",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Sikar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "3ab86813-57f8-4f22-997f-9dc2141c195c",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Sirohi",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "bb7a6ebb-0050-4498-b245-98d7a715b3b5",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Sri Ganganagar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "c2feeaca-9816-49b8-a61d-e1dc0552f8a4",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Tonk",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "31300a6d-eda5-4693-9ea8-6c259b8c24b2",
+        "stateId": "abfe763e-40f9-4834-8b47-f6b76284ed5f",
+        "name": "Udaipur",
+        "odopProduct": null,
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "af9f3cc9-0838-4390-acf2-d868fc4d99ee",
+    "name": "Sikkim",
+    "code": "SK",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "c18978d3-74fe-4076-bb6d-58ced47f5f4e",
+        "stateId": "af9f3cc9-0838-4390-acf2-d868fc4d99ee",
+        "name": "East District",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "53de527b-a5ef-4894-a0e9-8e9588549afe",
+        "stateId": "af9f3cc9-0838-4390-acf2-d868fc4d99ee",
+        "name": "East Sikkim",
+        "odopProduct": "Large Cardamom",
+        "isActive": true
+      },
+      {
+        "id": "986fc8af-7a23-4153-a35d-bd87d9dc23da",
+        "stateId": "af9f3cc9-0838-4390-acf2-d868fc4d99ee",
+        "name": "North District",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "2af46859-487f-462a-b031-6aec5fdb86e3",
+        "stateId": "af9f3cc9-0838-4390-acf2-d868fc4d99ee",
+        "name": "South District",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "fcd98d56-b0e3-4ce9-a351-2d004958c285",
+        "stateId": "af9f3cc9-0838-4390-acf2-d868fc4d99ee",
+        "name": "West District",
+        "odopProduct": null,
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+    "name": "Tamil Nadu",
+    "code": "TN",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "f588d83d-ee40-4d98-bb36-8c9c50fce561",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Ariyalur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "928bb99e-da16-4e60-9248-00ecbb440173",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Chennai",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "5c495783-392d-4317-b94f-e8dfb0cf79db",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Coimbatore",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "3299e601-ccc4-47f8-8993-2f937f748084",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Cuddalore",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "c67ffe3e-8d26-48bb-a79f-10f8ad54a15b",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Dharmapuri",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "565a8041-62c3-4042-96a8-96927d03f31b",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Dindigul",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "217047bf-bf86-4536-a0a3-1ede0d00fb01",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Erode",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "8d6d2c38-76e9-4758-8074-d7b0bb5b2f93",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Kancheepuram",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "e699ccf0-9a5d-402d-be3c-2c88c6692a35",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Kanchipuram",
+        "odopProduct": "Kanchipuram Silk Sarees",
+        "isActive": true
+      },
+      {
+        "id": "9257fd7b-4435-48ce-a8d8-59b1b940e406",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Kanniyakumari",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "707285fe-3c3a-46d4-9c0f-7d8089da19fe",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Karur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "9660027e-77a6-4784-b814-552cdad4009d",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Krishnagiri",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "124e9f99-88b8-40ae-bd03-bc28fd90905f",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Madurai",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "a418c0fe-1eeb-48ac-b3bf-cd00103947b0",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Nagapattinam",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "99de3e6f-f677-47e8-95de-991529c62391",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Namakkal",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "7934400f-176e-4885-a626-1b42333655ac",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Perambalur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "2d4f489a-7805-46b7-b683-1cb0077b1a8c",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Pudukkottai",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "6b9765f5-f06e-4cba-b57e-6bdc711bd0b3",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Ramanathapuram",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "8f98c7fa-e9b1-4ecf-9db1-da5e55f10cbe",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Salem",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "081b866f-2558-4e81-9a2a-a72dd06e9ed2",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Sivaganga",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "99019e8f-ff7b-49fb-97d2-89ac4d8b23d7",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Thanjavur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "2f02e411-b1d8-4dbf-8ae5-60717d70d702",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "The Nilgiris",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "88ecd147-1804-4e3e-9078-d53148542119",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Theni",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "64451341-d420-465c-9f7b-4d362abf20d0",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Thiruvallur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "976fa285-c33e-47de-bc89-42f13f515a68",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Thiruvarur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "518cdaae-eabd-47f2-b639-61cd0e3cbb8d",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Thoothukkudi",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "656d147f-2449-441b-8830-efa5932127bb",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Tiruchirappalli",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "5c2b875f-7554-4a3a-a43c-97869253c255",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Tirunelveli",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "0bd6d957-92a3-4ead-8eee-ffc052fbf62f",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Tiruppur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "2c5952b0-f7f3-425c-ae17-88a7818ccea2",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Tiruvannamalai",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "79f49980-6c7a-4f3f-90bf-e7792080648e",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Vellore",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "ab153bce-f976-4e34-a6d2-c0d18394ce29",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Viluppuram",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "4f07402c-3888-4b56-b943-4b7c83b64eee",
+        "stateId": "adc2bf97-f893-4e80-8e5d-182ea523911e",
+        "name": "Virudhunagar",
+        "odopProduct": null,
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+    "name": "Telangana",
+    "code": "TG",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "40512c4b-75ce-4ae1-8209-10e37e4292b6",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Adilabad",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "a7ffbbac-083d-4c05-9947-14626744a2e0",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Bhadradri",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "5928ee98-841e-4c63-8083-5600e241c506",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Hyderabad",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "4984ceed-4e27-48c1-ba01-5d3c9b1b88e3",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Jagtial",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "eda1ac57-f7c1-4624-878d-0d0094eb839e",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Jangaon",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "30b3d3ef-0e52-4662-86c1-14138be3ef6e",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Jayashankar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "6001d030-3ce4-4d65-82f8-621177d7574b",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Jogulamba",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "80abcb73-579d-4321-8788-7d5192c99b8d",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Kamareddy",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "af2bd526-168b-4c9b-bb18-31ef0668999c",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Karimnagar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "df44e617-b864-444d-8652-2123b08177a1",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Khammam",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "3dc74a4d-f978-49fe-b052-ebe0747c3d73",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Komaram Bheem",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "8af550e5-07fa-4652-a540-e17366d83b7f",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Mahabubabad",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "d8f4ae42-37ee-4454-a808-12afe83141bd",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Mahbubnagar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "75f1cb0d-9399-46fa-9f19-6e3e14e14f7a",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Mancherial",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b14d33b5-1c48-4b6f-b4e0-b7e2826b44fa",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Medak",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "d5f5bd85-b48a-4843-be0d-bdbbccfaa1d0",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Medchal-Malkajgiri",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "d424c4ba-1bb2-4536-b9e9-5886269ebc27",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Nagarkurnool",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "5efc7587-230a-4dbd-aca5-0f1f3b534418",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Nalgonda",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "eccee78b-f371-4694-86bc-1ddd373a2d3e",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Nirmal",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "7a2d07c1-6f42-400a-bedc-ebac7193d3f6",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Nizamabad",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "c0a23ff9-fc6e-4351-a0cd-3fde9b7ecddd",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Peddapalli",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "2aab7ba9-14ac-407d-85ca-6023895f62db",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Pochampally",
+        "odopProduct": "Pochampally Ikat Sarees",
+        "isActive": true
+      },
+      {
+        "id": "39b8be32-8ed9-4930-86b8-59ff6bc11de3",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Rajanna",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "5a95d124-0a28-4b05-a531-1874531a6512",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Rangareddy",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "4e482e50-28a9-4d8e-a182-107dc0744df8",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Sangareddy",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "e38ac996-3f25-4698-93d9-4145e477b8f5",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Siddipet",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "945e508f-9838-42cc-a8c6-febcbfc36ec9",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Suryapet",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "83c10c64-1f2f-4ef8-937f-ab5efe1915f5",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Vikarabad",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "927fc746-cf77-4e7f-a983-292f55c2281d",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Wanaparthy",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "1ba8ae36-2c23-4f84-960f-5f24dc238277",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Warangal Rural",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "2fb91e7e-715b-4799-9bc7-69c662555756",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Warangal Urban",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "01e2441d-6ed6-48bd-9f96-a96b8f74b0aa",
+        "stateId": "db7f5e0f-57d5-4085-9d6b-8cd1153c1b18",
+        "name": "Yadadri",
+        "odopProduct": null,
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "6adc6dec-3c35-41ab-aa98-1c80ce9ef334",
+    "name": "Tripura",
+    "code": "TR",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "d7b7b45b-43ed-4378-9c41-7e0e93c26a2b",
+        "stateId": "6adc6dec-3c35-41ab-aa98-1c80ce9ef334",
+        "name": "Dhalai",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "cff0add9-9827-492e-a81d-1dabb619578e",
+        "stateId": "6adc6dec-3c35-41ab-aa98-1c80ce9ef334",
+        "name": "Gomati",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "6c51c186-7f9f-441c-ab6d-50143423dde8",
+        "stateId": "6adc6dec-3c35-41ab-aa98-1c80ce9ef334",
+        "name": "Khowai",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "0b6b8f78-dd33-435e-969f-4d38f7b5d885",
+        "stateId": "6adc6dec-3c35-41ab-aa98-1c80ce9ef334",
+        "name": "North Tripura",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "052982ab-1ee6-4733-a128-700cf99f2b15",
+        "stateId": "6adc6dec-3c35-41ab-aa98-1c80ce9ef334",
+        "name": "Sepahijala",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "964ec8af-3b6b-444b-9b49-b73f61b50de4",
+        "stateId": "6adc6dec-3c35-41ab-aa98-1c80ce9ef334",
+        "name": "South Tripura",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "0e4c7729-265b-4470-a30f-bab320e39b20",
+        "stateId": "6adc6dec-3c35-41ab-aa98-1c80ce9ef334",
+        "name": "Unakoti",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "af5f78c4-7339-449f-8ff4-541c1e9b458d",
+        "stateId": "6adc6dec-3c35-41ab-aa98-1c80ce9ef334",
+        "name": "West Tripura",
+        "odopProduct": "Bamboo & Cane Handicrafts",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+    "name": "Uttar Pradesh",
+    "code": "UP",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "cf534486-9941-457e-ac49-51d656e2262e",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Agra",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "4cfd2c9d-f484-47cb-8a6f-8dc04a224b7a",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Aligarh",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "8dfac3da-1917-4b0a-bf9f-825c736e025f",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Allahabad",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "7e8ee684-a1a5-4238-92ae-c1eb4b263b10",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Ambedkar Nagar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "14ad3dbb-fdc7-4ab5-b9db-be657b0bf340",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Amethi",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b81a874f-c3d0-4dbd-92d4-978d5bcc55cd",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Amroha",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "774d7a79-110b-4c3b-ade0-fccbcb137965",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Auraiya",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "ec59735f-99dd-4911-bda7-cad97fd4a321",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Azamgarh",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b8fa806e-3507-4964-887a-e2a9f25c5196",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Baghpat",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "5909671e-388b-4a58-b7ac-e77951dde640",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Bahraich",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "71f8fc1c-f9a9-4b92-a460-7446d6803f48",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Ballia",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "8b73bf04-64e2-4500-bb06-66cb513df8f8",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Balrampur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "e7983b22-92e2-478e-b453-f985586f145a",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Banda",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "761b0f6f-c86d-49a2-b9c9-bdfc60eda4aa",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Bara Banki",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "29e22acf-3bed-470f-ba52-47b80200062b",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Bareilly",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "73903bbc-b5ab-45b4-a1b5-505753ffe74d",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Basti",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "e8f56a90-3a40-4ba6-8116-d81fd21bd6cc",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Bhadohi",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "8c438a12-3cd7-405a-b0d8-aa975fdac15e",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Bijnor",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "c4681915-4b78-48bd-8116-46d24c5e7b87",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Budaun",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "9ba33e6d-089e-4bbe-9ef5-0cdda6f09c08",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Bulandshahr",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "530507a1-e718-48c0-bdea-fd5ded84781f",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Chandauli",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "d73ec7ee-b74d-4308-901a-05eb43c74bc8",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Chitrakoot",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "a9c194f8-324f-4e49-a56e-46d8d03e5bd2",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Deoria",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "7b867cd0-248b-4d49-bf32-358cdd8d2d1a",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Etah",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "99285bd8-e7ca-4484-839e-c2a8a6ae2f47",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Etawah",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "932b6827-207c-4f04-b6d8-26a7354764bc",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Faizabad",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "d45b1d4f-0d6a-47d1-8c79-d9bec7eef61e",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Farrukhabad",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "3c1b38ba-f556-4af6-a184-be477c7cdb57",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Fatehpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "816d2b01-f2ad-4d78-8c64-d7827b6c35cf",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Firozabad",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "a2164192-141f-42db-a6e1-85bc90db0306",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Gautam Buddha Nagar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "c8ea54f9-7147-4c2c-bc2e-c1dbb352e1d8",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Ghaziabad",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "5c87c0c7-edd7-42b7-82fb-b9eddc079759",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Ghazipur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "381a96ce-4da6-42ed-971f-a6d3bea89cc7",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Gonda",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "379abc68-3838-46cb-8359-97c2e7f64159",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Gorakhpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "aafe4aac-96ff-45aa-8c37-0a694ae79824",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Hamirpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "d725cbfa-a3a2-470b-abe4-aaaa985bb70a",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Hapur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "7204bd55-cb9e-4d8d-819a-754f0643f225",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Hardoi",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "380f9349-bd06-42f7-b266-dae8d0377c9f",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Hathras",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "dde56e88-898d-4ed1-b8aa-04716b311f8d",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Jalaun",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "831eaa27-5589-42de-ad87-2ffd209b1e9e",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Jaunpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "115352a0-b441-4f72-8e7a-015cf2f636f9",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Jhansi",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "20dfe510-57e5-4249-a551-8236936a03a9",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Kannauj",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "2f874256-8fc0-4f06-9559-2aaa0d3e8032",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Kanpur Dehat",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "c846da41-9d5c-41c3-9162-03a4231797d8",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Kanpur Nagar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "53dbea2c-566d-4079-8fce-6d4bb137c2a7",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Kasganj",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "0d509ed5-c6e4-4c23-a7b5-30ed02db3d9b",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Kaushambi",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "3ee4586f-6611-4f58-82db-c5dc306711fd",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Kheri",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "bb2b4a32-417b-411a-895f-169e99c7439f",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Kushinagar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "62ba5771-7666-4899-8566-4a5261812ab3",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Lalitpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "16d13fe2-df4e-40c5-bf26-f3159d87161a",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Lucknow",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "5653259d-81fd-41fd-977e-6da3ae883e60",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Mahoba",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "8e1aa274-ed5b-49dd-b3e9-e867f51ba365",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Mahrajganj",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "544061ea-760c-4d83-8636-5e2b3e68bf2d",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Mainpuri",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "bf64508e-912f-4891-a1b2-c1312c46d0b0",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Mathura",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "fd2e43c6-fcd9-41fe-bf57-893ffc8dfc9c",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Mau",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b8feb668-6bde-4d00-b5a7-362e080ef31c",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Meerut",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "a4883305-f774-4739-8025-b7dea489ec1a",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Mirzapur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "632b1393-5b1d-47dc-b87f-3056bb64b469",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Moradabad",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "5ce8b0c7-373d-4bc0-8326-0a40c053168d",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Muzaffarnagar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "210ffc85-1502-4238-a210-05aabf4dd708",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Pilibhit",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "67d3e488-f069-4196-9569-115342e61b19",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Pratapgarh",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "08f293e9-25c5-4798-8b66-f8041713981f",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Rae Bareli",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "4fe25a83-f0ff-44eb-923f-f8f9ba026b2f",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Rampur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "6ca916c3-030f-4030-8276-17492020518b",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Saharanpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "e89a7991-c79d-4bea-9a34-80d6411e923e",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Sambhal",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b0b45ec5-57c5-49de-8b4f-9f55654c9c97",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Sant Kabir Nagar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "41dc538d-2a86-4f16-b1c6-54cdbf5f89d5",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Shahjahanpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "bbc1ea32-f58f-4dab-87e3-070f0e729221",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Shamli",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "1312900c-013c-42e3-a42c-ba4874c03250",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Shrawasti",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "bcda970a-4403-43d9-9605-048b2eb7a7d2",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Siddharthnagar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "d28e6708-d6ce-4e8a-818a-8604e1843a26",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Sitapur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "cde5a34c-a74c-4eba-961f-f34f41fb0d25",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Sonbhadra",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "569a2024-55b0-4378-8dea-9600c4d38f17",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Sultanpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "68a4cedf-63e7-430b-9635-44ffaca58ccf",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Unnao",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "85fe4a7e-1820-455d-a255-165b0c1e4024",
+        "stateId": "46c3b186-aa4c-4298-89cf-52b9f25c22b6",
+        "name": "Varanasi",
+        "odopProduct": "Banarasi Silk Brocade",
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "84dd1eb5-bf50-4fcb-b8fa-2823b44cf9af",
+    "name": "Uttarakhand",
+    "code": "UK",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "ff03db8f-4d37-4e57-a6e2-f07362dae905",
+        "stateId": "84dd1eb5-bf50-4fcb-b8fa-2823b44cf9af",
+        "name": "Almora",
+        "odopProduct": "Bal Mithai & Singauri",
+        "isActive": true
+      },
+      {
+        "id": "c9dfdb3f-fd96-42dd-8449-d59e6ce9129c",
+        "stateId": "84dd1eb5-bf50-4fcb-b8fa-2823b44cf9af",
+        "name": "Bageshwar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "b271009c-ec5c-4075-8eff-3fc1719f5f23",
+        "stateId": "84dd1eb5-bf50-4fcb-b8fa-2823b44cf9af",
+        "name": "Chamoli",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "102932a9-1e28-4f4a-9509-a68ef4efaed3",
+        "stateId": "84dd1eb5-bf50-4fcb-b8fa-2823b44cf9af",
+        "name": "Champawat",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "993a2174-d83e-4a81-a9af-302f018a6c80",
+        "stateId": "84dd1eb5-bf50-4fcb-b8fa-2823b44cf9af",
+        "name": "Dehradun",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "070c8d58-8fab-4c6e-80b5-78b45ba6297a",
+        "stateId": "84dd1eb5-bf50-4fcb-b8fa-2823b44cf9af",
+        "name": "Garhwal",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "4bbbd801-b702-478a-83bb-7e34d3f3d095",
+        "stateId": "84dd1eb5-bf50-4fcb-b8fa-2823b44cf9af",
+        "name": "Hardwar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "43618f36-1675-447c-827b-02f7ab0013a6",
+        "stateId": "84dd1eb5-bf50-4fcb-b8fa-2823b44cf9af",
+        "name": "Nainital",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "16e74b7f-4ea8-4270-8a24-385f280293e1",
+        "stateId": "84dd1eb5-bf50-4fcb-b8fa-2823b44cf9af",
+        "name": "Pithoragarh",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "befdea7f-5596-4e35-8289-f1fd9141d4ab",
+        "stateId": "84dd1eb5-bf50-4fcb-b8fa-2823b44cf9af",
+        "name": "Rudraprayag",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "37abb26e-096d-45c6-afed-f31c746b5d87",
+        "stateId": "84dd1eb5-bf50-4fcb-b8fa-2823b44cf9af",
+        "name": "Tehri Garhwal",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "29fc0af8-0078-4667-89c3-61ea736da6d3",
+        "stateId": "84dd1eb5-bf50-4fcb-b8fa-2823b44cf9af",
+        "name": "Udham Singh Nagar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "1d9a24be-407d-4e37-85df-e32f6fae3a49",
+        "stateId": "84dd1eb5-bf50-4fcb-b8fa-2823b44cf9af",
+        "name": "Uttarkashi",
+        "odopProduct": null,
+        "isActive": true
+      }
+    ]
+  },
+  {
+    "id": "a566836e-e066-4e56-aa0f-9ed5e6743cac",
+    "name": "West Bengal",
+    "code": "WB",
+    "isActive": true,
+    "districts": [
+      {
+        "id": "6778acf6-4f4d-48d6-8bb2-d05271f3c2b7",
+        "stateId": "a566836e-e066-4e56-aa0f-9ed5e6743cac",
+        "name": "Alipurduar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "ce19d54b-88f7-47dc-9a2c-aa2e3c269141",
+        "stateId": "a566836e-e066-4e56-aa0f-9ed5e6743cac",
+        "name": "Bankura",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "93d0f51b-4046-4495-9acb-0d26fbcc3617",
+        "stateId": "a566836e-e066-4e56-aa0f-9ed5e6743cac",
+        "name": "Barddhaman",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "77920cf7-5b5a-4e6d-9cb4-49b0f1c96153",
+        "stateId": "a566836e-e066-4e56-aa0f-9ed5e6743cac",
+        "name": "Birbhum",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "53ac1f11-7de6-463d-8b54-1c33ab923bbd",
+        "stateId": "a566836e-e066-4e56-aa0f-9ed5e6743cac",
+        "name": "Dakshin Dinajpur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "fd8229b1-5f1a-4fd5-96ea-ee916f2e99ea",
+        "stateId": "a566836e-e066-4e56-aa0f-9ed5e6743cac",
+        "name": "Darjeeling",
+        "odopProduct": "Darjeeling Tea",
+        "isActive": true
+      },
+      {
+        "id": "7a541415-dad8-492b-ac84-28cbc09fd71a",
+        "stateId": "a566836e-e066-4e56-aa0f-9ed5e6743cac",
+        "name": "Darjiling",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "f64539c0-2a67-499e-ab9d-f23825a3baac",
+        "stateId": "a566836e-e066-4e56-aa0f-9ed5e6743cac",
+        "name": "Haora",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "7f208f2b-1ca4-4a02-8e80-2c33ae8689ca",
+        "stateId": "a566836e-e066-4e56-aa0f-9ed5e6743cac",
+        "name": "Hugli",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "d843bd16-4b89-4518-8d28-6fefa2da9064",
+        "stateId": "a566836e-e066-4e56-aa0f-9ed5e6743cac",
+        "name": "Jalpaiguri",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "5f3f91d0-1564-4e7c-834e-c4f0c242c318",
+        "stateId": "a566836e-e066-4e56-aa0f-9ed5e6743cac",
+        "name": "Jhargram",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "0f30ef5b-3a6c-4fa5-bba8-d0c369894568",
+        "stateId": "a566836e-e066-4e56-aa0f-9ed5e6743cac",
+        "name": "Kalimpong",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "2a95faa8-206c-422a-94ab-a66bd2299973",
+        "stateId": "a566836e-e066-4e56-aa0f-9ed5e6743cac",
+        "name": "Koch Bihar",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "d5740e06-25cc-4b2e-9d9f-524e2a074020",
+        "stateId": "a566836e-e066-4e56-aa0f-9ed5e6743cac",
+        "name": "Kolkata",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "7394eb53-cb3a-4114-897b-a7b2c7abe8e7",
+        "stateId": "a566836e-e066-4e56-aa0f-9ed5e6743cac",
+        "name": "Maldah",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "05eaa686-c1b9-4db7-8835-64e06166585b",
+        "stateId": "a566836e-e066-4e56-aa0f-9ed5e6743cac",
+        "name": "Murshidabad",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "7a85d771-7e4c-4595-ae06-27c6767804ae",
+        "stateId": "a566836e-e066-4e56-aa0f-9ed5e6743cac",
+        "name": "Nadia",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "148229bf-4cc0-439e-9ed9-a535efde6ceb",
+        "stateId": "a566836e-e066-4e56-aa0f-9ed5e6743cac",
+        "name": "North Twenty Four Parganas",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "77448a50-dbe2-489d-b49b-a70b6d0542fd",
+        "stateId": "a566836e-e066-4e56-aa0f-9ed5e6743cac",
+        "name": "Paschim Bardhaman",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "7c09e368-c76c-414d-9c9e-76710776e70c",
+        "stateId": "a566836e-e066-4e56-aa0f-9ed5e6743cac",
+        "name": "Paschim Medinipur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "9c2a7485-514f-4dca-b5c2-44680607e3c6",
+        "stateId": "a566836e-e066-4e56-aa0f-9ed5e6743cac",
+        "name": "Purba Bardhaman",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "a2757ffc-4e9f-4b8b-9f6f-dc0ba5957ff4",
+        "stateId": "a566836e-e066-4e56-aa0f-9ed5e6743cac",
+        "name": "Purba Medinipur",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "2982b6f1-7e36-464d-b1b5-c8ca39dd2905",
+        "stateId": "a566836e-e066-4e56-aa0f-9ed5e6743cac",
+        "name": "Puruliya",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "d5400a94-4100-409b-866f-866c3eb87360",
+        "stateId": "a566836e-e066-4e56-aa0f-9ed5e6743cac",
+        "name": "South Twenty Four Parganas",
+        "odopProduct": null,
+        "isActive": true
+      },
+      {
+        "id": "3aa9b5fb-5e29-4349-bc2b-bd3399835def",
+        "stateId": "a566836e-e066-4e56-aa0f-9ed5e6743cac",
+        "name": "Uttar Dinajpur",
+        "odopProduct": null,
+        "isActive": true
+      }
+    ]
+  }
+]

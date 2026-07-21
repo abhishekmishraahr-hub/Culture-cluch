@@ -1,0 +1,42 @@
+[
+  {
+    "id": "cde698fc-9809-4212-a233-0063501aa17a",
+    "parentId": null,
+    "name": "Art & Folk Painting",
+    "slug": "art-folk-painting",
+    "description": "Historical paintings like Madhubani, Pattachitra, and Tanjore.",
+    "image": null,
+    "isActive": true,
+    "subcategories": []
+  },
+  {
+    "id": "b1dd75c3-8c22-4535-87ea-3436c895b420",
+    "parentId": null,
+    "name": "Handloom & Textiles",
+    "slug": "handloom-textiles",
+    "description": "Traditional weave, silks, and embroidered materials.",
+    "image": null,
+    "isActive": true,
+    "subcategories": []
+  },
+  {
+    "id": "e27e8bfe-19e7-4a2b-a32a-f98dceba32b7",
+    "parentId": null,
+    "name": "Heritage Handicrafts",
+    "slug": "heritage-handicrafts",
+    "description": "Handcrafted metal, clay, stone, and wood arts.",
+    "image": null,
+    "isActive": true,
+    "subcategories": []
+  },
+  {
+    "id": "411554b5-326a-469b-ba8b-12de723d56cd",
+    "parentId": null,
+    "name": "Spices & Organic Food",
+    "slug": "spices-organic-food",
+    "description": "Certified organic spices, farm products, and sweets.",
+    "image": null,
+    "isActive": true,
+    "subcategories": []
+  }
+]

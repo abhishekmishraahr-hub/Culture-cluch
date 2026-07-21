@@ -1,0 +1,456 @@
+datasource db {
+  provider = "sqlite"
+}
+
+generator client {
+  provider = "prisma-client"
+  output   = "../prisma/client"
+}
+
+model User {
+  id           String         @id @default(uuid())
+  name         String
+  email        String         @unique
+  phone        String?
+  passwordHash String
+  roleId       String
+  role         Role           @relation(fields: [roleId], references: [id])
+  isSuspended  Boolean        @default(false)
+  createdAt    DateTime       @default(now())
+  updatedAt    DateTime       @updatedAt
+  cartItems    CartItem[]
+  wishlist     WishlistItem[]
+  orders       Order[]
+  reviews      Review[]
+  addresses    Address[]
+  vendor       Vendor?
+}
+
+model Role {
+  id          String   @id @default(uuid())
+  name        String   @unique // e.g. Owner, Super Admin, Admin, Product Manager, Customer, etc.
+  permissions String   // Comma-separated list or JSON string. E.g. "ALL" or "PRICES:WRITE,PRODUCTS:WRITE"
+  users       User[]
+}
+
+model State {
+  id        String     @id @default(uuid())
+  name      String     @unique
+  code      String     @unique // e.g. UP, KL, MH
+  isActive  Boolean    @default(true)
+  districts District[]
+}
+
+model District {
+  id          String    @id @default(uuid())
+  stateId     String
+  state       State     @relation(fields: [stateId], references: [id], onDelete: Cascade)
+  name        String
+  odopProduct String?   // Official ODOP product name
+  isActive    Boolean   @default(true)
+  products    Product[]
+
+  @@unique([stateId, name])
+}
+
+model Category {
+  id          String     @id @default(uuid())
+  parentId    String?
+  parent      Category?  @relation("CategoryToCategory", fields: [parentId], references: [id], onDelete: Cascade)
+  subcategories Category[] @relation("CategoryToCategory")
+  name        String     @unique
+  slug        String     @unique
+  description String?
+  image       String?
+  isActive    Boolean    @default(true)
+  products    Product[]
+}
+
+model Product {
+  id              String           @id @default(uuid())
+  name            String
+  slug            String           @unique
+  description     String
+  price           Float            // Using Float for SQLite/PG compatibility
+  compareAtPrice  Float?
+  taxRate         Float            @default(18.0) // GST percentage, e.g. 18.0%
+  stock           Int              @default(0)
+  sku             String           @unique
+  barcode         String?          @unique
+  categoryId      String
+  category        Category         @relation(fields: [categoryId], references: [id])
+  districtId      String
+  district        District         @relation(fields: [districtId], references: [id])
+  isFeatured      Boolean          @default(false)
+  isTrending      Boolean          @default(false)
+  isNew           Boolean          @default(true)
+  isActive        Boolean          @default(true)
+  createdAt       DateTime         @default(now())
+  updatedAt       DateTime         @updatedAt
+  images          ProductImage[]
+  variants        ProductVariant[]
+  culturalStory   CulturalStory?
+  cartItems       CartItem[]
+  wishlistItems   WishlistItem[]
+  orderItems      OrderItem[]
+  reviews         Review[]
+  vendorId        String?
+  vendor          Vendor?          @relation(fields: [vendorId], references: [id])
+  approvalWorkflow ApprovalWorkflow?
+}
+
+model ProductVariant {
+  id              String   @id @default(uuid())
+  productId       String
+  product         Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  name            String   // e.g. Size, Color, Weight
+  value           String   // e.g. Large, Saffron Yellow, 500g
+  priceAdjustment Float    @default(0.0)
+  stock           Int      @default(0)
+}
+
+model ProductImage {
+  id        String   @id @default(uuid())
+  productId String
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  url       String
+}
+
+model CulturalStory {
+  id                   String   @id @default(uuid())
+  productId            String   @unique
+  product              Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  artisanName          String
+  artisanLocation      String
+  artisanImage         String?
+  history              String   // Historical background
+  culturalSignificance String   // Cultural importance
+  productionMethod     String   // Traditional production steps
+  geographicalIdentity String?  // Details of GI Tag if any
+  awards               String?  // Comma-separated awards
+}
+
+model CartItem {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  productId String
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  variantId String?
+  quantity  Int      @default(1)
+}
+
+model WishlistItem {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  productId String
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+
+  @@unique([userId, productId])
+}
+
+model Order {
+  id                String      @id @default(uuid())
+  userId            String
+  user              User        @relation(fields: [userId], references: [id])
+  totalAmount       Float
+  taxAmount         Float
+  discountAmount    Float       @default(0.0)
+  shippingAmount    Float       @default(0.0)
+  netAmount         Float
+  status            String      @default("PENDING") // PENDING, PAID, PACKED, SHIPPED, DELIVERED, CANCELLED, RETURNED
+  shippingAddressId String
+  shippingAddress   Address     @relation("OrderAddress", fields: [shippingAddressId], references: [id])
+  invoiceNumber     String?     @unique
+  trackingId        String?
+  createdAt         DateTime    @default(now())
+  updatedAt         DateTime    @updatedAt
+  orderItems        OrderItem[]
+  payments          Payment[]
+  vendorId          String?
+  vendor            Vendor?     @relation("VendorOrders", fields: [vendorId], references: [id])
+}
+
+model OrderItem {
+  id        String   @id @default(uuid())
+  orderId   String
+  order     Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  productId String
+  product   Product  @relation(fields: [productId], references: [id])
+  quantity  Int
+  price     Float
+  taxRate   Float
+}
+
+model Payment {
+  id            String   @id @default(uuid())
+  orderId       String
+  order         Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  gateway       String   // RAZORPAY, COD
+  transactionId String?
+  status        String   @default("PENDING") // PENDING, SUCCESS, FAILED
+  amount        Float
+  createdAt     DateTime @default(now())
+}
+
+model Address {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  street    String
+  city      String
+  state     String
+  pincode   String
+  country   String   @default("India")
+  isDefault Boolean  @default(false)
+  orders    Order[]  @relation("OrderAddress")
+}
+
+model Coupon {
+  id             String    @id @default(uuid())
+  code           String    @unique
+  type           String    // PERCENTAGE, FLAT, BOGO
+  value          Float
+  minOrderAmount Float     @default(0.0)
+  maxDiscount    Float?
+  startDate      DateTime
+  endDate        DateTime
+  usageLimit     Int       @default(100)
+  usedCount      Int       @default(0)
+  isActive       Boolean   @default(true)
+}
+
+model Banner {
+  id        String   @id @default(uuid())
+  title     String
+  subtitle  String?
+  imageUrl  String
+  linkUrl   String?
+  position  String   // HERO, CATEGORY, POPUP
+  isActive  Boolean  @default(true)
+}
+
+model Review {
+  id         String   @id @default(uuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  productId  String
+  product    Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  rating     Int
+  comment    String
+  isApproved Boolean  @default(false)
+  sentiment  String?
+  createdAt  DateTime @default(now())
+}
+
+model BlogPost {
+  id         String   @id @default(uuid())
+  title      String
+  slug       String   @unique
+  content    String
+  summary    String?
+  image      String?
+  author     String
+  isPublished Boolean @default(false)
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model Vendor {
+  id               String            @id @default(uuid())
+  userId           String            @unique
+  user             User              @relation(fields: [userId], references: [id], onDelete: Cascade)
+  businessName     String
+  ownerName        String
+  gstNumber        String?           @unique
+  panNumber        String            @unique
+  aadhaarNumber    String            @unique
+  businessType     String            // Artisan, Manufacturer, Cooperative, SHG, NGO, Small Business, Exporter
+  status           String            @default("Pending") // Pending, Under Verification, Approved, Rejected, Suspended
+  address          String
+  state            String
+  district         String
+  pinCode          String
+  msmeCertificate  String?
+  fssaiLicense     String?
+  createdAt        DateTime          @default(now())
+  updatedAt        DateTime          @updatedAt
+  documents        VendorDocument[]
+  bankAccount      VendorBankAccount?
+  products         Product[]
+  orders           Order[]           @relation("VendorOrders")
+  payments         Payout[]
+}
+
+model VendorDocument {
+  id         String    @id @default(uuid())
+  vendorId   String
+  vendor     Vendor    @relation(fields: [vendorId], references: [id], onDelete: Cascade)
+  docType    String    // GST_Cert, PAN_Proof, Aadhaar_Proof, MSME_Proof, License, Certificate
+  fileUrl    String
+  verifiedAt DateTime?
+  verifiedBy String?
+  status     String    @default("Pending") // Pending, Approved, Rejected
+}
+
+model VendorBankAccount {
+  id                 String @id @default(uuid())
+  vendorId           String @unique
+  vendor             Vendor @relation(fields: [vendorId], references: [id], onDelete: Cascade)
+  bankName           String
+  accountNumber      String
+  accountHolder      String
+  ifscCode           String
+  cancelledChequeUrl String
+}
+
+model ApprovalWorkflow {
+  id           String            @id @default(uuid())
+  productId    String            @unique
+  product      Product           @relation(fields: [productId], references: [id], onDelete: Cascade)
+  currentStage String            // VERIFICATION_REVIEW, QUALITY_REVIEW, etc.
+  assignedTo   String?
+  updatedAt    DateTime          @default(now())
+  comments     WorkflowComment[]
+}
+
+model WorkflowComment {
+  id         String           @id @default(uuid())
+  workflowId String
+  workflow   ApprovalWorkflow @relation(fields: [workflowId], references: [id], onDelete: Cascade)
+  department String           // Verification, Product, Content, Quality, Pricing, Photography, SEO, Admin
+  reviewerId String?
+  status     String           // Approved, Rejected, Changes_Requested
+  comments   String
+  createdAt  DateTime         @default(now())
+}
+
+model ProductStatusHistory {
+  id        String   @id @default(uuid())
+  productId String
+  fromStatus String?
+  toStatus   String
+  changedBy  String?
+  remarks    String?
+  createdAt  DateTime @default(now())
+}
+
+model Payout {
+  id                 String    @id @default(uuid())
+  vendorId           String
+  vendor             Vendor    @relation(fields: [vendorId], references: [id], onDelete: Cascade)
+  orderId            String
+  netEarnings        Float
+  commissionDeducted Float
+  tdsDeducted        Float     @default(0.0)
+  gstCollected       Float     @default(0.0)
+  payoutStatus       String    @default("Pending") // Pending, Settled
+  settledAt          DateTime?
+}
+
+model StateMapAsset {
+  id          String   @id @default(uuid())
+  stateName   String
+  stateCode   String   @unique
+  imageUrl    String
+  imageType   String   // SVG, PNG, WebP
+  fileSize    Int
+  width       Int
+  height      Int
+  version     Int      @default(1)
+  uploadedBy  String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  status      String   @default("active")
+}
+
+model FooterSection {
+  id        String       @id @default(uuid())
+  title     String
+  isEnabled Boolean      @default(true)
+  order     Int          @default(1)
+  links     FooterLink[]
+}
+
+model FooterLink {
+  id        String        @id @default(uuid())
+  sectionId String
+  section   FooterSection @relation(fields: [sectionId], references: [id], onDelete: Cascade)
+  label     String
+  url       String
+  order     Int           @default(1)
+  isEnabled Boolean       @default(true)
+}
+
+model FooterSocialLink {
+  id        String  @id @default(uuid())
+  platform  String  @unique // e.g. Instagram, Facebook, YouTube, LinkedIn, Pinterest, X, WhatsApp, Telegram
+  url       String
+  iconText  String? // Optional inline svg path or emoji/symbol
+  isEnabled Boolean @default(true)
+}
+
+model FooterPaymentMethod {
+  id        String  @id @default(uuid())
+  name      String  @unique // e.g. UPI, Visa, Mastercard, RuPay, Amex, Paytm, PhonePe, GPAY
+  imageUrl  String
+  isEnabled Boolean @default(true)
+}
+
+model FooterShippingPartner {
+  id        String  @id @default(uuid())
+  name      String  @unique // e.g. Delhivery, Blue Dart, DTDC, India Post, XpressBees
+  imageUrl  String
+  isEnabled Boolean @default(true)
+}
+
+model FooterCertification {
+  id        String  @id @default(uuid())
+  name      String  @unique // e.g. GI Certified, ISO, MSME, Government Partner
+  imageUrl  String
+  isEnabled Boolean @default(true)
+}
+
+model FooterContactInfo {
+  id             String  @id @default(uuid())
+  corporateOffice String
+  registeredOffice String
+  email          String
+  phone          String
+  whatsApp       String
+  businessHours  String
+  googleMapsUrl  String
+}
+
+model FooterLanguage {
+  id        String  @id @default(uuid())
+  code      String  @unique // e.g. en, hi, ta, te, bn, mr, gu, kn, ml, pa
+  name      String
+  isEnabled Boolean @default(true)
+}
+
+model FooterCurrency {
+  id        String  @id @default(uuid())
+  code      String  @unique // e.g. INR, USD, EUR, GBP, AED
+  name      String
+  symbol    String
+  isEnabled Boolean @default(true)
+}
+
+model FooterNewsletter {
+  id        String   @id @default(uuid())
+  email     String   @unique
+  createdAt DateTime @default(now())
+}
+
+model FooterSettings {
+  id                  String  @id @default(uuid())
+  copyright           String
+  companyRegistration String
+  gstNumber           String
+  trademark           String
+  accessibilityStmt   String
+  cookieSettings      String
+  versionNumber       String  @default("1.0.0")
+}

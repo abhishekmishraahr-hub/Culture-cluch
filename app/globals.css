@@ -1,0 +1,383 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700;800;900&family=Cinzel:wght@500;700;800&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=Poppins:wght@300;400;500;600;700;800&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&display=swap');
+@import "tailwindcss";
+
+:root {
+  --background: #FAF5EE;
+  --foreground: #2E1E1A;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  
+  --font-sans: 'Inter', 'Poppins', sans-serif;
+  --font-serif: 'Cormorant Garamond', 'Playfair Display', serif;
+  --font-decor: 'Cinzel', 'EB Garamond', serif;
+  
+  --color-primary: #3D1E16;
+  --color-secondary: #8B5A2B;
+  --color-muted-text: #7A6A53;
+  --color-accent-rust: #B56D3E;
+  
+  --color-gold: #C09355;
+  --color-copper: #B56D3E;
+  --color-heritage-brown: #3D1E16;
+  --color-cream: #FAF5EE;
+  --color-sand: #E6DFD3;
+  --color-charcoal: #2E1E1A;
+  
+  --color-warning-brand: #D97706;
+  --color-success-brand: #059669;
+  --color-danger-brand: #DC2626;
+  --color-info-brand: #2563EB;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not(.light) {
+    --background: #1c0f0c;
+    --foreground: #F5EFE6;
+  }
+}
+
+.dark {
+  --background: #1c0f0c !important;
+  --foreground: #F5EFE6 !important;
+}
+
+html, body {
+  background-color: var(--background) !important;
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  transition: background-color 250ms ease, color 250ms ease;
+  min-height: 100vh;
+}
+
+/* Typography Token Utilities */
+.display-title {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 2.25rem; /* 36px */
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  color: var(--foreground);
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-weight: 800;
+  font-size: 3.5rem; /* 56px */
+  @media (min-width: 768px) { font-size: 4.5rem; }
+  @media (min-width: 1024px) { font-size: 5.5rem; }
+  line-height: 1.05;
+  letter-spacing: -0.015em;
+  color: var(--foreground);
+}
+
+.section-heading {
+  font-family: var(--font-serif);
+  font-weight: 700;
+  font-size: 1.875rem; /* 30px */
+  @media (min-width: 768px) { font-size: 2.25rem; }
+  line-height: 1.2;
+  letter-spacing: -0.01em;
+  color: var(--foreground);
+}
+
+.card-heading {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+  color: var(--foreground);
+}
+
+.sub-heading {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.5;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--color-secondary);
+}
+
+.product-name {
+  font-family: var(--font-serif);
+  font-weight: 600;
+  font-size: 1.125rem;
+  line-height: 1.35;
+  color: var(--foreground);
+}
+
+.district-name {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-accent-rust);
+}
+
+.story-title {
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-weight: 700;
+  font-size: 1.5rem;
+  @media (min-width: 768px) { font-size: 2rem; }
+  line-height: 1.25;
+  color: var(--foreground);
+}
+
+.paragraph {
+  font-family: var(--font-sans);
+  font-weight: 300;
+  font-size: 0.95rem;
+  @media (min-width: 768px) { font-size: 1rem; }
+  line-height: 1.6;
+  color: var(--foreground);
+}
+
+.description {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--color-muted-text);
+}
+
+.caption {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 0.75rem;
+  line-height: 1.4;
+  color: var(--color-muted-text);
+}
+
+.label {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--foreground);
+}
+
+.button-text {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.navigation {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.825rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+
+.footer-link {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 0.825rem;
+  color: var(--color-muted-text);
+  transition: color 200ms ease;
+}
+
+.footer-link:hover {
+  color: var(--color-gold);
+}
+
+.badge {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.65rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.25rem 0.5rem;
+  border-radius: 9999px;
+}
+
+.price-regular {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 1.125rem;
+  color: var(--foreground);
+}
+
+.price-discount {
+  font-family: var(--font-sans);
+  font-weight: 400;
+  font-size: 0.875rem;
+  text-decoration: line-through;
+  color: var(--color-muted-text);
+}
+
+.price-offer {
+  font-family: var(--font-sans);
+  font-weight: 700;
+  font-size: 0.875rem;
+  color: var(--color-success-brand);
+}
+
+.error-msg {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: var(--color-danger-brand);
+}
+
+.success-msg {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.75rem;
+  color: var(--color-success-brand);
+}
+
+.decor-text {
+  font-family: var(--font-decor);
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  color: var(--foreground);
+}
+
+/* Text Effects & Custom Interactions */
+.text-gradient-gold {
+  background: linear-gradient(135deg, #FFFDF9 10%, #FAF5EE 40%, #C09355 80%, #B56D3E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gold-accent {
+  color: var(--color-gold);
+}
+
+.shadow-soft {
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.glow-subtle {
+  text-shadow: 0 0 12px rgba(192, 147, 85, 0.2);
+}
+
+.animated-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.animated-underline::after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 1.5px;
+  bottom: -2px;
+  left: 0;
+  background-color: var(--color-gold);
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.animated-underline:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+/* Page Load Animation & Image Loading transitions */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up-text {
+  animation: fade-up 0.5s ease forwards;
+}
+
+/* Skeleton Loading Theme style */
+.skeleton-loader {
+  background: linear-gradient(90deg, #E6DFD3 25%, #FAF5EE 50%, #E6DFD3 75%);
+  background-size: 200% 100%;
+  animation: loading-shimmer 1.5s infinite;
+}
+
+.dark .skeleton-loader {
+  background: linear-gradient(90deg, #2A1B18 25%, #3D1E16 50%, #2A1B18 75%);
+  background-size: 200% 100%;
+  animation: loading-shimmer 1.5s infinite;
+}
+
+@keyframes loading-shimmer {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+
+/* Custom Dark Theme Class Overrides */
+.dark body,
+.dark main,
+.dark .bg-\[\#FAF5EE\] {
+  background-color: #1c0f0c !important;
+  color: #faf5ee !important;
+}
+
+.dark .bg-\[\#FDFBF7\] {
+  background-color: #261613 !important;
+  color: #faf5ee !important;
+  border-color: rgba(192, 147, 85, 0.3) !important;
+}
+
+.dark header {
+  background-color: rgba(28, 15, 12, 0.95) !important;
+  border-color: rgba(192, 147, 85, 0.3) !important;
+}
+
+.dark footer {
+  background-color: #221411 !important;
+  border-color: rgba(192, 147, 85, 0.3) !important;
+  color: #faf5ee !important;
+}
+
+.dark text-\[\#2E1E1A\],
+.dark .text-\[\#2E1E1A\],
+.dark text-\[\#3D1E16\],
+.dark .text-\[\#3D1E16\],
+.dark .text-gray-500,
+.dark .text-gray-600 {
+  color: #e3dcd5 !important;
+}
+
+.dark .text-gray-400 {
+  color: #a39b94 !important;
+}
+
+.dark input,
+.dark select,
+.dark textarea {
+  background-color: #2a1b18 !important;
+  color: #faf5ee !important;
+  border-color: rgba(192, 147, 85, 0.35) !important;
+}
+
+.dark .bg-white,
+.dark .bg-gray-50 {
+  background-color: #2a1b18 !important;
+  color: #faf5ee !important;
+}
+
+.dark .border-gray-200,
+.dark .border-gray-100 {
+  border-color: rgba(192, 147, 85, 0.25) !important;
+}

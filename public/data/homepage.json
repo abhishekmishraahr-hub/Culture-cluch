@@ -1,0 +1,45 @@
+{
+  "sections": [
+    { "id": "Hero", "name": "Hero Banner & Statistics", "isEnabled": true, "order": 1 },
+    { "id": "TrustBar", "name": "Artisan Trust & Certifications", "isEnabled": true, "order": 2 },
+    { "id": "ShopByCategory", "name": "Circular Category Explorer", "isEnabled": true, "order": 3 },
+    { "id": "InteractiveMap", "name": "Interactive India Region Map", "isEnabled": true, "order": 4 },
+    { "id": "FeaturedCollections", "name": "Heritage Featured Collections", "isEnabled": true, "order": 5 },
+    { "id": "ShopByDistrict", "name": "One District One Product Slider", "isEnabled": true, "order": 6 },
+    { "id": "ArtisanStories", "name": "Artisan Stories & Narratives", "isEnabled": true, "order": 7 },
+    { "id": "Storytelling", "name": "Civilizational Storytelling Block", "isEnabled": true, "order": 8 },
+    { "id": "ProductCarousels", "name": "Best Sellers & Deal Carousels", "isEnabled": true, "order": 9 },
+    { "id": "Festival", "name": "Active Festive Showcases", "isEnabled": true, "order": 10 },
+    { "id": "WhyCulturalClutch", "name": "Why Choose Us Infographics", "isEnabled": true, "order": 11 },
+    { "id": "CustomerReviews", "name": "Verified Customer Reviews", "isEnabled": true, "order": 12 },
+    { "id": "Membership", "name": "Premium Member Benefits Banner", "isEnabled": true, "order": 13 }
+  ],
+  "activePromo": {
+    "text": "Festive Curation: Get 10% off Paithani Handlooms & Blue Pottery. Use Code: HERITAGE10",
+    "isEnabled": true
+  },
+  "testimonials": [
+    {
+      "id": "t-1",
+      "name": "Ananya Sharma",
+      "location": "Jaipur, Rajasthan",
+      "text": "The Blue Pottery vase I bought is a masterpiece. Knowing it came directly from the artisan's family makes it so special.",
+      "rating": 5,
+      "verified": true
+    },
+    {
+      "id": "t-2",
+      "name": "Rohan Deshmukh",
+      "location": "Pune, Maharashtra",
+      "text": "Exceptional Paithani silk weave! The QR code scan showing the master weaver's story added so much trust.",
+      "rating": 5,
+      "verified": true
+    }
+  ],
+  "specialPlace": {
+    "stateId": "rj",
+    "title": "Jaipur Craft Capital",
+    "description": "Jaipur is globally renowned for its traditional Blue Pottery, block printed textiles, and gemstone craft heritage. Click to explore Rajasthan's full ODOP registry.",
+    "imageUrl": "https://images.unsplash.com/photo-1596178060810-72cb62112e75?auto=format&fit=crop&w=600&q=80"
+  }
+}
