@@ -565,6 +565,16 @@ export default function Header() {
                 <Link onClick={() => setMobileMenuOpen(false)} href="/products" className="block hover:text-[#B56D3E] transition-colors py-2 border-b border-gray-150/40">Category / All Products</Link>
                 <Link onClick={() => setMobileMenuOpen(false)} href="/orders" className="block hover:text-[#B56D3E] transition-colors py-2 border-b border-gray-150/40">My Orders</Link>
                 
+                {!loading && isAdmin && (
+                  <div className="pt-2 pb-1 border-b border-gray-150/40 space-y-2">
+                    <span className="block text-[9px] uppercase tracking-widest text-[#B56D3E] font-extrabold mb-1">Admin Controls</span>
+                    <Link onClick={() => setMobileMenuOpen(false)} href="/admin/dashboard" className="block hover:text-[#B56D3E] transition-colors pl-2 py-1 text-xs text-[#B56D3E] font-black">Dashboard</Link>
+                    <Link onClick={() => setMobileMenuOpen(false)} href="/admin/states" className="block hover:text-[#B56D3E] transition-colors pl-2 py-1 text-xs">States & Districts</Link>
+                    <Link onClick={() => setMobileMenuOpen(false)} href="/admin/categories" className="block hover:text-[#B56D3E] transition-colors pl-2 py-1 text-xs">Categories</Link>
+                    <Link onClick={() => setMobileMenuOpen(false)} href="/admin/about" className="block hover:text-[#B56D3E] transition-colors pl-2 py-1 text-xs">About Editor</Link>
+                  </div>
+                )}
+                
                 {/* Flipkart/Amazon-style Cart Summary panel inside mobile menu */}
                 <div className="p-4 bg-amber-500/5 dark:bg-white/5 border border-[#C09355]/20 rounded-2xl space-y-3 normal-case font-medium text-left">
                   <div className="flex justify-between items-center text-[10px] font-bold uppercase tracking-wider text-[#B56D3E]">
