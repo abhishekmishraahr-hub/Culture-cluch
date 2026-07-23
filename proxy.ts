@@ -26,10 +26,28 @@ export async function proxy(request: NextRequest) {
     return NextResponse.next();
   }
 
-  const token = await getToken({
-    req: request,
-    secret: process.env.NEXTAUTH_SECRET,
-  });
+  const secret = process.env.NEXTAUTH_SECRET || "your-development-nextauth-secret-key-auraic-2026";
+
+  let token = null;
+  try {
+    // Try decrypting standard secure cookie prefix first (production HTTPS terminated at Vercel routing layers)
+    token = await getToken({
+      req: request,
+      secret,
+      secureCookie: true,
+    });
+    
+    // If not found, try retrieving insecure prefix cookie (for localhost development)
+    if (!token) {
+      token = await getToken({
+        req: request,
+        secret,
+        secureCookie: false,
+      });
+    }
+  } catch (err) {
+    console.error("[Middleware Token Decryption Error]:", err);
+  }
 
   const mockCookie = request.cookies.get("mock_session_cookie")?.value;
 
