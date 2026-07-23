@@ -2817,6 +2817,70 @@ export function DashboardContent() {
         );
       }
 
+      if (feat.includes("department")) {
+        return (
+          <div className="space-y-6">
+            <div className={`p-6 rounded-2xl border space-y-4 ${isDarkMode ? "bg-[#1A1311] border-gray-800" : "bg-[#FDFBF7] border-[#C09355]/20"}`}>
+              <div className="flex justify-between items-center border-b pb-2 border-gray-150/50 dark:border-gray-850">
+                <div>
+                  <h3 className="text-sm font-serif font-bold text-[#B56D3E] uppercase tracking-wider">Enterprise Corporate Departments</h3>
+                  <p className="text-xs text-gray-400">Master configuration registry of the organizational departments and business units.</p>
+                </div>
+                <span className="bg-[#B56D3E]/10 text-[#B56D3E] font-extrabold px-3 py-1 rounded-full text-xs">
+                  {DEPARTMENTS_PURPOSES.length} Total Units
+                </span>
+              </div>
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {DEPARTMENTS_PURPOSES.map((dept, index) => (
+                  <div key={index} className="p-4 border rounded-xl bg-white dark:bg-gray-805 flex flex-col justify-between hover:shadow-md transition-shadow">
+                    <div>
+                      <div className="flex items-center gap-2 mb-1.5">
+                        <span className="w-5 h-5 rounded bg-[#C09355]/10 text-[#B56D3E] flex items-center justify-center font-bold text-xs">{index + 1}</span>
+                        <strong className="text-sm text-gray-850 dark:text-gray-150 font-bold block">{dept.name}</strong>
+                      </div>
+                      <p className="text-[11px] text-gray-500 dark:text-gray-300 leading-relaxed font-semibold">
+                        {dept.purpose || (dept as any).focus || "General operational department capabilities."}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        );
+      }
+
+      if (feat.includes("designation")) {
+        return (
+          <div className="space-y-6">
+            <div className={`p-6 rounded-2xl border space-y-4 ${isDarkMode ? "bg-[#1A1311] border-gray-800" : "bg-[#FDFBF7] border-[#C09355]/20"}`}>
+              <div className="flex justify-between items-center border-b pb-2 border-gray-150/50 dark:border-gray-850">
+                <div>
+                  <h3 className="text-sm font-serif font-bold text-[#B56D3E] uppercase tracking-wider">Corporate Designations Registry</h3>
+                  <p className="text-xs text-gray-400">Registered payroll designations and organizational departments mapping.</p>
+                </div>
+                <span className="bg-[#B56D3E]/10 text-[#B56D3E] font-extrabold px-3 py-1 rounded-full text-xs">
+                  {erpJobRoles.length} Active Designations
+                </span>
+              </div>
+              <div className="space-y-3">
+                {erpJobRoles.map((role) => (
+                  <div key={role.id} className="p-3 border rounded-xl bg-white dark:bg-gray-855 flex justify-between items-center text-xs">
+                    <div>
+                      <strong className="block text-[#3D1E16] dark:text-gray-150">{role.title}</strong>
+                      <span className="text-[10px] text-gray-400 font-semibold">Department: {role.department}</span>
+                    </div>
+                    <span className="text-[9px] bg-amber-50 text-amber-700 font-bold px-2 py-0.5 rounded border border-amber-200">
+                      ID: {role.id}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        );
+      }
+
       // Default HR view is general registry info
       return (
         <div className={`p-6 rounded-2xl border space-y-4 ${isDarkMode ? "bg-[#1A1311] border-gray-800" : "bg-[#FDFBF7] border-[#C09355]/20"}`}>
