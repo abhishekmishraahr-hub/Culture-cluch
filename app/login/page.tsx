@@ -60,6 +60,7 @@ function LoginContent() {
           role: "Owner"
         };
         localStorage.setItem("mock_session", JSON.stringify(mockUser));
+        document.cookie = "mock_session_cookie=Owner; path=/; max-age=86400; SameSite=Lax";
         setSuccessMessage("Login successful! Redirecting...");
         setTimeout(() => {
           router.push(callbackUrl);
@@ -75,6 +76,7 @@ function LoginContent() {
           role: "Customer"
         };
         localStorage.setItem("mock_session", JSON.stringify(mockUser));
+        document.cookie = "mock_session_cookie=Customer; path=/; max-age=86400; SameSite=Lax";
         setSuccessMessage("Login successful! Redirecting...");
         setTimeout(() => {
           router.push(callbackUrl);

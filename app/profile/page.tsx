@@ -122,6 +122,7 @@ function ProfileContent() {
 
   const handleSignOut = () => {
     localStorage.removeItem("mock_session");
+    document.cookie = "mock_session_cookie=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT";
     signOut({ callbackUrl: "/" });
   };
 
