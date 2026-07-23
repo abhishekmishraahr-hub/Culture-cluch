@@ -1,8 +1,6 @@
 "use client";
 
-import React from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { usePathname } from "next/navigation";
+import { motion } from "framer-motion";
 
 export default function PageTransition({ children }: { children: React.ReactNode }) {
   return (

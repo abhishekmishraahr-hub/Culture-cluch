@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Sparkles, Star, ShoppingBag, Eye, Heart } from "lucide-react";
+import { Sparkles, ShoppingBag, Eye } from "lucide-react";
 import { useCart } from "@/lib/cart";
 import ProductQuickView from "./ProductQuickView";
 
@@ -129,22 +129,22 @@ export default function ProductCarousels({ trendingProducts, bestSellers, recent
                   </span>
                 )}
 
-                {/* Hover Quick-Shop Action Buttons */}
-                <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
+                {/* Hover Quick-Shop Action Buttons (with keyboard focus support) */}
+                <div className="absolute inset-0 bg-black/25 opacity-0 group-hover:opacity-100 focus-within:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-3">
                   <button 
                     title="Quick View Details"
                     onClick={(e) => {
                       e.stopPropagation();
                       setQuickViewProduct(prod);
                     }}
-                    className="p-2.5 bg-white hover:bg-[#FAF5EE] text-[#3D1E16] rounded-full shadow-lg transform translate-y-3 group-hover:translate-y-0 transition-all duration-300"
+                    className="p-2.5 bg-white hover:bg-[#FAF5EE] text-[#3D1E16] rounded-full shadow-lg transform translate-y-3 group-hover:translate-y-0 focus-within:translate-y-0 transition-all duration-300 cursor-pointer"
                   >
                     <Eye className="w-4.5 h-4.5" />
                   </button>
                   <button 
                     title="Add to Cart"
                     onClick={(e) => handleQuickAddToCart(e, prod)}
-                    className="p-2.5 bg-[#B56D3E] hover:bg-[#9B5A2F] text-white rounded-full shadow-lg transform translate-y-3 group-hover:translate-y-0 transition-all duration-300"
+                    className="p-2.5 bg-[#B56D3E] hover:bg-[#9B5A2F] text-white rounded-full shadow-lg transform translate-y-3 group-hover:translate-y-0 focus-within:translate-y-0 transition-all duration-300 cursor-pointer"
                   >
                     <ShoppingBag className="w-4.5 h-4.5" />
                   </button>
@@ -173,6 +173,27 @@ export default function ProductCarousels({ trendingProducts, bestSellers, recent
                       ₹{prod.compareAtPrice.toLocaleString()}
                     </span>
                   )}
+                </div>
+
+                {/* Mobile / Touch Action Row (Always Visible on Mobile/Tablet) */}
+                <div className="flex gap-2 mt-1.5 pt-2 border-t border-gray-100 md:hidden">
+                  <button 
+                    type="button"
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      setQuickViewProduct(prod);
+                    }}
+                    className="flex-1 py-2 bg-[#FAF5EE] border border-[#C09355]/30 text-[#3D1E16] rounded-xl text-[10px] font-bold uppercase text-center active:scale-95 transition-all cursor-pointer"
+                  >
+                    Details
+                  </button>
+                  <button 
+                    type="button"
+                    onClick={(e) => handleQuickAddToCart(e, prod)}
+                    className="flex-1 py-2 bg-[#B56D3E] text-white rounded-xl text-[10px] font-bold uppercase text-center active:scale-95 transition-all cursor-pointer"
+                  >
+                    Add
+                  </button>
                 </div>
               </div>
 

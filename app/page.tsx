@@ -13,7 +13,6 @@ import ArtisanStories from "@/components/ArtisanStories";
 import ProductCarousels from "@/components/ProductCarousels";
 import AIShoppingAssistant from "@/components/AIShoppingAssistant";
 import LivePurchasePopup from "@/components/LivePurchasePopup";
-import MobileStickyBottomNav from "@/components/MobileStickyBottomNav";
 import SafeImage from "@/components/SafeImage";
 
 // Server subcomponents for page content
@@ -448,7 +447,6 @@ export default async function Home() {
       {/* Interactive Floating Widgets */}
       <AIShoppingAssistant />
       <LivePurchasePopup />
-      <MobileStickyBottomNav />
     </div>
   );
 }

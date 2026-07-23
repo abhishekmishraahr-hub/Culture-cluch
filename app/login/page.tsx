@@ -50,6 +50,7 @@ function LoginContent() {
     } catch (err) {
       isStaticMode = true;
     }
+    console.log("[DEBUG LOGIN] isStaticMode:", isStaticMode);
 
     if (isStaticMode) {
       if (email === "owner@auraic.in" && password === "AuraicOwner2026") {

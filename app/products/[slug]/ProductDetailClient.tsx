@@ -1,28 +1,17 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { 
   MapPin, 
   ShieldCheck, 
   ShoppingCart, 
-  Heart, 
-  ChevronLeft, 
-  ChevronRight, 
   Award, 
   History, 
   Hammer, 
-  CheckCircle2, 
   User, 
   Star, 
   Clock, 
   Zap,
-  Share2,
-  HelpCircle,
-  TrendingUp,
-  SlidersHorizontal,
-  ChevronDown,
-  Info,
-  PlayCircle,
   Gift
 } from "lucide-react";
 import Link from "next/link";
@@ -117,7 +106,6 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
   // Customizer selection
   const [selectedVariants, setSelectedVariants] = useState<Record<string, string>>({});
   const [quantity, setQuantity] = useState(1);
-  const [cartSuccess, setCartSuccess] = useState(false);
 
   // Tabs
   const [activeTab, setActiveTab] = useState("story"); // story, specs, reviews
@@ -128,7 +116,6 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
 
   // Wishlist states
   const [isWishlisted, setIsWishlisted] = useState(false);
-  const [wishlistSuccess, setWishlistSuccess] = useState(false);
 
   // Interactive 360 view states
   const [is360Active, setIs360Active] = useState(false);
@@ -176,18 +163,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleWishlistToggle = () => {
-    setIsWishlisted(!isWishlisted);
-    if (!isWishlisted) {
-      setWishlistSuccess(true);
-      showToast("Added to Wishlist! We will notify you of stock levels.");
-      setTimeout(() => setWishlistSuccess(false), 3000);
-    } else {
-      showToast("Removed from Wishlist.");
-    }
-  };
-
-  const fetchProduct = async () => {
+  const fetchProduct = useCallback(async () => {
     try {
       let isStaticMode = false;
       let data: any = null;
@@ -210,7 +186,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
         } else {
           isStaticMode = true;
         }
-      } catch (err) {
+      } catch {
         isStaticMode = true;
       }
 
@@ -277,11 +253,11 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
     } finally {
       setLoading(false);
     }
-  };
+  }, [slug]);
 
   useEffect(() => {
     fetchProduct();
-  }, [slug]);
+  }, [fetchProduct]);
 
   // Browse History Tracker
   useEffect(() => {
@@ -381,9 +357,7 @@ export default function ProductDetailClient({ slug }: { slug: string }) {
       variantValue: Object.values(selectedVariants)[0] || "Craft Selection",
       taxRate: product.taxRate || 12
     });
-    setCartSuccess(true);
     showToast(`Added ${quantity} × "${product.name}" to cart!`);
-    setTimeout(() => setCartSuccess(false), 2500);
   };
 
   const handleBuyNow = () => {

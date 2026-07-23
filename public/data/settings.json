@@ -1,0 +1,68 @@
+{
+  "site_name": "Cultural Clutch",
+  "logo_url": "/logo.jpg",
+  "favicon_url": "/favicon.ico",
+  "theme_palette": "saffron",
+  "gst_details_pan": "AAAC0000A",
+  "otp_login_status": "true",
+  "sku_format_default": "CC-[DIST]-[CAT]-[NUM]",
+  "minimum_stock_alert": "5",
+  "free_shipping_threshold": "1999",
+  "razorpay_api_live": "true",
+  "ai_chatbot_status": "true",
+  "debug_mode": "false",
+  "header_nav_menus": [
+    { "key": "home", "label": "Home", "href": "/" },
+    {
+      "key": "categories",
+      "label": "Categories",
+      "href": "/products",
+      "children": [
+        { "key": "all-products", "label": "All Products", "href": "/products" },
+        { "key": "heritage-handicrafts", "label": "Stone & Wood Carvings", "href": "/products?category=heritage-handicrafts" },
+        { "key": "blue-pottery", "label": "Blue Pottery & Clay Art", "href": "/products?category=pottery" },
+        { "key": "brassware", "label": "Moradabad Brassware", "href": "/products?category=metal-crafts" },
+        { "key": "tribal-bamboo", "label": "Tribal Bamboo Crafts", "href": "/products?category=tribal-art" },
+        { "key": "banarasi", "label": "Banarasi Silk Sarees", "href": "/products?category=handloom-textiles" },
+        { "key": "paithani", "label": "Paithani Silk Sarees", "href": "/products?category=handloom-textiles" },
+        { "key": "venkatagiri", "label": "Venkatagiri Handlooms", "href": "/products?category=handloom-textiles" },
+        { "key": "pashmina", "label": "Pashmina Shawls", "href": "/products?category=handloom-textiles" },
+        { "key": "madhubani", "label": "Madhubani Paintings", "href": "/products?category=art-folk-painting" },
+        { "key": "pattachitra", "label": "Pattachitra Scrolls", "href": "/products?category=art-folk-painting" },
+        { "key": "warli", "label": "Warli Folk Drawings", "href": "/products?category=art-folk-painting" }
+      ]
+    },
+    { "key": "stories", "label": "Stories", "href": "/stories" },
+    { "key": "orders", "label": "Orders", "href": "/orders" },
+    { "key": "wishlist", "label": "Wishlist", "href": "/products?wishlist=true" }
+  ],
+  "languages": [
+    { "code": "en", "name": "English", "localName": "English" },
+    { "code": "hi", "name": "Hindi", "localName": "हिन्दी" },
+    { "code": "gu", "name": "Gujarati", "localName": "ગુજરાતી" },
+    { "code": "ta", "name": "Tamil", "localName": "தமிழ்" }
+  ],
+  "currencies": [
+    { "code": "INR", "name": "Indian Rupee (₹)" },
+    { "code": "USD", "name": "US Dollar ($)" },
+    { "code": "EUR", "name": "Euro (€)" }
+  ],
+  "faq": [
+    {
+      "q": "What is the One District One Product (ODOP) initiative?",
+      "a": "ODOP is a Government of India initiative aimed at promoting unique local specialties and traditional crafts from each district across the country, enhancing native weaver livelihoods."
+    },
+    {
+      "q": "How do you verify the authenticity of handicraft products?",
+      "a": "All artisan cooperatives listing products on Cultural Clutch provide Geographical Indication (GI) registration certificates and undergo validation audits before publishing listings."
+    },
+    {
+      "q": "What are your shipping policies?",
+      "a": "We partner with leading insured courier services (Delhivery, BlueDart, IndiaPost) to deliver orders. Standard delivery across India takes 3-7 business days."
+    }
+  ],
+  "privacy_policy": "Your privacy is important to us. Cultural Clutch stores user profiles and functional functional functional cookies locally to deliver customized translations, theme attributes, and shopping carts. We protect your billing transactions in compliance with PCI DSS standards.",
+  "terms_of_service": "By utilizing the Cultural Clutch portal, you agree to buy genuine certified items sourced directly from artisan collectives under fair margins. Copying content, reverse engineering APIs, or scraping catalog registries is strictly prohibited.",
+  "return_policy": "We offer a customer-friendly 7-day return window for items with verified structural weaving or transit damage. Simply scan the GI tag and request verification to release manual/instant refunds.",
+  "shipping_policy": "Orders are processed within 24-48 hours. Standard domestic shipping is free for all orders above ₹1,999. Courier details and tracking logs are updated inside your customer profile dashboard upon package dispatch."
+}

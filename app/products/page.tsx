@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import Link from "next/link";
-import { Search, MapPin, SlidersHorizontal, ArrowUpDown, Mic, MicOff, Star, Heart, Clock } from "lucide-react";
+import { Search, MapPin, SlidersHorizontal, ArrowUpDown, Mic, MicOff, Heart, Clock } from "lucide-react";
 
 interface ProductImage {
   id: string;
@@ -137,7 +137,7 @@ export default function ProductsCatalogPage() {
           if (data && !data.error) return data;
         }
       }
-    } catch (err) {
+    } catch {
       console.warn(`Dynamic API fetch failed for ${apiUrl}, attempting static fallback...`);
     }
     const staticRes = await fetch(staticUrl);
@@ -145,19 +145,19 @@ export default function ProductsCatalogPage() {
     throw new Error(`Failed to load data from both ${apiUrl} and ${staticUrl}`);
   };
 
-  const fetchFilters = async () => {
+  const fetchFilters = useCallback(async () => {
     try {
       const catData = await fetchJSONWithFallback("/api/categories", "/static-data/categories.json");
       setCategories(catData);
 
       const stateData = await fetchJSONWithFallback("/api/states", "/static-data/states.json");
       setStates(stateData);
-    } catch (err) {
-      console.error("Failed to load catalog filters", err);
+    } catch (error) {
+      console.error("Failed to load catalog filters", error);
     }
-  };
+  }, []);
 
-  const fetchProducts = async () => {
+  const fetchProducts = useCallback(async () => {
     setLoading(true);
     try {
       let isStaticMode = false;
@@ -189,7 +189,7 @@ export default function ProductsCatalogPage() {
         } else {
           isStaticMode = true;
         }
-      } catch (err) {
+      } catch {
         isStaticMode = true;
       }
 
@@ -250,16 +250,19 @@ export default function ProductsCatalogPage() {
       }
 
       setProducts(fetchedProducts);
-    } catch (err) {
-      console.error("Failed to fetch products", err);
+    } catch (error) {
+      console.error("Failed to fetch products", error);
     } finally {
       setLoading(false);
     }
-  };
+  }, [
+    searchTerm, selectedCategory, selectedState, selectedDistrict, selectedSort,
+    minPrice, maxPrice, allProducts
+  ]);
 
   useEffect(() => {
     fetchFilters();
-  }, []);
+  }, [fetchFilters]);
 
   useEffect(() => {
     // Debounce product fetching when searching
@@ -268,7 +271,7 @@ export default function ProductsCatalogPage() {
     }, 300);
 
     return () => clearTimeout(delayDebounceFn);
-  }, [searchTerm, selectedCategory, selectedState, selectedDistrict, selectedSort, minPrice, maxPrice]);
+  }, [fetchProducts]);
 
   const selectedStateObj = states.find((st) => st.code === selectedState);
   const districtsToShow = selectedStateObj ? selectedStateObj.districts : [];
@@ -492,7 +495,7 @@ export default function ProductsCatalogPage() {
                 </div>
                 <h3 className="text-lg font-serif text-[#3D1E16] font-semibold">No products found</h3>
                 <p className="text-sm text-gray-400 mt-1 max-w-sm">
-                  We couldn't find any products matching your current filter set. Try adjusting your search query or clear all filters.
+                  We couldn&apos;t find any products matching your current filter set. Try adjusting your search query or clear all filters.
                 </p>
               </div>
             ) : (

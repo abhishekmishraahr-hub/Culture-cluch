@@ -2,30 +2,30 @@
 @import "tailwindcss";
 
 :root {
-  --background: #FAF5EE;
+  --background: #d5af7a;
   --foreground: #2E1E1A;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  
+
   --font-sans: 'Inter', 'Poppins', sans-serif;
   --font-serif: 'Cormorant Garamond', 'Playfair Display', serif;
   --font-decor: 'Cinzel', 'EB Garamond', serif;
-  
+
   --color-primary: #3D1E16;
   --color-secondary: #8B5A2B;
   --color-muted-text: #7A6A53;
   --color-accent-rust: #B56D3E;
-  
+
   --color-gold: #C09355;
   --color-copper: #B56D3E;
   --color-heritage-brown: #3D1E16;
   --color-cream: #FAF5EE;
   --color-sand: #E6DFD3;
   --color-charcoal: #2E1E1A;
-  
+
   --color-warning-brand: #D97706;
   --color-success-brand: #059669;
   --color-danger-brand: #DC2626;
@@ -44,7 +44,8 @@
   --foreground: #F5EFE6 !important;
 }
 
-html, body {
+html,
+body {
   background-color: var(--background) !important;
   color: var(--foreground);
   font-family: var(--font-sans);
@@ -56,7 +57,8 @@ html, body {
 .display-title {
   font-family: var(--font-serif);
   font-weight: 700;
-  font-size: 2.25rem; /* 36px */
+  font-size: 2.25rem;
+  /* 36px */
   line-height: 1.15;
   letter-spacing: -0.02em;
   color: var(--foreground);
@@ -65,9 +67,17 @@ html, body {
 .hero-title {
   font-family: var(--font-serif);
   font-weight: 800;
-  font-size: 3.5rem; /* 56px */
-  @media (min-width: 768px) { font-size: 4.5rem; }
-  @media (min-width: 1024px) { font-size: 5.5rem; }
+  font-size: 3.5rem;
+
+  /* 56px */
+  @media (min-width: 768px) {
+    font-size: 4.5rem;
+  }
+
+  @media (min-width: 1024px) {
+    font-size: 5.5rem;
+  }
+
   line-height: 1.05;
   letter-spacing: -0.015em;
   color: var(--foreground);
@@ -76,8 +86,13 @@ html, body {
 .section-heading {
   font-family: var(--font-serif);
   font-weight: 700;
-  font-size: 1.875rem; /* 30px */
-  @media (min-width: 768px) { font-size: 2.25rem; }
+  font-size: 1.875rem;
+
+  /* 30px */
+  @media (min-width: 768px) {
+    font-size: 2.25rem;
+  }
+
   line-height: 1.2;
   letter-spacing: -0.01em;
   color: var(--foreground);
@@ -86,7 +101,8 @@ html, body {
 .card-heading {
   font-family: var(--font-sans);
   font-weight: 600;
-  font-size: 1.125rem; /* 18px */
+  font-size: 1.125rem;
+  /* 18px */
   line-height: 1.4;
   letter-spacing: -0.01em;
   color: var(--foreground);
@@ -95,7 +111,8 @@ html, body {
 .sub-heading {
   font-family: var(--font-sans);
   font-weight: 500;
-  font-size: 0.875rem; /* 14px */
+  font-size: 0.875rem;
+  /* 14px */
   line-height: 1.5;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -124,7 +141,11 @@ html, body {
   font-style: italic;
   font-weight: 700;
   font-size: 1.5rem;
-  @media (min-width: 768px) { font-size: 2rem; }
+
+  @media (min-width: 768px) {
+    font-size: 2rem;
+  }
+
   line-height: 1.25;
   color: var(--foreground);
 }
@@ -133,7 +154,11 @@ html, body {
   font-family: var(--font-sans);
   font-weight: 300;
   font-size: 0.95rem;
-  @media (min-width: 768px) { font-size: 1rem; }
+
+  @media (min-width: 768px) {
+    font-size: 1rem;
+  }
+
   line-height: 1.6;
   color: var(--foreground);
 }
@@ -293,6 +318,7 @@ html, body {
     opacity: 0;
     transform: translateY(12px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -320,6 +346,7 @@ html, body {
   0% {
     background-position: 200% 0;
   }
+
   100% {
     background-position: -200% 0;
   }
@@ -380,4 +407,50 @@ html, body {
 .dark .border-gray-200,
 .dark .border-gray-100 {
   border-color: rgba(192, 147, 85, 0.25) !important;
+}
+
+/* Global Responsive Layout Fixes */
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Table container styling to allow swipe scroll on narrow screens */
+.responsive-table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Touch device accessibility overrides (forces hover play elements to display on tap viewports) */
+@media (hover: none) {
+  .touch-show-play {
+    opacity: 1 !important;
+  }
+}
+
+/* Theme color palettes configured dynamically via CMS */
+.theme-indigo {
+  --color-primary: #1A237E !important;
+  --color-accent-rust: #3F51B5 !important;
+  --color-gold: #5C6BC0 !important;
+  --color-copper: #3F51B5 !important;
+}
+.theme-emerald {
+  --color-primary: #064E3B !important;
+  --color-accent-rust: #059669 !important;
+  --color-gold: #34D399 !important;
+  --color-copper: #059669 !important;
+}
+.theme-crimson {
+  --color-primary: #7F1D1D !important;
+  --color-accent-rust: #DC2626 !important;
+  --color-gold: #F87171 !important;
+  --color-copper: #DC2626 !important;
 }

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Sparkles, Star, Award, Heart, Play, X, User } from "lucide-react";
+import { Sparkles, Award, Heart, Play, X, User } from "lucide-react";
 
 const ARTISANS = [
   {
@@ -47,7 +47,7 @@ export default function ArtisanStories() {
           Artisan Chronicles
         </h2>
         <p className="text-xs text-gray-400 uppercase tracking-widest font-semibold">
-          Meet the master craftspeople behind India's timeless heritage
+          Meet the master craftspeople behind India&apos;s timeless heritage
         </p>
       </div>
 
@@ -66,12 +66,12 @@ export default function ArtisanStories() {
                 <User className="w-8 h-8" />
               </div>
 
-              {/* Play Video Trigger overlay */}
+              {/* Play Video Trigger overlay (with keyboard focus & touchscreen hover support) */}
               <button 
                 onClick={() => setActiveVideo(art.videoUrl)}
-                className="absolute inset-0 flex items-center justify-center z-25 bg-black/35 opacity-0 group-hover:opacity-100 transition-opacity duration-300 cursor-pointer"
+                className="absolute inset-0 flex items-center justify-center z-25 bg-black/35 opacity-0 group-hover:opacity-100 focus-within:opacity-100 touch-show-play transition-opacity duration-300 cursor-pointer focus:outline-none"
               >
-                <div className="w-12 h-12 rounded-full bg-[#B56D3E] hover:bg-[#9B5A2F] text-[#FAF5EE] flex items-center justify-center shadow-lg transition-transform transform scale-90 group-hover:scale-100 duration-300">
+                <div className="w-12 h-12 rounded-full bg-[#B56D3E] hover:bg-[#9B5A2F] text-[#FAF5EE] flex items-center justify-center shadow-lg transition-transform transform scale-90 group-hover:scale-100 focus-within:scale-100 duration-300">
                   <Play className="w-5 h-5 fill-current ml-0.5" />
                 </div>
               </button>
@@ -97,7 +97,7 @@ export default function ArtisanStories() {
                   {art.name}
                 </h3>
                 <p className="text-xs text-gray-550 leading-relaxed font-serif text-justify line-clamp-4">
-                  "{art.story}"
+                  &ldquo;{art.story}&rdquo;
                 </p>
               </div>
 

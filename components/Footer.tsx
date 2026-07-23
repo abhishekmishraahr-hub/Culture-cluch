@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { 
   ShieldCheck, Award, Lock, RefreshCw, Truck, CheckCircle2, Heart, Flag,
-  Send, HelpCircle, Phone, Mail, Clock, MapPin, Sparkles, Globe, CreditCard
+  Send, Mail, Clock, MapPin, Sparkles
 } from "lucide-react";
 import SafeImage from "@/components/SafeImage";
 import { usePathname } from "next/navigation";
@@ -16,12 +16,8 @@ export default function Footer() {
   const [submitting, setSubmitting] = useState(false);
   const [message, setMessage] = useState<string | null>(null);
 
-  // Database Configurations
   const [sections, setSections] = useState<any[]>([]);
   const [socialLinks, setSocialLinks] = useState<any[]>([]);
-  const [paymentMethods, setPaymentMethods] = useState<any[]>([]);
-  const [shippingPartners, setShippingPartners] = useState<any[]>([]);
-  const [certifications, setCertifications] = useState<any[]>([]);
   const [contactInfo, setContactInfo] = useState<any>({
     corporateOffice: "Cultural Clutch Hub, Sector 62, Noida, UP, 201301",
     registeredOffice: "Heritage House, 12 Kalakshetra Road, Chennai, TN, 600041",
@@ -51,9 +47,6 @@ export default function Footer() {
         if (data.sections && data.sections.length > 0) {
           setSections(data.sections.filter((s: any) => s.isEnabled));
           setSocialLinks(data.socialLinks.filter((s: any) => s.isEnabled));
-          setPaymentMethods(data.paymentMethods.filter((s: any) => s.isEnabled));
-          setShippingPartners(data.shippingPartners.filter((s: any) => s.isEnabled));
-          setCertifications(data.certifications.filter((s: any) => s.isEnabled));
           setContactInfo(data.contactInfo);
           setSettings(data.settings);
         }
@@ -83,8 +76,9 @@ export default function Footer() {
             id: "sec-3",
             title: "Customer Support",
             links: [
-              { label: "Help Center & FAQs", url: "/about" },
+              { label: "Help Center & FAQs", url: "/faq" },
               { label: "Track Your Order", url: "/orders" },
+              { label: "Shipping & Returns", url: "/shipping-returns" },
               { label: "Contact Us", url: "/profile" }
             ]
           }
@@ -92,7 +86,7 @@ export default function Footer() {
       });
   }, []);
 
-  if (pathname !== "/" && !pathname.startsWith("/admin")) {
+  if (pathname.startsWith("/admin") || pathname.startsWith("/vendor")) {
     return null;
   }
 
@@ -116,7 +110,7 @@ export default function Footer() {
       } else {
         setMessage(data.error);
       }
-    } catch (err) {
+    } catch {
       setMessage("Subscription failed. Please try again.");
     } finally {
       setSubmitting(false);
@@ -322,10 +316,10 @@ export default function Footer() {
 
           {/* Quick legal compliance links */}
           <div className="flex flex-wrap justify-center items-center gap-x-6 gap-y-2 text-[9px] text-gray-300 font-bold uppercase tracking-wider">
-            <Link href="/about" className="hover:text-[#C09355] transition-colors">Privacy Policy</Link>
-            <Link href="/about" className="hover:text-[#C09355] transition-colors">Terms of Service</Link>
-            <Link href="/about" className="hover:text-[#C09355] transition-colors">Accessibility Statement</Link>
-            <Link href="/about" className="hover:text-[#C09355] transition-colors">Cookie Settings</Link>
+            <Link href="/privacy" className="hover:text-[#C09355] transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-[#C09355] transition-colors">Terms of Service</Link>
+            <Link href="/shipping-returns" className="hover:text-[#C09355] transition-colors">Shipping & Returns</Link>
+            <Link href="/faq" className="hover:text-[#C09355] transition-colors">FAQs</Link>
           </div>
 
           {/* Customer live counts */}

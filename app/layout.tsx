@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { CartProvider } from "@/lib/cart";
+import { LanguageProvider } from "@/lib/i18n/LanguageContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AuthProvider from "@/components/AuthProvider";
@@ -40,13 +41,15 @@ export default function RootLayout({
       </head>
       <body className="min-h-full flex flex-col bg-[#FAF5EE] dark:bg-[#1c0f0c] font-sans transition-colors duration-300">
         <AuthProvider>
-          <CartProvider>
-            <Header />
-            <PageTransition>
-              <main className="flex-grow bg-inherit">{children}</main>
-            </PageTransition>
-            <Footer />
-          </CartProvider>
+          <LanguageProvider>
+            <CartProvider>
+              <Header />
+              <PageTransition>
+                <main className="flex-grow bg-inherit">{children}</main>
+              </PageTransition>
+              <Footer />
+            </CartProvider>
+          </LanguageProvider>
         </AuthProvider>
       </body>
     </html>

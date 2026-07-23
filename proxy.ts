@@ -2,10 +2,14 @@ import { NextResponse } from "next/server";
 import type { NextRequest } from "next/server";
 import { getToken } from "next-auth/jwt";
 
-export async function middleware(request: NextRequest) {
+export const config = {
+  matcher: ["/admin/:path*", "/api/admin/:path*"],
+};
+
+export async function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // Only run middleware on /admin and /api/admin routes
+  // Only run proxy logic on /admin and /api/admin routes
   const isAdminRoute = pathname.startsWith("/admin");
   const isAdminApiRoute = pathname.startsWith("/api/admin");
 
@@ -37,8 +41,8 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(loginUrl);
   }
 
-  const userRole = token.role as string;
-  const userPermissions = token.permissions as string;
+  const userRole = token.role as string | undefined;
+  const rawPermissions = token.permissions as string | undefined;
 
   // 1. Owner / Super Admin has absolute bypass access
   if (userRole === "Owner" || userRole === "Super Admin") {
@@ -53,7 +57,40 @@ export async function middleware(request: NextRequest) {
     return NextResponse.redirect(new URL("/unauthorized", request.url));
   }
 
-  // 3. Price restriction rules (Only Owner, Super Admin, and Admin can access pricing routes/APIs)
+  // 3. Dynamic JSON Permissions Enforcement
+  if (rawPermissions && rawPermissions.trim().startsWith("{")) {
+    try {
+      const parsed = JSON.parse(rawPermissions);
+      
+      // Enforce API Route Access
+      if (isAdminApiRoute) {
+        const allowedApis = Array.isArray(parsed.apis) ? parsed.apis : [];
+        const isAllowed = allowedApis.some((api: string) => pathname.startsWith(api) || api === "*");
+        if (!isAllowed) {
+          return NextResponse.json({ error: "Forbidden: Access to this API route is restricted by your role" }, { status: 403 });
+        }
+      }
+
+      // Enforce Page Route Access
+      if (isAdminRoute) {
+        const allowedPages = Array.isArray(parsed.pages) ? parsed.pages : [];
+        const isAllowed = allowedPages.some((page: string) => pathname.startsWith(page) || page === "*");
+        if (!isAllowed) {
+          return NextResponse.redirect(new URL("/unauthorized", request.url));
+        }
+      }
+      
+      return NextResponse.next();
+    } catch (e) {
+      // JSON parse error - fall back to legacy checks
+    }
+  }
+
+  const userPermissions = typeof rawPermissions === "string"
+    ? rawPermissions.split(",").map(p => p.trim())
+    : (Array.isArray(token.permissions) ? token.permissions : []);
+
+  // 4. Price restriction rules (Only Owner, Super Admin, and Admin can access pricing routes/APIs)
   const isPricingRoute = pathname.includes("/price") || pathname.includes("/pricing");
   if (isPricingRoute) {
     const hasPricePermission = userRole === "Admin" || userPermissions.includes("PRICES:WRITE");
@@ -68,7 +105,7 @@ export async function middleware(request: NextRequest) {
     }
   }
 
-  // 4. Product Manager access rules
+  // 5. Product Manager access rules
   const isProductWriteRoute = pathname.includes("/products") && (request.method === "POST" || request.method === "PUT" || request.method === "DELETE");
   if (isProductWriteRoute) {
     const hasProductWrite = userRole === "Admin" || userRole === "Product Manager" || userPermissions.includes("PRODUCTS:WRITE");
@@ -79,7 +116,3 @@ export async function middleware(request: NextRequest) {
 
   return NextResponse.next();
 }
-
-export const config = {
-  matcher: ["/admin/:path*", "/api/admin/:path*"],
-};

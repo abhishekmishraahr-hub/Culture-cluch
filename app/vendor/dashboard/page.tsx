@@ -1,6 +1,7 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { useSession } from "next-auth/react";
 import { 
   BarChart3, 
   TrendingUp, 
@@ -13,13 +14,39 @@ import {
   Bell, 
   ChevronRight, 
   Upload, 
-  BookOpen
+  BookOpen,
+  Menu,
+  X
 } from "lucide-react";
 
 export default function VendorDashboard() {
   const [activeMenu, setActiveMenu] = useState("Dashboard");
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [toastMessage, setToastMessage] = useState<string | null>(null);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
+  const { data: session } = useSession();
+
+  // Load products dynamically on mount
+  useEffect(() => {
+    fetch("/api/vendor/products")
+      .then(res => {
+        if (res.ok) return res.json();
+        throw new Error("Failed to load vendor products");
+      })
+      .then(data => {
+        setProducts(data.map((p: any) => ({
+          id: p.id,
+          name: p.name,
+          price: p.price,
+          stock: p.stock,
+          status: p.isActive ? "Published" : (p.approvalWorkflow ? "Submitted" : "Draft"),
+          stage: p.approvalWorkflow?.currentStage || (p.isActive ? "Published" : "Draft")
+        })));
+      })
+      .catch(err => {
+        console.warn("Failed to load database products for vendor:", err);
+      });
+  }, [session]);
 
   // Vendor Catalog State
   const [products, setProducts] = useState([
@@ -82,16 +109,47 @@ export default function VendorDashboard() {
     e.preventDefault();
     if (!prodName || !prodPrice || !prodStock) return;
     
-    const newProduct = {
-      id: `P-${Date.now().toString().slice(-3)}`,
-      name: prodName,
-      price: parseFloat(prodPrice),
-      stock: parseInt(prodStock),
-      status: isDraft ? "Draft" : "Submitted",
-      stage: isDraft ? "Draft" : "Verification_Review"
-    };
+    const sku = `VND-VAR-${prodName.toUpperCase().replace(/[^A-Z0-9]/g, "").slice(0, 6)}-${Date.now().toString().slice(-4)}`;
 
-    setProducts([newProduct, ...products]);
+    fetch("/api/vendor/products", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: prodName,
+        sku,
+        description: artisanStory || "Authentic local artisan craft product.",
+        price: parseFloat(prodPrice),
+        stock: parseInt(prodStock),
+        status: isDraft ? "Draft" : "Submitted",
+        story: {
+          artisanName: "Banaras Weavers Guild Member",
+          artisanLocation: prodDistrict,
+          history: artisanStory,
+          culturalSignificance: culturalSignificance,
+          productionMethod: craftProcess
+        }
+      })
+    }).then(res => {
+      if (res.ok) {
+        // Reload products list
+        fetch("/api/vendor/products")
+          .then(r => r.json())
+          .then(data => {
+            setProducts(data.map((p: any) => ({
+              id: p.id,
+              name: p.name,
+              price: p.price,
+              stock: p.stock,
+              status: p.isActive ? "Published" : (p.approvalWorkflow ? "Submitted" : "Draft"),
+              stage: p.approvalWorkflow?.currentStage || (p.isActive ? "Published" : "Draft")
+            })));
+            showToast(isDraft ? "Draft saved successfully." : "Product catalog submitted to the Admin Approval Workflow!");
+          });
+      } else {
+        showToast("Failed to save product in database.");
+      }
+    });
+
     setProdName("");
     setProdPrice("");
     setProdStock("");
@@ -99,23 +157,42 @@ export default function VendorDashboard() {
     setCraftProcess("");
     setCulturalSignificance("");
     setUploadedFiles([]);
-    showToast(isDraft ? "Draft saved successfully." : "Product catalog submitted to the Admin Approval Workflow!");
   };
 
   return (
     <div className={`min-h-screen font-sans flex transition-colors duration-300 ${isDarkMode ? "bg-[#110B09] text-gray-100" : "bg-[#FAF5EE] text-[#2E1E1A]"}`}>
       
+      {/* Mobile Sidebar Overlay backdrop */}
+      {isSidebarOpen && (
+        <div 
+          onClick={() => setIsSidebarOpen(false)}
+          className="fixed inset-0 z-40 bg-black/50 md:hidden"
+        />
+      )}
+
       {/* 1. LEFT SIDEBAR PANEL */}
-      <aside className={`w-64 border-r flex flex-col justify-between p-5 ${isDarkMode ? "bg-[#1A1311] border-gray-800" : "bg-[#FDFBF7] border-[#C09355]/20"}`}>
+      <aside className={`w-64 border-r flex flex-col justify-between p-5 transition-all duration-300 shrink-0 ${
+        isSidebarOpen ? "fixed inset-y-0 left-0 z-50 bg-[#FDFBF7] dark:bg-[#1A1311] shadow-2xl" : "hidden md:flex"
+      } ${isDarkMode ? "bg-[#1A1311] border-gray-800" : "bg-[#FDFBF7] border-[#C09355]/20"}`}>
         <div className="space-y-6">
-          <div className="flex items-center gap-2.5">
-            <div className="p-2 rounded-xl bg-[#B56D3E] text-white">
-              <Sparkles className="w-5 h-5 animate-pulse" />
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2.5">
+              <div className="p-2 rounded-xl bg-[#B56D3E] text-white">
+                <Sparkles className="w-5 h-5 animate-pulse" />
+              </div>
+              <div>
+                <span className="font-serif font-black tracking-wide text-md text-[#B56D3E] block">Sellers hub</span>
+                <span className="text-[9px] uppercase font-extrabold tracking-widest text-gray-400">Cultural Clutch</span>
+              </div>
             </div>
-            <div>
-              <span className="font-serif font-black tracking-wide text-md text-[#B56D3E] block">Sellers hub</span>
-              <span className="text-[9px] uppercase font-extrabold tracking-widest text-gray-400">Cultural Clutch</span>
-            </div>
+            {isSidebarOpen && (
+              <button 
+                onClick={() => setIsSidebarOpen(false)}
+                className="p-1 text-gray-400 hover:text-[#B56D3E] md:hidden"
+              >
+                <X className="w-4 h-4" />
+              </button>
+            )}
           </div>
 
           <nav className="space-y-1">
@@ -128,7 +205,10 @@ export default function VendorDashboard() {
             ].map(item => (
               <button
                 key={item.name}
-                onClick={() => setActiveMenu(item.name)}
+                onClick={() => {
+                  setActiveMenu(item.name);
+                  setIsSidebarOpen(false);
+                }}
                 className={`w-full flex items-center gap-3 px-3.5 py-2.5 rounded-xl text-xs font-bold transition-all ${
                   activeMenu === item.name 
                     ? "bg-[#B56D3E] text-white shadow-sm" 
@@ -168,6 +248,12 @@ export default function VendorDashboard() {
         {/* TOP STATUS HEADER BAR */}
         <header className={`px-6 py-4 flex items-center justify-between border-b ${isDarkMode ? "bg-[#110B09]/95 border-gray-800" : "bg-[#FAF5EE]/95 border-[#C09355]/20"}`}>
           <div className="flex items-center gap-2 text-xs font-extrabold uppercase text-gray-450 tracking-wider">
+            <button
+              onClick={() => setIsSidebarOpen(!isSidebarOpen)}
+              className="p-1.5 rounded-lg border border-[#C09355]/20 hover:bg-[#C09355]/10 text-[#B56D3E] mr-2 md:hidden"
+            >
+              <Menu className="w-4 h-4" />
+            </button>
             <span>Portal Mode</span>
             <ChevronRight className="w-3.5 h-3.5" />
             <span className="text-[#B56D3E]">{activeMenu}</span>

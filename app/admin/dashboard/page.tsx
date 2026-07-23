@@ -197,34 +197,135 @@ const DATABASE_SCHEMAS = [
   { table: "employees", pk: "id (UUID)", fk: "user_id (users.id), manager_id (employees.id)", relations: "Self-referencing manager, 1-to-Many with payroll", indexes: "idx_emp_dept" }
 ];
 
-export default function AdminDashboardPage() {
+import { useSearchParams } from "next/navigation";
+import { Suspense } from "react";
+
+export function DashboardContent() {
+  const searchParams = useSearchParams();
+  const queryModule = searchParams.get("module") || "bi";
+  
+  // Helper: Get initial sub-feature
+  const getInitialSubFeature = (mod: string) => {
+    if (mod === "inventory") return "Stock Control";
+    if (mod === "sales") return "Billing & Sales";
+    if (mod === "settings") return "General Settings";
+    if (mod === "vendor") return "Approvals Queue";
+    if (mod === "customer") return "Customer Registry";
+    return "ODOP Analytics";
+  };
+
   // ==================== STATE MANAGEMENT ====================
-  const [activeModule, setActiveModule] = useState("bi");
-  const [activeSubFeature, setActiveSubFeature] = useState("ODOP Analytics");
+  const [activeModule, setActiveModule] = useState(queryModule);
+  const [activeSubFeature, setActiveSubFeature] = useState(() => getInitialSubFeature(queryModule));
   const [isDarkMode, setIsDarkMode] = useState(false);
   const [dashboardTheme, setDashboardTheme] = useState("saffron");
+
+  // Load dynamic data on mount
+  useEffect(() => {
+    // 1. Fetch site configurations from public/data/settings.json
+    fetch("/api/admin/settings")
+      .then((res) => {
+        if (res.ok) return res.json();
+        throw new Error("Failed to load settings");
+      })
+      .then((data) => {
+        // Map settings JSON key-values to settings list structure in dashboard
+        const flatList = Object.keys(data).map((key, idx) => ({
+          id: `set-${idx}`,
+          key,
+          value: typeof data[key] === "object" ? JSON.stringify(data[key]) : String(data[key]),
+          category: "System Config",
+          enabled: true,
+          role: "All Roles",
+          updatedAt: new Date().toISOString(),
+          updatedBy: "System"
+        }));
+        setSettings(flatList);
+      })
+      .catch((err) => console.error("Error loading CMS settings:", err));
+
+    // 2. Fetch dashboard BI reports and database user/roles details
+    fetch("/api/admin/dashboard")
+      .then((res) => {
+        if (res.ok) return res.json();
+        throw new Error("Failed to load dashboard data");
+      })
+      .then((data) => {
+        if (data.users) {
+          // Sync database users list with deptAccounts
+          setDeptAccounts(
+            data.users.map((u: any) => ({
+              id: u.id,
+              name: u.name,
+              email: u.email,
+              password: "●●●●●●●●",
+              department: u.role?.name || "Customer",
+              accessGrants: u.role?.permissions ? [u.role.permissions] : []
+            }))
+          );
+        }
+        if (data.roles) {
+          // Sync database role permissions matrix with rolePermissions
+          const matrix: Record<string, string[]> = {};
+          data.roles.forEach((r: any) => {
+            try {
+              if (r.permissions.startsWith("{")) {
+                const parsed = JSON.parse(r.permissions);
+                matrix[r.name] = parsed.actions || ["Read"];
+              } else {
+                matrix[r.name] = r.permissions.split(",").map((p: string) => p.trim());
+              }
+            } catch {
+              matrix[r.name] = [r.permissions];
+            }
+          });
+          setRolePermissions(matrix);
+        }
+      })
+      .catch((err) => console.error("Error loading dashboard data:", err));
+
+    // 3. Fetch products master
+    fetch("/api/admin/products")
+      .then((res) => {
+        if (res.ok) return res.json();
+        throw new Error("Failed to load products");
+      })
+      .then((data) => {
+        setProductsMaster(
+          data.map((p: any) => ({
+            id: p.id,
+            name: p.name,
+            price: p.price,
+            stock: p.stock,
+            state: p.district?.state?.name || "State",
+            active: p.isActive
+          }))
+        );
+      })
+      .catch((err) => console.error("Error loading products master:", err));
+  }, []);
 
   // Filter States for BI
   const [biFilterState, setBiFilterState] = useState("All States");
   const [biFilterCategory, setBiFilterCategory] = useState("All Categories");
 
   // Website Settings Module States
-  const [settings, setSettings] = useState(() => [
-    { id: "set-1", key: "site_name", value: "Cultural Clutch", category: "General Settings", enabled: true, role: "All Roles", updatedAt: new Date().toISOString(), updatedBy: "Super Admin" },
-    { id: "set-2", key: "favicon_url", value: "/favicon.ico", category: "General Settings", enabled: true, role: "All Roles", updatedAt: new Date().toISOString(), updatedBy: "Super Admin" },
-    { id: "set-3", key: "gst_details_pan", value: "AAAC0000A", category: "Company Settings", enabled: true, role: "Super Admin", updatedAt: new Date().toISOString(), updatedBy: "Finance Manager" },
-    { id: "set-4", key: "otp_login_status", value: "true", category: "User Settings", enabled: true, role: "Admin", updatedAt: new Date().toISOString(), updatedBy: "Admin" },
-    { id: "set-5", key: "sku_format_default", value: "CC-[DIST]-[CAT]-[NUM]", category: "Product Settings", enabled: true, role: "All Roles", updatedAt: new Date().toISOString(), updatedBy: "Super Admin" },
-    { id: "set-6", key: "minimum_stock_alert", value: "5", category: "Inventory Settings", enabled: true, role: "Admin", updatedAt: new Date().toISOString(), updatedBy: "Super Admin" },
-    { id: "set-7", key: "free_shipping_threshold", value: "1999", category: "Shipping Settings", enabled: true, role: "All Roles", updatedAt: new Date().toISOString(), updatedBy: "Admin" },
-    { id: "set-8", key: "razorpay_api_live", value: "true", category: "Payment Gateway Settings", enabled: true, role: "Super Admin", updatedAt: new Date().toISOString(), updatedBy: "Finance Manager" },
-    { id: "set-9", key: "ai_chatbot_status", value: "true", category: "AI Settings", enabled: true, role: "All Roles", updatedAt: new Date().toISOString(), updatedBy: "Super Admin" },
-    { id: "set-10", key: "debug_mode", value: "false", category: "Developer Settings", enabled: false, role: "Super Admin", updatedAt: new Date().toISOString(), updatedBy: "Super Admin" }
+  const [settings, setSettings] = useState([
+    { id: "set-1", key: "site_name", value: "Cultural Clutch", category: "General Settings", enabled: true, role: "All Roles", updatedAt: "2026-07-21T18:00:00.000Z", updatedBy: "Super Admin" },
+    { id: "set-2", key: "favicon_url", value: "/favicon.ico", category: "General Settings", enabled: true, role: "All Roles", updatedAt: "2026-07-21T18:00:00.000Z", updatedBy: "Super Admin" },
+    { id: "set-3", key: "gst_details_pan", value: "AAAC0000A", category: "Company Settings", enabled: true, role: "Super Admin", updatedAt: "2026-07-21T18:00:00.000Z", updatedBy: "Finance Manager" },
+    { id: "set-4", key: "otp_login_status", value: "true", category: "User Settings", enabled: true, role: "Admin", updatedAt: "2026-07-21T18:00:00.000Z", updatedBy: "Admin" },
+    { id: "set-5", key: "sku_format_default", value: "CC-[DIST]-[CAT]-[NUM]", category: "Product Settings", enabled: true, role: "All Roles", updatedAt: "2026-07-21T18:00:00.000Z", updatedBy: "Super Admin" },
+    { id: "set-6", key: "minimum_stock_alert", value: "5", category: "Inventory Settings", enabled: true, role: "Admin", updatedAt: "2026-07-21T18:00:00.000Z", updatedBy: "Super Admin" },
+    { id: "set-7", key: "free_shipping_threshold", value: "1999", category: "Shipping Settings", enabled: true, role: "All Roles", updatedAt: "2026-07-21T18:00:00.000Z", updatedBy: "Admin" },
+    { id: "set-8", key: "razorpay_api_live", value: "true", category: "Payment Gateway Settings", enabled: true, role: "Super Admin", updatedAt: "2026-07-21T18:00:00.000Z", updatedBy: "Finance Manager" },
+    { id: "set-9", key: "ai_chatbot_status", value: "true", category: "AI Settings", enabled: true, role: "All Roles", updatedAt: "2026-07-21T18:00:00.000Z", updatedBy: "Super Admin" },
+    { id: "set-10", key: "debug_mode", value: "false", category: "Developer Settings", enabled: false, role: "Super Admin", updatedAt: "2026-07-21T18:00:00.000Z", updatedBy: "Super Admin" }
   ]);
 
-  const [settingsLogs, setSettingsLogs] = useState(() => [
-    { id: "slog-1", timestamp: new Date(Date.now() - 3600000).toLocaleString(), action: "UPDATE", key: "site_name", desc: "Super Admin changed value to 'Cultural Clutch'", user: "Super Admin" },
-    { id: "slog-2", timestamp: new Date(Date.now() - 7200000).toLocaleString(), action: "CREATE", key: "gst_details_pan", desc: "Super Admin initialized value to 'AAAC0000A'", user: "Super Admin" }
+  const [settingsLogs, setSettingsLogs] = useState([
+    { id: "slog-1", timestamp: "2026-07-21 17:00:00", action: "UPDATE", key: "site_name", desc: "Super Admin changed value to 'Cultural Clutch'", user: "Super Admin" },
+    { id: "slog-2", timestamp: "2026-07-21 16:00:00", action: "CREATE", key: "gst_details_pan", desc: "Super Admin initialized value to 'AAAC0000A'", user: "Super Admin" }
   ]);
 
   const [searchSettingsQuery, setSearchSettingsQuery] = useState("");
@@ -625,25 +726,56 @@ export default function AdminDashboardPage() {
   };
 
   // Handles simulated department credentials creation
-  const handleCreateDept = (e: React.FormEvent) => {
+  const handleCreateDept = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!newName || !newEmail || !newPassword) {
       showToast("Please fill out all credentials fields.");
       return;
     }
-    const newAcct = {
-      id: String(Date.now()),
-      name: newName,
-      email: newEmail,
-      password: newPassword,
-      department: newDept,
-      accessGrants: selectedGrants.length > 0 ? selectedGrants : ["General Access"]
-    };
-    setDeptAccounts([...deptAccounts, newAcct]);
-    showToast(`Account provisioned successfully for ${newName}!`);
-    setNewName("");
-    setNewEmail("");
-    setNewPassword("");
+
+    try {
+      const rolesRes = await fetch("/api/admin/roles");
+      if (!rolesRes.ok) throw new Error("Failed to load roles list");
+      const rolesList = await rolesRes.json();
+      
+      const matchedRole = rolesList.find((r: any) => r.name.toLowerCase().includes(newDept.toLowerCase())) || rolesList[0];
+      
+      if (!matchedRole) {
+        showToast("No matching database role found to provision user.");
+        return;
+      }
+
+      const userRes = await fetch("/api/admin/users", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name: newName,
+          email: newEmail,
+          password: newPassword,
+          roleId: matchedRole.id
+        })
+      });
+
+      const data = await userRes.json();
+      if (!userRes.ok) throw new Error(data.error || "Failed to create user account");
+
+      const newAcct = {
+        id: data.id,
+        name: data.name,
+        email: data.email,
+        password: "●●●●●●●●",
+        department: data.role?.name || newDept,
+        accessGrants: data.role?.permissions ? [data.role.permissions] : ["General Access"]
+      };
+
+      setDeptAccounts([newAcct, ...deptAccounts]);
+      showToast(`Account provisioned successfully in database for ${newName}!`);
+      setNewName("");
+      setNewEmail("");
+      setNewPassword("");
+    } catch (err: any) {
+      showToast(`Provisioning failed: ${err.message}`);
+    }
   };
 
   const toggleGrant = (grant: string) => {
@@ -655,7 +787,7 @@ export default function AdminDashboardPage() {
   };
 
   // Toggle user permissions switches
-  const togglePermission = (role: string, perm: string) => {
+  const togglePermission = async (role: string, perm: string) => {
     const current = rolePermissions[role] || [];
     let updated;
     if (current.includes(perm)) {
@@ -663,15 +795,63 @@ export default function AdminDashboardPage() {
     } else {
       updated = [...current, perm];
     }
-    setRolePermissions({
+    const newRolePermissions = {
       ...rolePermissions,
       [role]: updated
-    });
+    };
+    setRolePermissions(newRolePermissions);
+    
+    try {
+      const rolesRes = await fetch("/api/admin/roles");
+      if (rolesRes.ok) {
+        const rolesList = await rolesRes.json();
+        const roleObj = rolesList.find((r: any) => r.name === role);
+        if (roleObj) {
+          let serializedPermissions = JSON.stringify({ actions: updated });
+          if (roleObj.permissions && !roleObj.permissions.startsWith("{")) {
+            serializedPermissions = updated.join(",");
+          }
+          await fetch("/api/admin/roles", {
+            method: "PUT",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ id: roleObj.id, permissions: serializedPermissions })
+          });
+        }
+      }
+    } catch (err) {
+      console.error("Failed to persist permission update to database:", err);
+    }
+    
     showToast(`Updated permissions for ${role}`);
   };
 
+  // Helper to sync dynamic flat array back to the JSON file settings
+  const syncSettingsToBackend = async (flatList: any[]) => {
+    try {
+      const kv: Record<string, any> = {};
+      flatList.forEach((s) => {
+        let val = s.value;
+        try {
+          if (val.startsWith("[") || val.startsWith("{")) {
+            val = JSON.parse(val);
+          }
+        } catch {
+          // Keep as string
+        }
+        kv[s.key] = val;
+      });
+      await fetch("/api/admin/settings", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(kv)
+      });
+    } catch (err) {
+      console.error("Failed to sync settings with backend database:", err);
+    }
+  };
+
   // Website Settings CRUD Handlers
-  const handleSaveSetting = (e: React.FormEvent) => {
+  const handleSaveSetting = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!inputSettingKey || !inputSettingValue) {
       showToast("Please fill key and value fields.");
@@ -679,9 +859,10 @@ export default function AdminDashboardPage() {
     }
 
     const timestamp = new Date().toISOString();
+    let updatedList;
     if (editingSetting) {
       // Update Mode
-      const updated = settings.map((s) => {
+      updatedList = settings.map((s) => {
         if (s.id === editingSetting.id) {
           return {
             ...s,
@@ -696,7 +877,7 @@ export default function AdminDashboardPage() {
         }
         return s;
       });
-      setSettings(updated);
+      setSettings(updatedList);
       
       const newLog = {
         id: `slog-${Date.now()}`,
@@ -725,7 +906,8 @@ export default function AdminDashboardPage() {
         updatedAt: timestamp,
         updatedBy: "Super Admin"
       };
-      setSettings([...settings, newSetting]);
+      updatedList = [...settings, newSetting];
+      setSettings(updatedList);
 
       const newLog = {
         id: `slog-${Date.now()}`,
@@ -739,14 +921,17 @@ export default function AdminDashboardPage() {
       showToast(`Created new setting: ${inputSettingKey}`);
     }
 
+    await syncSettingsToBackend(updatedList);
+
     setIsSettingsModalOpen(false);
     setEditingSetting(null);
     setInputSettingKey("");
     setInputSettingValue("");
   };
 
-  const handleDeleteSetting = (id: string, keyName: string) => {
-    setSettings(settings.filter(s => s.id !== id));
+  const handleDeleteSetting = async (id: string, keyName: string) => {
+    const updatedList = settings.filter(s => s.id !== id);
+    setSettings(updatedList);
     const newLog = {
       id: `slog-${Date.now()}`,
       timestamp: new Date().toLocaleString(),
@@ -757,16 +942,17 @@ export default function AdminDashboardPage() {
     };
     setSettingsLogs([newLog, ...settingsLogs]);
     showToast(`Deleted settings key: ${keyName}`);
+    await syncSettingsToBackend(updatedList);
   };
 
-  const handleToggleSettingEnabled = (id: string, keyName: string, currentStatus: boolean) => {
-    const updated = settings.map((s) => {
+  const handleToggleSettingEnabled = async (id: string, keyName: string, currentStatus: boolean) => {
+    const updatedList = settings.map((s) => {
       if (s.id === id) {
         return { ...s, enabled: !currentStatus };
       }
       return s;
     });
-    setSettings(updated);
+    setSettings(updatedList);
     
     const newLog = {
       id: `slog-${Date.now()}`,
@@ -778,6 +964,7 @@ export default function AdminDashboardPage() {
     };
     setSettingsLogs([newLog, ...settingsLogs]);
     showToast(`Setting ${keyName} is now ${!currentStatus ? "Enabled" : "Disabled"}`);
+    await syncSettingsToBackend(updatedList);
   };
 
   const handleExportSettings = () => {
@@ -2199,8 +2386,18 @@ export default function AdminDashboardPage() {
                           if (newStock !== null) {
                             const parsed = parseInt(newStock);
                             if (!isNaN(parsed)) {
-                              setProductsMaster(productsMaster.map(p => p.id === prod.id ? { ...p, stock: parsed } : p));
-                              showToast(`Updated stock count for ${prod.name} to ${parsed}.`);
+                              fetch("/api/admin/products", {
+                                method: "PUT",
+                                headers: { "Content-Type": "application/json" },
+                                body: JSON.stringify({ id: prod.id, stock: parsed })
+                              }).then(res => {
+                                if (res.ok) {
+                                  setProductsMaster(productsMaster.map(p => p.id === prod.id ? { ...p, stock: parsed } : p));
+                                  showToast(`Updated stock count for ${prod.name} to ${parsed}.`);
+                                } else {
+                                  showToast("Failed to update stock in database.");
+                                }
+                              });
                             }
                           }
                         }}
@@ -2231,19 +2428,44 @@ export default function AdminDashboardPage() {
                 onSubmit={(e) => {
                   e.preventDefault();
                   if (!newProductName || !newProductPrice) return;
-                  const newProd = {
-                    id: `P-${Date.now().toString().slice(-3)}`,
-                    name: newProductName,
-                    price: parseFloat(newProductPrice) || 0,
-                    stock: parseInt(newProductStock) || 0,
-                    state: newProductState,
-                    active: true
-                  };
-                  setProductsMaster([...productsMaster, newProd]);
+                  
+                  const slug = newProductName.toLowerCase().replace(/[^a-z0-9\s-]/g, "").replace(/\s+/g, "-");
+                  const sku = `CC-${newProductState.toUpperCase().slice(0,3)}-${slug.toUpperCase().slice(0,6)}-${Date.now().toString().slice(-4)}`;
+
+                  fetch("/api/admin/products", {
+                    method: "POST",
+                    headers: { "Content-Type": "application/json" },
+                    body: JSON.stringify({
+                      name: newProductName,
+                      sku,
+                      slug,
+                      price: parseFloat(newProductPrice) || 0,
+                      stock: parseInt(newProductStock) || 0
+                    })
+                  }).then(res => {
+                    if (res.ok) {
+                      // Reload products master list from database
+                      fetch("/api/admin/products")
+                        .then(r => r.json())
+                        .then(data => {
+                          setProductsMaster(data.map((p: any) => ({
+                            id: p.id,
+                            name: p.name,
+                            price: p.price,
+                            stock: p.stock,
+                            state: p.district?.state?.name || "State",
+                            active: p.isActive
+                          })));
+                          showToast(`Product ${newProductName} added to registry.`);
+                        });
+                    } else {
+                      showToast("Failed to onboard product in database.");
+                    }
+                  });
+
                   setNewProductName("");
                   setNewProductPrice("");
                   setNewProductStock("");
-                  showToast(`Product ${newProductName} added to registry.`);
                 }}
                 className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-5 gap-4 text-xs"
               >
@@ -4538,5 +4760,17 @@ export default function AdminDashboardPage() {
       )}
 
     </div>
+  );
+}
+
+export default function AdminDashboardPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen flex items-center justify-center bg-[#FAF5EE] dark:bg-[#1c0f0c]">
+        <div className="w-10 h-10 border-4 border-[#B56D3E] border-t-transparent rounded-full animate-spin" />
+      </div>
+    }>
+      <DashboardContent />
+    </Suspense>
   );
 }

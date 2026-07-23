@@ -1,7 +1,6 @@
 import React from "react";
 import { prisma } from "@/lib/db";
 import { BookOpen, User, Calendar, ArrowRight } from "lucide-react";
-import Link from "next/link";
 
 export const revalidate = false; // Compile statically at build time
 
@@ -24,7 +23,7 @@ export default async function StoriesPage() {
             Artisan &amp; Craft <span className="italic font-normal text-[#B56D3E]">Stories</span>
           </h1>
           <p className="text-sm text-gray-550 leading-relaxed">
-            Delve into the history, ancient methodologies, and inspiring personal narratives of the community craftspeople preserving India's local heritage.
+            Delve into the history, ancient methodologies, and inspiring personal narratives of the community craftspeople preserving India&apos;s local heritage.
           </p>
         </div>
 

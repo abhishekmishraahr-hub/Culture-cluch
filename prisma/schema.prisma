@@ -23,6 +23,8 @@ model User {
   reviews      Review[]
   addresses    Address[]
   vendor       Vendor?
+
+  @@index([roleId])
 }
 
 model Role {
@@ -50,6 +52,7 @@ model District {
   products    Product[]
 
   @@unique([stateId, name])
+  @@index([stateId])
 }
 
 model Category {
@@ -63,6 +66,8 @@ model Category {
   image       String?
   isActive    Boolean    @default(true)
   products    Product[]
+
+  @@index([parentId])
 }
 
 model Product {
@@ -96,6 +101,10 @@ model Product {
   vendorId        String?
   vendor          Vendor?          @relation(fields: [vendorId], references: [id])
   approvalWorkflow ApprovalWorkflow?
+
+  @@index([categoryId])
+  @@index([districtId])
+  @@index([vendorId])
 }
 
 model ProductVariant {
@@ -180,6 +189,9 @@ model OrderItem {
   quantity  Int
   price     Float
   taxRate   Float
+
+  @@index([orderId])
+  @@index([productId])
 }
 
 model Payment {
@@ -241,6 +253,9 @@ model Review {
   isApproved Boolean  @default(false)
   sentiment  String?
   createdAt  DateTime @default(now())
+
+  @@index([productId])
+  @@index([userId])
 }
 
 model BlogPost {

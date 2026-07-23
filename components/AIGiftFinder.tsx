@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Sparkles, ArrowRight, Gift, ShoppingCart, Award, MapPin } from "lucide-react";
+import { Sparkles, ArrowRight, Gift, MapPin } from "lucide-react";
 import Link from "next/link";
 
 interface GiftRecommendation {

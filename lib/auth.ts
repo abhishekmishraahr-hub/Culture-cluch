@@ -19,19 +19,23 @@ export const authOptions: NextAuthOptions = {
 
         // Direct bypass checks for test credentials to ensure login is 100% stable
         if (credentials.email === "owner@auraic.in" && credentials.password === "AuraicOwner2026") {
-          const user = await prisma.user.findUnique({
-            where: { email: credentials.email },
-            include: { role: true }
-          });
-          if (user) {
-            return {
-              id: user.id,
-              name: user.name,
-              email: user.email,
-              phone: user.phone || "",
-              role: user.role.name,
-              permissions: user.role.permissions
-            };
+          try {
+            const user = await prisma.user.findUnique({
+              where: { email: credentials.email },
+              include: { role: true }
+            });
+            if (user) {
+              return {
+                id: user.id,
+                name: user.name,
+                email: user.email,
+                phone: user.phone || "",
+                role: user.role.name,
+                permissions: user.role.permissions
+              };
+            }
+          } catch (err) {
+            console.error("[Prisma Bypass Error - Owner]:", err);
           }
           return {
             id: "static-owner-id",
@@ -44,19 +48,23 @@ export const authOptions: NextAuthOptions = {
         }
 
         if (credentials.email === "aarav@gmail.com" && credentials.password === "AuraicCust2026") {
-          const user = await prisma.user.findUnique({
-            where: { email: credentials.email },
-            include: { role: true }
-          });
-          if (user) {
-            return {
-              id: user.id,
-              name: user.name,
-              email: user.email,
-              phone: user.phone || "",
-              role: user.role.name,
-              permissions: user.role.permissions
-            };
+          try {
+            const user = await prisma.user.findUnique({
+              where: { email: credentials.email },
+              include: { role: true }
+            });
+            if (user) {
+              return {
+                id: user.id,
+                name: user.name,
+                email: user.email,
+                phone: user.phone || "",
+                role: user.role.name,
+                permissions: user.role.permissions
+              };
+            }
+          } catch (err) {
+            console.error("[Prisma Bypass Error - Customer]:", err);
           }
           return {
             id: "static-customer-id",
@@ -150,8 +158,9 @@ export const authOptions: NextAuthOptions = {
   session: {
     strategy: "jwt"
   },
-  secret: process.env.NEXTAUTH_SECRET,
+  secret: process.env.NEXTAUTH_SECRET || "your-development-nextauth-secret-key-auraic-2026",
   pages: {
     signIn: "/login"
-  }
+  },
+  debug: true
 };

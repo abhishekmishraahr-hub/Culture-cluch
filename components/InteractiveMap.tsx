@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Compass, Sparkles, MapPin, X, ArrowRight, Tag, Info, RefreshCw } from "lucide-react";
+import { Compass, Sparkles, MapPin, X, ArrowRight, Tag, RefreshCw } from "lucide-react";
 import Link from "next/link";
 import SafeImage from "@/components/SafeImage";
 
@@ -117,7 +117,7 @@ export default function InteractiveMap({ specialPlace }: InteractiveMapProps) {
     try {
       const res = await fetch(`/api/state-maps/${lookupCode}`);
       if (res.ok) {
-        const data = await res.json();
+        await res.json();
         // Fetch full state districts details via standard API
         const detailsRes = await fetch(`/api/states?admin=true`);
         if (detailsRes.ok) {
@@ -262,7 +262,7 @@ export default function InteractiveMap({ specialPlace }: InteractiveMapProps) {
                       <div className="space-y-1">
                         <h4 className="font-serif font-bold text-xs">ODOP Crafts Directory</h4>
                         <p className="text-[10px] text-gray-550 leading-normal">
-                          Configured with {stateDetails.districts.length} districts under India's Vocal for Local mission.
+                          Configured with {stateDetails.districts.length} districts under India&apos;s Vocal for Local mission.
                         </p>
                       </div>
                     </div>

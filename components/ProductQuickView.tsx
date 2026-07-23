@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { X, Heart, ShoppingBag, ArrowRight, Share2, Shield, RefreshCw } from "lucide-react";
+import { X, ShoppingBag, ArrowRight, Shield, RefreshCw } from "lucide-react";
 import Link from "next/link";
 
 interface ProductImage {
