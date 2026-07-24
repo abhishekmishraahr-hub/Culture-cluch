@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import { useSession, signOut } from "next-auth/react";
-import { useRouter } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { 
   DollarSign, ShoppingBag, TrendingUp, AlertTriangle, Users, Download, Upload, Check, 
   ShieldAlert, RefreshCw, FileText, ShieldCheck, Activity, UserPlus, PlusCircle, Lock,
@@ -22,9 +22,10 @@ const THEMES: Record<string, { primary: string; bg: string; text: string; card: 
   emerald: { primary: "#2D5A27", bg: "bg-[#0B150A]", text: "text-[#ECF3EC]", card: "bg-[#122210] border-[#2D5A27]/25", accent: "#4E9A45" }
 };
 
-export default function AdminDashboardPage() {
+function DashboardContent() {
   const { data: session, status } = useSession();
   const router = useRouter();
+  const searchParams = useSearchParams();
 
   // Active theme
   const [theme, setTheme] = useState("saffron");
@@ -32,6 +33,15 @@ export default function AdminDashboardPage() {
 
   // Selected Department / Module View
   const [activeModule, setActiveModule] = useState("bi");
+  
+  // Sync module with query parameters (e.g. from RedirectHelper)
+  useEffect(() => {
+    const mod = searchParams.get("module");
+    if (mod) {
+      setActiveModule(mod);
+    }
+  }, [searchParams]);
+
   const [activeSubTab, setActiveSubTab] = useState("analytics");
   const [toast, setToast] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
@@ -1498,5 +1508,20 @@ export default function AdminDashboardPage() {
       )}
 
     </div>
+  );
+}
+
+export default function AdminDashboardPage() {
+  return (
+    <Suspense fallback={
+      <div className="min-h-screen bg-[#1c0f0c] flex items-center justify-center text-[#FAF5EE]">
+        <div className="text-center space-y-4">
+          <div className="w-12 h-12 border-4 border-[#C09355] border-t-transparent rounded-full animate-spin mx-auto" />
+          <p className="text-sm font-semibold tracking-wider font-sans uppercase">Synchronizing Auraic ERP Systems...</p>
+        </div>
+      </div>
+    }>
+      <DashboardContent />
+    </Suspense>
   );
 }
