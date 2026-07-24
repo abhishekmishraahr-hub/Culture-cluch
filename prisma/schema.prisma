@@ -7,22 +7,32 @@ generator client {
 }
 
 model User {
-  id           String         @id @default(uuid())
-  name         String
-  email        String         @unique
-  phone        String?
-  passwordHash String
-  roleId       String
-  role         Role           @relation(fields: [roleId], references: [id])
-  isSuspended  Boolean        @default(false)
-  createdAt    DateTime       @default(now())
-  updatedAt    DateTime       @updatedAt
-  cartItems    CartItem[]
-  wishlist     WishlistItem[]
-  orders       Order[]
-  reviews      Review[]
-  addresses    Address[]
-  vendor       Vendor?
+  id                String            @id @default(uuid())
+  name              String
+  email             String            @unique
+  phone             String?
+  passwordHash      String
+  roleId            String
+  role              Role              @relation(fields: [roleId], references: [id])
+  isSuspended       Boolean           @default(false)
+  employeeId        String?           @unique // e.g. SAL-ROHIT
+  department        String?           // e.g. Sales, Finance, HR
+  designation       String?           // e.g. Manager, Executive
+  terminationExpiry DateTime?         // Date when temporary suspension ends
+  createdAt         DateTime          @default(now())
+  updatedAt         DateTime          @updatedAt
+  cartItems         CartItem[]
+  wishlist          WishlistItem[]
+  orders            Order[]
+  reviews           Review[]
+  addresses         Address[]
+  vendor            Vendor?
+  passwordHistory   PasswordHistory[]
+  resetRequests     ResetRequest[]
+  attendanceLogs    Attendance[]
+  leaveRequests     LeaveRequest[]
+  payrolls          Payroll[]
+  supportTickets    SupportTicket[]
 
   @@index([roleId])
 }
@@ -467,4 +477,145 @@ model FooterSettings {
   accessibilityStmt   String
   cookieSettings      String
   versionNumber       String  @default("1.0.0")
+}
+
+model PasswordHistory {
+  id           String   @id @default(uuid())
+  userId       String
+  user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  passwordHash String
+  createdAt    DateTime @default(now())
+}
+
+model ResetRequest {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  status    String   @default("PENDING") // PENDING, APPROVED, REJECTED
+  createdAt DateTime @default(now())
+}
+
+model Shipment {
+  id             String    @id @default(uuid())
+  orderId        String    @unique
+  carrier        String    // e.g. Delhivery, DHL
+  trackingNumber String?
+  weight         Float     @default(0.5) // kg
+  length         Float     @default(15.0) // cm
+  width          Float     @default(15.0) // cm
+  height         Float     @default(10.0) // cm
+  status         String    @default("PENDING_PICKUP") // PENDING_PICKUP, IN_TRANSIT, DELIVERED
+  labelUrl       String?
+  manifestUrl    String?
+  createdAt      DateTime  @default(now())
+  updatedAt      DateTime  @updatedAt
+}
+
+model AuditLog {
+  id        String   @id @default(uuid())
+  userId    String?
+  actorName String   // Name of employee/customer who performed action
+  action    String   // LOGIN, LOGOUT, PASSWORD_CHANGE, PERMISSION_CHANGE, DELETE, EDIT, APPROVE, REJECT
+  details   String   // Text description
+  createdAt DateTime @default(now())
+}
+
+model Lead {
+  id         String   @id @default(uuid())
+  name       String
+  email      String
+  phone      String
+  status     String   @default("NEW") // NEW, CONTACTED, QUALIFIED, PROPOSAL, WON, LOST
+  value      Float    @default(0.0)
+  source     String   @default("Website") // Referral, Search, Advertisement, Campaign
+  assignedTo String?  // Employee ID or user name
+  createdAt  DateTime @default(now())
+  updatedAt  DateTime @updatedAt
+}
+
+model PurchaseOrder {
+  id           String              @id @default(uuid())
+  vendorId     String
+  vendorName   String
+  totalAmount  Float
+  status       String              @default("PENDING") // PENDING, APPROVED, SHIPPED, DELIVERED, CANCELLED
+  orderDate    DateTime            @default(now())
+  expectedDate DateTime
+  items        PurchaseOrderItem[]
+  createdAt    DateTime            @default(now())
+  updatedAt    DateTime            @updatedAt
+}
+
+model PurchaseOrderItem {
+  id              String        @id @default(uuid())
+  purchaseOrderId String
+  purchaseOrder   PurchaseOrder @relation(fields: [purchaseOrderId], references: [id], onDelete: Cascade)
+  productName     String
+  quantity        Int
+  unitPrice       Float
+}
+
+model Attendance {
+  id       String    @id @default(uuid())
+  userId   String
+  user     User      @relation(fields: [userId], references: [id], onDelete: Cascade)
+  date     String    // YYYY-MM-DD
+  status   String    // PRESENT, ABSENT, LEAVE
+  checkIn  String?   // HH:MM
+  checkOut String?   // HH:MM
+}
+
+model LeaveRequest {
+  id        String   @id @default(uuid())
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  startDate DateTime
+  endDate   DateTime
+  reason    String
+  status    String   @default("PENDING") // PENDING, APPROVED, REJECTED
+  approvedBy String?
+  createdAt DateTime @default(now())
+}
+
+model Payroll {
+  id         String   @id @default(uuid())
+  userId     String
+  user       User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  salary     Float
+  bonus      Float    @default(0.0)
+  pf         Float    @default(0.0)
+  esic       Float    @default(0.0)
+  tax        Float    @default(0.0)
+  netPay     Float
+  month      Int      // 1-12
+  year       Int
+  status     String   @default("PENDING") // PENDING, APPROVED
+  approvedBy String?
+  createdAt  DateTime @default(now())
+}
+
+model Campaign {
+  id          String   @id @default(uuid())
+  name        String
+  type        String   // EMAIL, SMS, SOCIAL, INFLUENCER
+  budget      Float    @default(0.0)
+  status      String   @default("PLANNING") // PLANNING, ACTIVE, COMPLETED, PAUSED
+  startDate   DateTime
+  endDate     DateTime
+  clicks      Int      @default(0)
+  conversions Int      @default(0)
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+}
+
+model SupportTicket {
+  id          String   @id @default(uuid())
+  userId      String
+  user        User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  subject     String
+  description String
+  status      String   @default("OPEN") // OPEN, IN_PROGRESS, RESOLVED
+  priority    String   @default("LOW") // LOW, MEDIUM, HIGH
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
 }

@@ -14,81 +14,59 @@ export const authOptions: NextAuthOptions = {
       },
       async authorize(credentials) {
         if (!credentials?.email || !credentials?.password) {
-          throw new Error("Missing email or password");
+          throw new Error("Missing email/employee ID or password");
         }
 
-        // Direct bypass checks for test credentials to ensure login is 100% stable
-        if (credentials.email === "owner@auraic.in" && credentials.password === "AuraicOwner2026") {
-          try {
-            const user = await prisma.user.findUnique({
-              where: { email: credentials.email },
-              include: { role: true }
-            });
-            if (user) {
-              return {
-                id: user.id,
-                name: user.name,
-                email: user.email,
-                phone: user.phone || "",
-                role: user.role.name,
-                permissions: user.role.permissions
-              };
-            }
-          } catch (err) {
-            console.error("[Prisma Bypass Error - Owner]:", err);
-          }
-          return {
-            id: "static-owner-id",
-            name: "Super Admin",
-            email: "owner@auraic.in",
-            phone: "+91 99999 99999",
-            role: "Owner",
-            permissions: ["*"]
-          };
-        }
-
-        if (credentials.email === "aarav@gmail.com" && credentials.password === "AuraicCust2026") {
-          try {
-            const user = await prisma.user.findUnique({
-              where: { email: credentials.email },
-              include: { role: true }
-            });
-            if (user) {
-              return {
-                id: user.id,
-                name: user.name,
-                email: user.email,
-                phone: user.phone || "",
-                role: user.role.name,
-                permissions: user.role.permissions
-              };
-            }
-          } catch (err) {
-            console.error("[Prisma Bypass Error - Customer]:", err);
-          }
-          return {
-            id: "static-customer-id",
-            name: "Aarav Sharma",
-            email: "aarav@gmail.com",
-            phone: "+91 98123 45678",
-            role: "Customer",
-            permissions: []
-          };
-        }
-
-        const user = await prisma.user.findUnique({
-          where: { email: credentials.email },
+        // Query user by email or employeeId
+        const user = await prisma.user.findFirst({
+          where: {
+            OR: [
+              { email: credentials.email },
+              { employeeId: credentials.email }
+            ]
+          },
           include: { role: true }
         });
 
-        if (!user || user.isSuspended) {
-          throw new Error("Invalid credentials or suspended account");
+        if (!user) {
+          throw new Error("Account not found");
+        }
+
+        // Check if account is suspended
+        if (user.isSuspended) {
+          await prisma.auditLog.create({
+            data: {
+              userId: user.id,
+              actorName: user.name,
+              action: "FAILED_LOGIN",
+              details: `Blocked login attempt: Suspended employee ${user.employeeId || user.email}.`
+            }
+          });
+          throw new Error("Account suspended. Profile locked.");
         }
 
         const passwordMatch = await bcrypt.compare(credentials.password, user.passwordHash);
         if (!passwordMatch) {
-          throw new Error("Invalid credentials");
+          await prisma.auditLog.create({
+            data: {
+              userId: user.id,
+              actorName: user.name,
+              action: "FAILED_LOGIN",
+              details: `Failed login attempt (incorrect password) for account: ${credentials.email}`
+            }
+          });
+          throw new Error("Invalid password");
         }
+
+        // Log successful login
+        await prisma.auditLog.create({
+          data: {
+            userId: user.id,
+            actorName: user.name,
+            action: "LOGIN",
+            details: `Employee ${user.employeeId || user.email} logged in successfully.`
+          }
+        });
 
         return {
           id: user.id,
@@ -96,7 +74,10 @@ export const authOptions: NextAuthOptions = {
           email: user.email,
           phone: user.phone || "",
           role: user.role.name,
-          permissions: user.role.permissions
+          permissions: user.role.permissions,
+          department: user.department || "",
+          employeeId: user.employeeId || "",
+          designation: user.designation || ""
         };
       }
     }),
@@ -126,13 +107,26 @@ export const authOptions: NextAuthOptions = {
           throw new Error("No active account found with this phone number");
         }
 
+        // Log successful OTP login
+        await prisma.auditLog.create({
+          data: {
+            userId: user.id,
+            actorName: user.name,
+            action: "LOGIN",
+            details: `User ${user.name} logged in via OTP authentication.`
+          }
+        });
+
         return {
           id: user.id,
           name: user.name,
           email: user.email,
           phone: user.phone || "",
           role: user.role.name,
-          permissions: user.role.permissions
+          permissions: user.role.permissions,
+          department: user.department || "",
+          employeeId: user.employeeId || "",
+          designation: user.designation || ""
         };
       }
     })
@@ -143,6 +137,9 @@ export const authOptions: NextAuthOptions = {
         token.id = user.id;
         token.role = (user as any).role;
         token.permissions = (user as any).permissions;
+        token.department = (user as any).department;
+        token.employeeId = (user as any).employeeId;
+        token.designation = (user as any).designation;
       }
       return token;
     },
@@ -151,6 +148,9 @@ export const authOptions: NextAuthOptions = {
         (session.user as any).id = token.id;
         (session.user as any).role = token.role;
         (session.user as any).permissions = token.permissions;
+        (session.user as any).department = token.department;
+        (session.user as any).employeeId = token.employeeId;
+        (session.user as any).designation = token.designation;
       }
       return session;
     }

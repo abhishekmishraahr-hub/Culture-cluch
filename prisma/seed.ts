@@ -244,10 +244,22 @@ async function main() {
   await prisma.review.deleteMany();
   await prisma.orderItem.deleteMany();
   await prisma.payment.deleteMany();
+  await prisma.shipment.deleteMany();
   await prisma.order.deleteMany();
   await prisma.cartItem.deleteMany();
   await prisma.wishlistItem.deleteMany();
   await prisma.address.deleteMany();
+  await prisma.passwordHistory.deleteMany();
+  await prisma.resetRequest.deleteMany();
+  await prisma.auditLog.deleteMany();
+  await prisma.lead.deleteMany();
+  await prisma.purchaseOrderItem.deleteMany();
+  await prisma.purchaseOrder.deleteMany();
+  await prisma.attendance.deleteMany();
+  await prisma.leaveRequest.deleteMany();
+  await prisma.payroll.deleteMany();
+  await prisma.campaign.deleteMany();
+  await prisma.supportTicket.deleteMany();
   await prisma.user.deleteMany();
   await prisma.role.deleteMany();
   await prisma.productVariant.deleteMany();
@@ -474,10 +486,18 @@ async function main() {
   // 6. Users (Admin/Owner and Customer)
   const ownerPasswordHash = await bcrypt.hash("AuraicOwner2026", 10);
   const customerPasswordHash = await bcrypt.hash("AuraicCust2026", 10);
+  const genericEmpPasswordHash = await bcrypt.hash("AuraicEmp2026", 10);
 
   const ownerRole = createdRoles["Owner"];
+  const adminRole = createdRoles["Admin"];
   const customerRole = createdRoles["Customer"];
+  const orderManagerRole = createdRoles["Order Manager"];
+  const financeRole = createdRoles["Finance"];
+  const hrRole = createdRoles["HR Manager"] || createdRoles["Owner"];
+  const marketingRole = createdRoles["Marketing"];
+  const supportRole = createdRoles["Customer Support"];
 
+  // Central Owner Account
   await prisma.user.create({
     data: {
       name: "Abhishek Auraic",
@@ -485,6 +505,99 @@ async function main() {
       phone: "+919876543210",
       passwordHash: ownerPasswordHash,
       roleId: ownerRole,
+      employeeId: "ADM-ABHISHEK",
+      department: "Administration",
+      designation: "Super Admin",
+      isSuspended: false
+    }
+  });
+
+  // Sales / Billing Employee
+  await prisma.user.create({
+    data: {
+      name: "Rohit Deshpande",
+      email: "rohit.sales@auraic.in",
+      phone: "+919876543211",
+      passwordHash: genericEmpPasswordHash,
+      roleId: adminRole,
+      employeeId: "SAL-ROHIT",
+      department: "Sales",
+      designation: "Sales Manager",
+      isSuspended: false
+    }
+  });
+
+  // Finance Employee
+  await prisma.user.create({
+    data: {
+      name: "Amit Trivedi",
+      email: "amit.finance@auraic.in",
+      phone: "+919876543212",
+      passwordHash: genericEmpPasswordHash,
+      roleId: financeRole,
+      employeeId: "FIN-AMIT",
+      department: "Finance",
+      designation: "Finance Manager",
+      isSuspended: false
+    }
+  });
+
+  // HR Employee
+  await prisma.user.create({
+    data: {
+      name: "Sneha Sen",
+      email: "sneha.hr@auraic.in",
+      phone: "+919876543213",
+      passwordHash: genericEmpPasswordHash,
+      roleId: adminRole,
+      employeeId: "HR-SNEHA",
+      department: "Human Resource",
+      designation: "HR Manager",
+      isSuspended: false
+    }
+  });
+
+  // Logistics / Shipping Employee
+  await prisma.user.create({
+    data: {
+      name: "Raj Kumar",
+      email: "raj.logistics@auraic.in",
+      phone: "+919876543214",
+      passwordHash: genericEmpPasswordHash,
+      roleId: orderManagerRole,
+      employeeId: "LOG-RAJ",
+      department: "Logistics",
+      designation: "Logistics Manager",
+      isSuspended: false
+    }
+  });
+
+  // Customer Support Employee
+  await prisma.user.create({
+    data: {
+      name: "Abhishekh Support",
+      email: "abhishek.support@auraic.in",
+      phone: "+919876543215",
+      passwordHash: genericEmpPasswordHash,
+      roleId: supportRole,
+      employeeId: "SUP-ABHISHEK",
+      department: "Customer Support",
+      designation: "Support Manager",
+      isSuspended: false
+    }
+  });
+
+  // Admin Controller Employee
+  await prisma.user.create({
+    data: {
+      name: "Vikas Kumar",
+      email: "vikas.admin@auraic.in",
+      phone: "+919876543216",
+      passwordHash: genericEmpPasswordHash,
+      roleId: adminRole,
+      employeeId: "ADM-VIKAS",
+      department: "Administration",
+      designation: "Admin Specialist",
       isSuspended: false
     }
   });
@@ -552,7 +665,7 @@ async function main() {
   });
 
   // 9. BlogPosts
-  await prisma.blogPost.create({
+  const blog = await prisma.blogPost.create({
     data: {
       title: "The Golden Thread: Journey of Varanasi's Handwoven Sarees",
       slug: "golden-thread-varanasi-handwoven-sarees",
@@ -562,6 +675,337 @@ async function main() {
       author: "Auraic Editorial",
       isPublished: true
     }
+  });
+
+  // ==================== NEW DATABASE SEEDS FOR ERP PANEL ====================
+  console.log("Seeding Leads...");
+  await prisma.lead.createMany({
+    data: [
+      {
+        name: "Rahul Verma",
+        email: "rahul@gmail.com",
+        phone: "+91 9988776655",
+        status: "NEW",
+        value: 12500.0,
+        source: "Campaign",
+        assignedTo: "SAL-ROHIT"
+      },
+      {
+        name: "Sneha Reddy",
+        email: "sneha.r@gmail.com",
+        phone: "+91 9876543210",
+        status: "CONTACTED",
+        value: 45000.0,
+        source: "Referral",
+        assignedTo: "SAL-ROHIT"
+      },
+      {
+        name: "Amit Patel",
+        email: "amit.p@gmail.com",
+        phone: "+91 9123456789",
+        status: "QUALIFIED",
+        value: 28000.0,
+        source: "Search",
+        assignedTo: "SAL-ROHIT"
+      },
+      {
+        name: "Priya Sharma",
+        email: "priya@gmail.com",
+        phone: "+91 9000011111",
+        status: "WON",
+        value: 15000.0,
+        source: "Website",
+        assignedTo: "SAL-ROHIT"
+      }
+    ]
+  });
+
+  console.log("Seeding Purchase Orders...");
+  const po1 = await prisma.purchaseOrder.create({
+    data: {
+      vendorId: "v-pashmina-01",
+      vendorName: "Kashmiri Handloom Association",
+      totalAmount: 85000.0,
+      status: "DELIVERED",
+      expectedDate: new Date(Date.now() + 3 * 24 * 60 * 60 * 1000)
+    }
+  });
+  await prisma.purchaseOrderItem.create({
+    data: {
+      purchaseOrderId: po1.id,
+      productName: "Kashmiri Pashmina Shawl",
+      quantity: 10,
+      unitPrice: 8500.0
+    }
+  });
+
+  const po2 = await prisma.purchaseOrder.create({
+    data: {
+      vendorId: "v-banarasi-02",
+      vendorName: "Varanasi Silk Weaver Coop",
+      totalAmount: 120000.0,
+      status: "APPROVED",
+      expectedDate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000)
+    }
+  });
+  await prisma.purchaseOrderItem.create({
+    data: {
+      purchaseOrderId: po2.id,
+      productName: "Banarasi Silk Brocade",
+      quantity: 20,
+      unitPrice: 6000.0
+    }
+  });
+
+  // Fetch employees for attendance & payroll seeding
+  const employees = await prisma.user.findMany({
+    where: { employeeId: { not: null } }
+  });
+
+  console.log("Seeding Employee Attendance...");
+  for (const emp of employees) {
+    // Seed attendance for today & yesterday
+    await prisma.attendance.createMany({
+      data: [
+        {
+          userId: emp.id,
+          date: new Date().toISOString().split("T")[0],
+          status: "PRESENT",
+          checkIn: "09:15",
+          checkOut: "18:05"
+        },
+        {
+          userId: emp.id,
+          date: new Date(Date.now() - 24 * 60 * 60 * 1000).toISOString().split("T")[0],
+          status: "PRESENT",
+          checkIn: "09:02",
+          checkOut: "18:00"
+        }
+      ]
+    });
+  }
+
+  console.log("Seeding Leave Requests...");
+  const supportEmp = employees.find((e) => e.employeeId === "SUP-ABHISHEK");
+  const financeEmp = employees.find((e) => e.employeeId === "FIN-AMIT");
+  if (supportEmp) {
+    await prisma.leaveRequest.create({
+      data: {
+        userId: supportEmp.id,
+        startDate: new Date(Date.now() + 2 * 24 * 60 * 60 * 1000),
+        endDate: new Date(Date.now() + 4 * 24 * 60 * 60 * 1000),
+        reason: "Medical checkup & personal work",
+        status: "APPROVED",
+        approvedBy: "HR-SNEHA"
+      }
+    });
+  }
+  if (financeEmp) {
+    await prisma.leaveRequest.create({
+      data: {
+        userId: financeEmp.id,
+        startDate: new Date(Date.now() + 5 * 24 * 60 * 60 * 1000),
+        endDate: new Date(Date.now() + 6 * 24 * 60 * 60 * 1000),
+        reason: "Family event in native hometown",
+        status: "PENDING"
+      }
+    });
+  }
+
+  console.log("Seeding Payroll & Payslips...");
+  for (const emp of employees) {
+    const salary = emp.designation?.includes("Manager") ? 75000.0 : 45000.0;
+    const bonus = emp.employeeId === "SAL-ROHIT" ? 8500.0 : 0.0;
+    const pf = salary * 0.12;
+    const esic = salary * 0.0075;
+    const tax = salary * 0.10;
+    const netPay = salary + bonus - pf - esic - tax;
+
+    await prisma.payroll.create({
+      data: {
+        userId: emp.id,
+        salary,
+        bonus,
+        pf,
+        esic,
+        tax,
+        netPay,
+        month: new Date().getMonth() + 1,
+        year: new Date().getFullYear(),
+        status: emp.employeeId === "SAL-ROHIT" ? "APPROVED" : "PENDING",
+        approvedBy: emp.employeeId === "SAL-ROHIT" ? "HR-SNEHA" : null
+      }
+    });
+  }
+
+  console.log("Seeding Marketing Campaigns...");
+  await prisma.campaign.createMany({
+    data: [
+      {
+        name: "Independence Day Heritage Expo",
+        type: "SOCIAL",
+        budget: 25000.0,
+        status: "ACTIVE",
+        startDate: new Date("2026-08-01"),
+        endDate: new Date("2026-08-20"),
+        clicks: 1240,
+        conversions: 82
+      },
+      {
+        name: "Diwali Silk & Saffron Special",
+        type: "EMAIL",
+        budget: 15000.0,
+        status: "PLANNING",
+        startDate: new Date("2026-10-15"),
+        endDate: new Date("2026-11-05"),
+        clicks: 0,
+        conversions: 0
+      }
+    ]
+  });
+
+  console.log("Seeding CRM Customer Support Tickets...");
+  if (normalCust) {
+    await prisma.supportTicket.createMany({
+      data: [
+        {
+          userId: normalCust.id,
+          subject: "Refund Delay on Cancellation",
+          description: "I cancelled order #ORD-0023 yesterday, but my Razorpay wallet refund hasn't reflected.",
+          status: "OPEN",
+          priority: "HIGH"
+        },
+        {
+          userId: normalCust.id,
+          subject: "Fidelity of Blue Pottery Vase Pack",
+          description: "Requesting additional bubble wraps for blue pottery shipment to protect ceramic glaze.",
+          status: "IN_PROGRESS",
+          priority: "MEDIUM"
+        }
+      ]
+    });
+  }
+
+  console.log("Seeding Real E-Commerce Orders, Payments & Shipments...");
+  // Fetch a seeded product to make a real order
+  const seededProduct = await prisma.product.findFirst();
+  if (seededProduct && normalCust && custAddress) {
+    // 1. Create a PAID, DELIVERED order
+    const orderDelivered = await prisma.order.create({
+      data: {
+        userId: normalCust.id,
+        totalAmount: seededProduct.price,
+        taxAmount: seededProduct.price * 0.05,
+        netAmount: seededProduct.price * 1.05,
+        status: "DELIVERED",
+        shippingAddressId: custAddress.id,
+        invoiceNumber: "INV-2026-0001",
+        trackingId: "DLV12345678"
+      }
+    });
+
+    await prisma.orderItem.create({
+      data: {
+        orderId: orderDelivered.id,
+        productId: seededProduct.id,
+        quantity: 1,
+        price: seededProduct.price,
+        taxRate: 5.0
+      }
+    });
+
+    await prisma.payment.create({
+      data: {
+        orderId: orderDelivered.id,
+        gateway: "RAZORPAY",
+        transactionId: "pay_xyz123456",
+        status: "SUCCESS",
+        amount: orderDelivered.netAmount
+      }
+    });
+
+    await prisma.shipment.create({
+      data: {
+        orderId: orderDelivered.id,
+        carrier: "Delhivery",
+        trackingNumber: "DLV12345678",
+        status: "DELIVERED",
+        weight: 1.2,
+        length: 20.0,
+        width: 15.0,
+        height: 12.0,
+        labelUrl: "/labels/label-0001.pdf",
+        manifestUrl: "/manifests/manifest-0001.pdf"
+      }
+    });
+
+    // 2. Create a PENDING_PICKUP order ready for logistics queue
+    const orderPending = await prisma.order.create({
+      data: {
+        userId: normalCust.id,
+        totalAmount: seededProduct.price * 2,
+        taxAmount: seededProduct.price * 2 * 0.05,
+        netAmount: seededProduct.price * 2 * 1.05,
+        status: "PAID",
+        shippingAddressId: custAddress.id,
+        invoiceNumber: "INV-2026-0002"
+      }
+    });
+
+    await prisma.orderItem.create({
+      data: {
+        orderId: orderPending.id,
+        productId: seededProduct.id,
+        quantity: 2,
+        price: seededProduct.price,
+        taxRate: 5.0
+      }
+    });
+
+    await prisma.payment.create({
+      data: {
+        orderId: orderPending.id,
+        gateway: "COD",
+        status: "PENDING",
+        amount: orderPending.netAmount
+      }
+    });
+
+    await prisma.shipment.create({
+      data: {
+        orderId: orderPending.id,
+        carrier: "Blue Dart",
+        status: "PENDING_PICKUP",
+        weight: 2.4,
+        length: 30.0,
+        width: 25.0,
+        height: 18.0
+      }
+    });
+  }
+
+  console.log("Seeding Audit Logs...");
+  await prisma.auditLog.createMany({
+    data: [
+      {
+        userId: employees[0]?.id || null,
+        actorName: "Abhishek Auraic",
+        action: "LOGIN",
+        details: "Super Admin logged in from IP 192.168.1.1 (Windows Chrome)"
+      },
+      {
+        userId: employees[0]?.id || null,
+        actorName: "Abhishek Auraic",
+        action: "PERMISSION_CHANGE",
+        details: "Updated roles matrix permissions for Sales Executive"
+      },
+      {
+        userId: employees[2]?.id || null,
+        actorName: "Sneha Sen",
+        action: "EDIT",
+        details: "Updated employee onboarding files for LOG-RAJ"
+      }
+    ]
   });
 
   console.log("Seeding completed successfully.");

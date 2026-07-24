@@ -6,15 +6,25 @@ import { useRouter, useSearchParams } from "next/navigation";
 import { ShieldCheck, Info, Check, ShieldAlert, ArrowLeft, Mail, Lock, User } from "lucide-react";
 import Link from "next/link";
 
+const SEEDED_EMPLOYEES = [
+  { id: "ADM-ABHISHEK", role: "Super Admin", email: "owner@auraic.in", pass: "AuraicOwner2026", dept: "Administration" },
+  { id: "SAL-ROHIT", role: "Sales Manager", email: "rohit.sales@auraic.in", pass: "AuraicEmp2026", dept: "Sales" },
+  { id: "FIN-AMIT", role: "Finance Manager", email: "amit.finance@auraic.in", pass: "AuraicEmp2026", dept: "Finance" },
+  { id: "HR-SNEHA", role: "HR Manager", email: "sneha.hr@auraic.in", pass: "AuraicEmp2026", dept: "Human Resource" },
+  { id: "LOG-RAJ", role: "Logistics Manager", email: "raj.logistics@auraic.in", pass: "AuraicEmp2026", dept: "Logistics" },
+  { id: "SUP-ABHISHEK", role: "Support Manager", email: "abhishek.support@auraic.in", pass: "AuraicEmp2026", dept: "Customer Support" },
+  { id: "ADM-VIKAS", role: "Admin Specialist", email: "vikas.admin@auraic.in", pass: "AuraicEmp2026", dept: "Administration" }
+];
+
 function LoginContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
-  const callbackUrl = searchParams.get("callbackUrl") || "/";
+  const callbackUrl = searchParams.get("callbackUrl") || "/admin/dashboard";
 
   // Mode switcher: login, signup, forgot
   const [viewMode, setViewMode] = useState<"login" | "signup" | "forgot">("login");
 
-  // Sign In inputs
+  // Sign In inputs (can be email or employee ID e.g. SAL-ROHIT)
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
@@ -23,13 +33,21 @@ function LoginContent() {
   const [signupEmail, setSignupEmail] = useState("");
   const [signupPassword, setSignupPassword] = useState("");
 
-  // Forgot Password input
+  // Forgot Password input (email or Employee ID)
   const [forgotEmail, setForgotEmail] = useState("");
 
   // UI state
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
   const [successMessage, setSuccessMessage] = useState<string | null>(null);
+
+  // Prefill helper
+  const handlePrefill = (emailOrId: string, pass: string) => {
+    setEmail(emailOrId);
+    setPassword(pass);
+    setError(null);
+    setSuccessMessage("Credentials loaded. Click Sign In to verify.");
+  };
 
   // Handle Login form submission
   const handleLoginSubmit = async (e: React.FormEvent) => {
@@ -40,99 +58,29 @@ function LoginContent() {
     setError(null);
     setSuccessMessage(null);
 
-    // Detect if running on static serve (mock authentication fallback)
-    let isStaticMode = false;
-    try {
-      const sessionRes = await fetch("/api/auth/session");
-      if (!sessionRes.ok || sessionRes.headers.get("content-type")?.includes("text/html")) {
-        isStaticMode = true;
-      }
-    } catch (err) {
-      isStaticMode = true;
-    }
-    console.log("[DEBUG LOGIN] isStaticMode:", isStaticMode);
-
-    if (isStaticMode) {
-      if (email === "owner@auraic.in" && password === "AuraicOwner2026") {
-        const mockUser = {
-          name: "Owner User",
-          email: "owner@auraic.in",
-          role: "Owner"
-        };
-        localStorage.setItem("mock_session", JSON.stringify(mockUser));
-        document.cookie = "mock_session_cookie=Owner; path=/; max-age=86400; SameSite=Lax";
-        setSuccessMessage("Login successful! Redirecting...");
-        setTimeout(() => {
-          router.push(callbackUrl);
-          setTimeout(() => {
-            window.location.reload();
-          }, 300);
-        }, 1000);
-        return;
-      } else if (email === "aarav@gmail.com" && password === "AuraicCust2026") {
-        const mockUser = {
-          name: "Aarav Sharma",
-          email: "aarav@gmail.com",
-          role: "Customer"
-        };
-        localStorage.setItem("mock_session", JSON.stringify(mockUser));
-        document.cookie = "mock_session_cookie=Customer; path=/; max-age=86400; SameSite=Lax";
-        setSuccessMessage("Login successful! Redirecting...");
-        setTimeout(() => {
-          router.push(callbackUrl);
-          setTimeout(() => {
-            window.location.reload();
-          }, 300);
-        }, 1000);
-        return;
-      } else {
-        setError("Invalid credentials for static simulation.");
-        setLoading(false);
-        return;
-      }
-    }
-
     try {
       const res = await signIn("credentials", {
         redirect: false,
-        email,
+        email, // email field carries either email or employeeId
         password,
         callbackUrl
       });
 
       if (res?.error) {
-        if (email === "owner@auraic.in" && password === "AuraicOwner2026") {
-          console.warn("[Login Fallback Triggered] NextAuth credentials flow failed; falling back to local session cookies.");
-          const mockUser = {
-            name: "Owner User",
-            email: "owner@auraic.in",
-            role: "Owner"
-          };
-          localStorage.setItem("mock_session", JSON.stringify(mockUser));
-          document.cookie = "mock_session_cookie=Owner; path=/; max-age=86400; SameSite=Lax";
-        } else if (email === "aarav@gmail.com" && password === "AuraicCust2026") {
-          console.warn("[Login Fallback Triggered] NextAuth credentials flow failed; falling back to local session cookies.");
-          const mockUser = {
-            name: "Aarav Sharma",
-            email: "aarav@gmail.com",
-            role: "Customer"
-          };
-          localStorage.setItem("mock_session", JSON.stringify(mockUser));
-          document.cookie = "mock_session_cookie=Customer; path=/; max-age=86400; SameSite=Lax";
-        } else {
-          throw new Error(res.error || "Login failed");
-        }
+        throw new Error(res.error || "Authentication failed. Check credentials or suspension status.");
       }
 
-      setSuccessMessage("Login successful! Redirecting...");
+      setSuccessMessage("Login successful! Loading your department dashboard...");
+      
+      // Dynamic Redirect based on logged in user session
       setTimeout(() => {
         router.push(callbackUrl);
         setTimeout(() => {
           window.location.reload();
-        }, 300);
+        }, 150);
       }, 1000);
     } catch (err: any) {
-      setError(err.message);
+      setError(err.message || "Invalid credentials.");
     } finally {
       setLoading(false);
     }
@@ -148,21 +96,25 @@ function LoginContent() {
     setSuccessMessage(null);
 
     try {
-      // Create mock registration in local storage and sign in
-      const mockNewUser = {
-        name,
-        email: signupEmail,
-        role: "Customer"
-      };
-      localStorage.setItem("mock_session", JSON.stringify(mockNewUser));
-      setSuccessMessage("Account created successfully! Auto-signing you in...");
-      
-      // Auto-redirect
+      const res = await fetch("/api/admin/users", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          name,
+          email: signupEmail,
+          password: signupPassword,
+          roleId: "customer-default-role-id" // Placeholder role, handled by backend
+        })
+      });
+
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Registration failed.");
+
+      setSuccessMessage("Account created successfully! Redirecting to login...");
       setTimeout(() => {
-        router.push(callbackUrl);
-        setTimeout(() => {
-          window.location.reload();
-        }, 300);
+        setViewMode("login");
+        setEmail(signupEmail);
+        setPassword(signupPassword);
       }, 1500);
     } catch (err: any) {
       setError(err.message || "Registration failed");
@@ -171,8 +123,8 @@ function LoginContent() {
     }
   };
 
-  // Handle Forgot Password submission
-  const handleForgotSubmit = (e: React.FormEvent) => {
+  // Handle Forgot Password submission (Saves reset request to database)
+  const handleForgotSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!forgotEmail) return;
 
@@ -180,17 +132,30 @@ function LoginContent() {
     setError(null);
     setSuccessMessage(null);
 
-    // Simulate OTP / reset link dispatch
-    setTimeout(() => {
-      setSuccessMessage(`Password recovery link has been sent to ${forgotEmail}! Please check your inbox.`);
+    try {
+      const res = await fetch("/api/admin/credentials", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          action: "FORGOT_REQUEST",
+          email: forgotEmail
+        })
+      });
+
+      const data = await res.json();
+      if (!res.ok) throw new Error(data.error || "Failed to submit request.");
+
+      setSuccessMessage("Password reset request submitted successfully to Admin. Lock state locked until approved.");
       setForgotEmail("");
+    } catch (err: any) {
+      setError(err.message || "Error submitting reset request.");
+    } finally {
       setLoading(false);
-    }, 1200);
+    }
   };
 
   return (
-    <div className="min-h-[80vh] flex items-center justify-center p-6 text-[#2E1E1A]">
-      
+    <div className="min-h-[85vh] flex items-center justify-center p-6 text-[#2E1E1A]">
       <div className="max-w-md w-full bg-[#FDFBF7] border border-gray-200/80 p-8 rounded-3xl shadow-lg space-y-6">
         
         {/* Logo & Headline */}
@@ -202,11 +167,11 @@ function LoginContent() {
           />
           <div>
             <h1 className="text-2xl font-serif text-[#3D1E16] font-bold tracking-wide">
-              {viewMode === "login" && "Sign In to Cultural Clutch"}
-              {viewMode === "signup" && "Create Your Account"}
+              {viewMode === "login" && "Cultural Clutch ERP Access"}
+              {viewMode === "signup" && "Create Customer Account"}
               {viewMode === "forgot" && "Recover Password"}
             </h1>
-            <p className="text-xs text-gray-550 font-semibold uppercase tracking-widest mt-1 font-sans">
+            <p className="text-xs text-gray-500 font-semibold uppercase tracking-widest mt-1 font-sans">
               Indian Heritage & ODOP Marketplace
             </p>
           </div>
@@ -234,15 +199,15 @@ function LoginContent() {
             <form onSubmit={handleLoginSubmit} className="space-y-4">
               <div>
                 <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">
-                  Email Address
+                  Email Address or Employee ID
                 </label>
                 <div className="relative">
                   <input
-                    type="email"
+                    type="text"
                     required
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
-                    placeholder="e.g. customer@domain.com"
+                    placeholder="e.g. SAL-ROHIT or owner@auraic.in"
                     className="w-full pl-10 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#B56D3E]/20 text-[#3D1E16]"
                   />
                   <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-450" />
@@ -283,19 +248,6 @@ function LoginContent() {
                 {loading ? "Verifying Credentials..." : "Sign In"}
               </button>
             </form>
-
-            <div className="border-t border-gray-100 pt-3">
-              <p className="text-center text-xs text-gray-500 font-semibold">
-                New to Cultural Clutch?{" "}
-                <button
-                  type="button"
-                  onClick={() => { setViewMode("signup"); setError(null); setSuccessMessage(null); }}
-                  className="text-[#B56D3E] font-bold hover:underline"
-                >
-                  Register Now
-                </button>
-              </p>
-            </div>
           </div>
         )}
 
@@ -363,17 +315,13 @@ function LoginContent() {
               </button>
             </form>
 
-            <div className="border-t border-gray-100 pt-3">
-              <p className="text-center text-xs text-gray-500 font-semibold">
-                Already registered?{" "}
-                <button
-                  type="button"
-                  onClick={() => { setViewMode("login"); setError(null); setSuccessMessage(null); }}
-                  className="text-[#B56D3E] font-bold hover:underline"
-                >
-                  Sign In here
-                </button>
-              </p>
+            <div className="border-t border-gray-150 pt-3">
+              <button
+                onClick={() => setViewMode("login")}
+                className="w-full py-2.5 border border-gray-200 hover:bg-gray-50 text-gray-600 rounded-xl text-xs font-bold transition-all flex items-center justify-center gap-2"
+              >
+                <ArrowLeft className="w-3.5 h-3.5" /> Back to Sign In
+              </button>
             </div>
           </div>
         )}
@@ -384,15 +332,15 @@ function LoginContent() {
             <form onSubmit={handleForgotSubmit} className="space-y-4">
               <div>
                 <label className="block text-xs font-semibold text-gray-400 uppercase tracking-wider mb-1">
-                  Registered Email Address
+                  Email Address or Employee ID
                 </label>
                 <div className="relative">
                   <input
-                    type="email"
+                    type="text"
                     required
                     value={forgotEmail}
                     onChange={(e) => setForgotEmail(e.target.value)}
-                    placeholder="Enter your email to receive recovery instructions"
+                    placeholder="Enter email or employee ID e.g. SAL-ROHIT"
                     className="w-full pl-10 pr-4 py-2.5 bg-gray-50 border border-gray-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-[#B56D3E]/20 text-[#3D1E16]"
                   />
                   <Mail className="absolute left-3.5 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-455" />
@@ -404,7 +352,7 @@ function LoginContent() {
                 disabled={loading}
                 className="w-full py-3 bg-[#B56D3E] hover:bg-[#9B5A2F] text-white rounded-xl text-sm font-bold shadow-sm transition-all disabled:opacity-50 uppercase tracking-wider"
               >
-                {loading ? "Sending link..." : "Send Recovery Link"}
+                {loading ? "Submitting request..." : "Submit Reset Request"}
               </button>
             </form>
 
@@ -417,29 +365,39 @@ function LoginContent() {
           </div>
         )}
 
-        {/* Local Test Accounts Credentials Tip (Only show in login mode) */}
+        {/* Real Seeded Employee IDs Tip Panel */}
         {viewMode === "login" && (
-          <div className="bg-[#FAF5EE] border border-[#C09355]/20 rounded-2xl p-4 text-[11px] leading-relaxed text-gray-655 space-y-2">
-            <div className="flex items-center gap-1.5 font-bold text-[#3D1E16] uppercase tracking-wider text-xs">
-              <Info className="w-4 h-4 text-[#B56D3E]" /> Seeding Test Credentials
+          <div className="bg-[#FAF5EE] border border-[#C09355]/20 rounded-2xl p-4 text-[11px] leading-relaxed text-gray-600 space-y-2.5">
+            <div className="flex items-center gap-1.5 font-bold text-[#3D1E16] uppercase tracking-wider text-xs border-b border-gray-200/50 pb-1.5">
+              <Info className="w-4 h-4 text-[#B56D3E]" /> Seeded Active Employee IDs
             </div>
-            <div>
-              <span className="font-bold text-gray-600">Owner Access (Full Control):</span>
-              <div className="font-mono mt-0.5 bg-white/70 border border-gray-150 p-1.5 rounded-lg select-all text-[10px]">
-                Email: owner@auraic.in <br /> Password: AuraicOwner2026
-              </div>
-            </div>
-            <div>
-              <span className="font-bold text-gray-600">Customer Access (Mock Checkout):</span>
-              <div className="font-mono mt-0.5 bg-white/70 border border-gray-150 p-1.5 rounded-lg select-all text-[10px]">
-                Email: aarav@gmail.com <br /> Password: AuraicCust2026
-              </div>
+            
+            <p className="text-[10px] text-gray-500">
+              Click any active employee profile below to prefill their database credentials:
+            </p>
+
+            <div className="space-y-1.5 max-h-[160px] overflow-y-auto pr-1">
+              {SEEDED_EMPLOYEES.map((emp) => (
+                <button
+                  key={emp.id}
+                  type="button"
+                  onClick={() => handlePrefill(emp.id, emp.pass)}
+                  className="w-full text-left p-2 bg-white hover:bg-amber-50 border border-gray-150 hover:border-[#B56D3E]/30 rounded-xl transition-all flex items-center justify-between text-[10px] cursor-pointer"
+                >
+                  <div>
+                    <span className="font-bold text-[#3D1E16]">{emp.id}</span>
+                    <span className="block text-[8px] text-gray-400 font-medium uppercase tracking-wider">{emp.role} • {emp.dept}</span>
+                  </div>
+                  <span className="font-mono text-[9px] text-[#B56D3E] font-semibold bg-[#FAF5EE] px-1.5 py-0.5 rounded-md border border-gray-200">
+                    {emp.pass}
+                  </span>
+                </button>
+              ))}
             </div>
           </div>
         )}
 
       </div>
-      
     </div>
   );
 }
